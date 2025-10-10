@@ -8,9 +8,9 @@ const nextConfig = {
   trailingSlash: true,
   // Suppress hydration warnings caused by browser extensions
   reactStrictMode: false,
-  // Base path for GitHub Pages (update 'repo-name' to your actual repo name)
-  // basePath: '/repo-name',
-  // assetPrefix: '/repo-name',
+  // Base path for GitHub Pages project repo
+  basePath: '/personal-website-react',
+  assetPrefix: '/personal-website-react',
 }
 
 module.exports = nextConfig
