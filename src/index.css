@@ -1,0 +1,17 @@
+/**
+ * ===== INDEX.CSS - APPLICATION ENTRY POINT =====
+ * 
+ * This is the root CSS file that gets imported into main.jsx.
+ * It imports our modular BEM-based styles.
+ * 
+ * BEM = Block Element Modifier
+ * A CSS naming methodology that makes styles more maintainable and scalable.
+ * 
+ * The styles are now organized into logical modules:
+ * - Base: Global resets and typography
+ * - Utilities: Reusable helper classes
+ * - Components: Individual UI components (header, hero, services, etc.)
+ */
+
+/* Import our modular BEM styles */
+@import './styles/main.css';

@@ -1,0 +1,114 @@
+/**
+ * ===== MODAL COMPONENT =====
+ * Contact form modal popup
+ */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+.modal__content {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 32rem;
+  width: 100%;
+  margin: 1rem;
+}
+
+.modal__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.modal__description {
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.modal__form {
+  /* Form container */
+}
+
+.modal__input {
+  /* width, padding, border, border-radius, font-family, font-size, transition inherited from input defaults */
+  margin-bottom: 1rem;
+  font-size: 1rem; /* Override default to be explicit */
+}
+
+.modal__input:focus {
+  /* Focus styles inherited from input defaults */
+}
+
+.modal__textarea {
+  /* width, padding, border, border-radius, font-family, font-size, transition, resize inherited from textarea defaults */
+  margin-bottom: 1.5rem;
+  font-size: 1rem; /* Override default to be explicit */
+}
+
+.modal__textarea:focus {
+  /* Focus styles inherited from textarea defaults */
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.modal__button {
+  padding: 0.5rem 1rem;
+  /* border, border-radius, cursor, transition inherited from button defaults */
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.modal__button--close {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.modal__button--close:hover {
+  background-color: #d1d5db;
+}
+
+.modal__button--submit {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.modal__button--submit:hover {
+  background-color: #1e40af;
+}
+
+.modal__success {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.modal__success-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.modal__success-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  margin-bottom: 0.75rem;
+}
+
+.modal__success-message {
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+

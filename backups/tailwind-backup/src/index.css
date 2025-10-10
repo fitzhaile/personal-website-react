@@ -1,0 +1,65 @@
+/**
+ * ===== INDEX.CSS - GLOBAL STYLES =====
+ * 
+ * This file contains styles that apply to the ENTIRE website.
+ * It's imported in main.jsx so all components can use these styles.
+ */
+
+/* ===== TAILWIND DIRECTIVES ===== 
+   These three lines import all of Tailwind CSS
+   - base: resets default browser styles for consistency
+   - components: utility classes for common patterns
+   - utilities: all the classes like "px-4", "text-center", etc.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== GLOBAL RESETS ===== 
+   Apply to ALL elements (the * selector)
+*/
+* {
+  /* Remove default margins and padding from all elements
+     Browsers add these by default, but they're inconsistent */
+  margin: 0;
+  padding: 0;
+  
+  /* box-sizing: border-box means:
+     "Include padding and border in the element's total width/height"
+     This makes sizing elements WAY easier and more predictable */
+  box-sizing: border-box;
+}
+
+/* ===== HTML ELEMENT ===== 
+   Styles for the root <html> element
+*/
+html {
+  /* scroll-behavior: smooth enables smooth scrolling when clicking nav links
+     Without this, the page would "jump" instantly to sections */
+  scroll-behavior: smooth;
+}
+
+/* ===== BODY ELEMENT ===== 
+   Styles for the <body> element (contains all visible content)
+*/
+body {
+  margin: 0;
+  
+  /* Font stack: tries fonts in order until it finds one that exists
+     1. 'Inter' - our custom Google Font (loaded in index.html)
+     2. -apple-system - Apple's system font (San Francisco)
+     3. BlinkMacSystemFont - Older Apple system font
+     4. 'Segoe UI' - Windows system font
+     5. 'Roboto' - Android system font
+     6. ... and several other fallbacks
+     7. sans-serif - generic sans-serif font as last resort */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  
+  /* Font smoothing: makes text look better on Mac/iOS screens
+     These are vendor-specific (webkit for Chrome/Safari, moz for Firefox) */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

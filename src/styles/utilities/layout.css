@@ -1,0 +1,14 @@
+/**
+ * ===== LAYOUT UTILITIES =====
+ * Common layout patterns
+ */
+
+.main {
+  /* Container for all main content sections */
+}
+
+/* Scroll margin for sections to account for sticky header */
+section {
+  scroll-margin-top: 5rem;
+}
+

@@ -1,0 +1,36 @@
+/**
+ * ===== MAIN STYLESHEET =====
+ * 
+ * This file imports all modular CSS files in the correct order.
+ * BEM (Block Element Modifier) Architecture
+ * 
+ * Structure:
+ * 1. Base - Global resets and typography
+ * 2. Utilities - Reusable helper classes
+ * 3. Components - Individual UI components
+ * 
+ * Import order matters! Base styles should come first, then utilities, then components.
+ */
+
+/* ===== BASE STYLES ===== */
+/* Global resets and foundational styles */
+@import './base/variables.css'; /* CSS Variables - MUST be first! */
+@import './base/reset.css';
+@import './base/typography.css';
+@import './base/defaults.css';
+
+/* ===== UTILITIES ===== */
+/* Reusable utility classes */
+@import './utilities/containers.css';
+@import './utilities/layout.css';
+
+/* ===== COMPONENTS ===== */
+/* Individual UI components in alphabetical order for easy finding */
+@import './components/about.css';
+@import './components/contact.css';
+@import './components/footer.css';
+@import './components/header.css';
+@import './components/hero.css';
+@import './components/modal.css';
+@import './components/services.css';
+

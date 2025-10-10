@@ -1,0 +1,89 @@
+/**
+ * ===== ABOUT COMPONENT =====
+ * About section with text and image
+ */
+
+.about {
+  padding: 3rem 0;
+  background-color: var(--color-white);
+}
+
+.about__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about__content {
+  /* Text content container */
+}
+
+.about__title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about__text {
+  font-size: 1.125rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.about__cta {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  background: transparent;
+  /* border, cursor, transition inherited from button defaults */
+  border: none; /* Reset default */
+  border-bottom: 2px solid var(--color-secondary); /* Specific underline style */
+  transition: all 0.3s;
+  padding: 0;
+}
+
+.about__cta:hover {
+  border-bottom-color: var(--color-text);
+}
+
+.about__image-container {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  height: 20rem;
+  width: 100%;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+/* Responsive: Two-column layout on large screens */
+@media (min-width: 768px) {
+  .about {
+    padding: 4rem 0;
+  }
+
+  .about__title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

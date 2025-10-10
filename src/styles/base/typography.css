@@ -1,0 +1,13 @@
+/**
+ * ===== TYPOGRAPHY =====
+ * Base typography settings and text styles
+ */
+
+/* Main app wrapper - sets default text color and font */
+.app {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f9fb;
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+}
+
