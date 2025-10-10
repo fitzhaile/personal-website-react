@@ -4,15 +4,10 @@ A modern, responsive consulting website built with React, Vite, and BEM CSS arch
 
 ## Features
 
-- 🚀 Fast development with Vite
-- ⚛️ React 18 with hooks
-- 🎨 BEM CSS architecture (Block Element Modifier)
-- 📁 Modular CSS structure
-- 📱 Fully responsive design
-- ✨ Smooth scrolling navigation
-- 📧 Contact form modal
-- 🎯 Modern UI/UX
-- 🔥 Hot Module Replacement (HMR)
+- Fast development with Vite
+- React 18 with hooks
+- BEM CSS architecture (Block Element Modifier)
+- Hot Module Replacement (HMR)
 
 ## Getting Started
 
@@ -97,10 +92,10 @@ personal-website-react/
 
 This project uses a **defaults-first approach** where base styles are defined once in `defaults.css` and inherited everywhere:
 
-- ✅ All buttons automatically get: `border: none`, `border-radius`, `cursor: pointer`, `transition`
-- ✅ All inputs/textareas automatically get: borders, padding, focus styles
-- ✅ Component CSS files only define **unique styles** (colors, sizes, layouts)
-- ✅ Change a default once = updates everywhere consistently
+- All buttons automatically get: `border: none`, `border-radius`, `cursor: pointer`, `transition`
+- All inputs/textareas automatically get: borders, padding, focus styles
+- Component CSS files only define **unique styles** (colors, sizes, layouts)
+- Change a default once = updates everywhere consistently
 
 **Result:** Clean, maintainable, DRY (Don't Repeat Yourself) code with no redundant declarations.
 
