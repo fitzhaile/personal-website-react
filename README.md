@@ -1,4 +1,4 @@
-# Ascend Consulting - Personal Website
+# Fitzhugh Consulting - Personal Website
 
 A modern, responsive consulting website built with React, Vite, and BEM CSS architecture.
 
@@ -83,8 +83,6 @@ personal-website-react/
 - **React 18** - Modern UI library with hooks
 - **Vite** - Next-generation build tool and dev server
 - **BEM CSS** - Block Element Modifier methodology
-- **Modular CSS** - Organized component-based styles
-- **Inter Font** - Modern typography from Google Fonts
 
 ## Architecture
 
@@ -170,34 +168,9 @@ Edit the content directly in `src/App.jsx`. The website includes:
 - Footer with social links
 - Contact form modal
 
-### Adding New Components
-
-1. Create a new CSS file in `src/styles/components/`
-2. Add your BEM styles
-3. Import in `src/styles/main.css`
-4. Use the classes in `src/App.jsx`
-
-See `MODULAR_CSS_GUIDE.md` for detailed instructions.
-
 ## Documentation
 
 - **BEGINNERS_GUIDE.md** - Complete guide for learning React and BEM (579 lines)
 - **MODULAR_CSS_GUIDE.md** - Detailed CSS architecture documentation (294 lines)
 - **README.md** - This file, project overview
 
-## Development Tips
-
-- Changes auto-reload in the browser (Hot Module Replacement)
-- Edit any CSS file and see instant updates
-- Check browser console (F12) for errors
-- All code is thoroughly commented for learning
-
-## Browser Support
-
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Responsive design works on all screen sizes
-- Mobile-first approach with progressive enhancement
-
-## License
-
-© 2025 Ascend Consulting. All rights reserved.
