@@ -15,7 +15,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
-  align-items: center;
+  align-items: start; /* Align text to top of image */
 }
 
 .about__content {
@@ -53,14 +53,17 @@
 
 .about__image-container {
   border-radius: 1rem;
-  overflow: hidden;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  height: 20rem;
+  border: 3px solid #d1d5db; /* More visible gray border */
   width: 100%;
+  max-width: 550px;
+  height: 400px;
+  margin: 0 auto; /* Center on mobile */
   background-color: #e5e7eb;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .about__image {

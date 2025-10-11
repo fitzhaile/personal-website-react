@@ -40,30 +40,83 @@
 /* Service Card */
 .service-card {
   background-color: var(--color-white);
-  padding: 2rem; /* Comfortable padding */
+  padding: 2rem;
   border-radius: 1rem;
   box-shadow: var(--shadow-lg);
-  border-top: 4px solid var(--color-primary);
-  transition: all 0.5s;
+  border-left: 4px solid var(--color-secondary); /* Green base border */
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ensures even height across row */
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: var(--color-secondary); /* Green */
+  transition: height 0.3s ease;
+  z-index: 1; /* Ensure it's on top of the border */
 }
 
 .service-card:hover {
   box-shadow: var(--shadow-2xl);
-  transform: translateY(-0.25rem);
+  transform: translateY(-4px);
+}
+
+.service-card:hover::before {
+  height: 100%;
 }
 
 .service-card__title {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   font-weight: 700;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  color: var(--color-navy);
+  line-height: 1.3;
 }
 
 .service-card__content {
   color: var(--color-text-light);
-  line-height: 1.625;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Style paragraphs inside cards */
+.service-card__content p {
+  margin: 0 0 0 0; /* Remove default margins */
+}
+
+/* Style lists inside cards */
+.service-card__content ul {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+  list-style: none;
+}
+
+.service-card__content li {
+  position: relative;
+  padding-left: 0.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.service-card__content li::before {
+  content: "→";
+  position: absolute;
+  left: -1.25rem;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.service-card__content strong {
+  color: var(--color-navy);
+  font-weight: 600;
 }
 
 /* Responsive: Grid layouts */
@@ -101,7 +154,15 @@
   }
 
   .service-card {
-    padding: 2.5rem; /* Extra padding on larger screens */
+    padding: 2.5rem;
+  }
+
+  .service-card__title {
+    font-size: 1.5rem;
+  }
+  
+  .service-card__content {
+    font-size: 1.0625rem;
   }
 }
 

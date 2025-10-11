@@ -8,9 +8,9 @@ const nextConfig = {
   trailingSlash: true,
   // Suppress hydration warnings caused by browser extensions
   reactStrictMode: false,
-  // Base path for GitHub Pages project repo
-  basePath: '/personal-website-react',
-  assetPrefix: '/personal-website-react',
+  // Base path for GitHub Pages project repo (only in production)
+  basePath: process.env.NODE_ENV === 'production' ? '/personal-website-react' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/personal-website-react' : '',
 }
 
 module.exports = nextConfig
