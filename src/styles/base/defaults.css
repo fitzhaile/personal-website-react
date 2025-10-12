@@ -121,7 +121,14 @@ footer[id] {
   footer[id] {
     scroll-margin-top: 10rem; /* Extra margin on mobile for header + padding */
   }
+  
+  /* About section needs slightly more offset */
+  #about {
+    scroll-margin-top: 11.5rem;
+  }
 }
+
+
 
 /* ===== CARDS / CONTAINERS ===== */
 /* Common card styling - can be used with a .card class */
