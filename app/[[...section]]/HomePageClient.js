@@ -43,7 +43,7 @@ export default function HomePageClient({ section }) {
     if (e && e.preventDefault) e.preventDefault();
     setIsModalOpen(true);
     setIsMobileMenuOpen(false);
-    window.history.pushState({}, '', '/contact');
+    window.history.pushState({}, '', `${basePath}/contact`);
   };
 
   const handleNavClick = (e, targetId, path) => {
@@ -53,7 +53,7 @@ export default function HomePageClient({ section }) {
     const element = document.getElementById(targetId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      window.history.pushState({}, '', path);
+      window.history.pushState({}, '', `${basePath}${path}`);
     }
   };
 
@@ -63,7 +63,7 @@ export default function HomePageClient({ section }) {
       <header className="header">
         <div className="header__container">
           <a 
-            href="/"
+            href={`${basePath}/`}
             onClick={(e) => handleNavClick(e, 'hero', '/')}
             className="header__logo"
           >
@@ -72,10 +72,10 @@ export default function HomePageClient({ section }) {
           </a>
           
           <nav className="nav">
-            <a href="/services" onClick={(e) => handleNavClick(e, 'services', '/services')} className="nav__link">Services</a>
-            <a href="/about" onClick={(e) => handleNavClick(e, 'about', '/about')} className="nav__link">About</a>
+            <a href={`${basePath}/services`} onClick={(e) => handleNavClick(e, 'services', '/services')} className="nav__link">Services</a>
+            <a href={`${basePath}/about`} onClick={(e) => handleNavClick(e, 'about', '/about')} className="nav__link">About</a>
             <a 
-              href="/contact" 
+              href={`${basePath}/contact`}
               onClick={handleContactTrigger}
               className="nav__link--cta button"
             >
@@ -94,10 +94,10 @@ export default function HomePageClient({ section }) {
         </div>
 
         <div className={`mobile-menu ${isMobileMenuOpen ? '' : 'mobile-menu--hidden'}`}>
-          <a href="/services" onClick={(e) => handleNavClick(e, 'services', '/services')} className="mobile-menu__link">Services</a>
-          <a href="/about" onClick={(e) => handleNavClick(e, 'about', '/about')} className="mobile-menu__link">About</a>
+          <a href={`${basePath}/services`} onClick={(e) => handleNavClick(e, 'services', '/services')} className="mobile-menu__link">Services</a>
+          <a href={`${basePath}/about`} onClick={(e) => handleNavClick(e, 'about', '/about')} className="mobile-menu__link">About</a>
           <a 
-            href="/contact"
+            href={`${basePath}/contact`}
             onClick={handleContactTrigger}
             className="mobile-menu__link--cta"
           >
