@@ -4,9 +4,9 @@
  */
 
 .contact {
-  padding: var(--spacing-2xl) 0;
+  padding: var(--spacing-3xl) 0;
   color: var(--color-text);
-  background-color: var(--color-white);
+  background-color: var(--color-background);
 }
 
 .contact__container {
@@ -81,7 +81,7 @@
 
 @media (min-width: 768px) {
   .contact {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-4xl) 0;
   }
 
   .contact__title {
