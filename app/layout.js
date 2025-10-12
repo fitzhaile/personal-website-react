@@ -6,7 +6,10 @@ export const metadata = {
   keywords: ['analytics', 'consulting', 'data strategy', 'business intelligence'],
   authors: [{ name: 'Fitz Haile' }],
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
   },
   openGraph: {
     title: 'Fitzhugh Analytics',
