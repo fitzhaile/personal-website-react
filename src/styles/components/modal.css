@@ -16,7 +16,7 @@
 .modal__content {
   background-color: var(--color-white);
   padding: var(--spacing-xl);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-2xl);
   max-width: 32rem;
   width: 100%;
