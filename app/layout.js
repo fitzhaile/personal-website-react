@@ -5,9 +5,6 @@ export const metadata = {
   description: 'Expert strategic guidance to transform challenges into measurable growth and sustainable success.',
   keywords: ['analytics', 'consulting', 'data strategy', 'business intelligence'],
   authors: [{ name: 'Fitz Haile' }],
-  icons: {
-    icon: '/favicon.svg',
-  },
   openGraph: {
     title: 'Fitzhugh Analytics',
     description: 'Expert strategic guidance to transform challenges into measurable growth and sustainable success.',
