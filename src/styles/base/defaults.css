@@ -108,6 +108,13 @@ ul, ol {
   padding: 0;
 }
 
+/* ===== SCROLL BEHAVIOR ===== */
+/* Account for sticky header when scrolling to sections */
+section[id], 
+footer[id] {
+  scroll-margin-top: 5rem; /* Match header height */
+}
+
 /* ===== CARDS / CONTAINERS ===== */
 /* Common card styling - can be used with a .card class */
 .card {
