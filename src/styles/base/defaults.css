@@ -115,6 +115,14 @@ footer[id] {
   scroll-margin-top: 5rem; /* Match header height */
 }
 
+/* Mobile: Increase scroll margin for better positioning */
+@media (max-width: 767px) {
+  section[id], 
+  footer[id] {
+    scroll-margin-top: 6rem; /* Extra margin on mobile */
+  }
+}
+
 /* ===== CARDS / CONTAINERS ===== */
 /* Common card styling - can be used with a .card class */
 .card {
