@@ -119,7 +119,7 @@ footer[id] {
 @media (max-width: 767px) {
   section[id], 
   footer[id] {
-    scroll-margin-top: 6rem; /* Extra margin on mobile */
+    scroll-margin-top: 8rem; /* Extra margin on mobile for header + padding */
   }
 }
 
