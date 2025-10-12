@@ -22,7 +22,7 @@
 }
 
 .header__logo {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.025em;
   text-decoration: none;
@@ -166,6 +166,10 @@
 
 /* Responsive: Show desktop nav on medium+ screens */
 @media (min-width: 768px) {
+  .header__logo {
+    font-size: 2.5rem;
+  }
+
   .nav {
     display: flex;
   }
