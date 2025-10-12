@@ -64,8 +64,8 @@ export default function HomePageClient({ section }) {
             onClick={(e) => handleNavClick(e, 'hero', '/')}
             className="header__logo"
           >
-            <span className="header__logo-green">Fitzhugh</span>{' '}
-            <span className="header__logo-navy">Analytics</span>
+            <span className="header__logo-green">Fitz</span>{' '}
+            <span className="header__logo-navy">Haile</span>
           </a>
           
           <nav className="nav">
@@ -160,18 +160,18 @@ export default function HomePageClient({ section }) {
               <h2 className="about__title">Hi, I'm Fitz</h2>
               
               <p className="about__text">
-                Fitzhugh Consulting was founded on the principle that the most effective advice is both <strong>strategic and practical</strong>. We don't just deliver a report; we partner with you to implement the changes and ensure they stick.
+              Fitz Haile is a Savannah-based data and analytics consultant who helps organizations make smarter decisions through evidence-based insight. He began his career in economic and community development before spending a decade in New York and San Francisco leading web and software development projects and managing analytics teams.
               </p>
               
               <p className="about__text">
-                Our lead consultant, <strong>Fitz Haile</strong>, brings over 15 years of experience across multiple industries, specializing in scalable growth and turnaround management.
+                Fitz specializes in Google Analytics, data quality management, and visualization—using clean, reliable data to measure performance and inform strategy. A founding member of the Metro Savannah Rotary Club, he remains deeply engaged in the Savannah community.
               </p>
               
               <button 
                 onClick={handleContactTrigger}
                 className="about__cta"
               >
-                Give me a shout &rarr;
+                Let's Talk
               </button>
             </div>
             
@@ -211,15 +211,6 @@ export default function HomePageClient({ section }) {
         <div className="footer__container">
           <div className="footer__content">
             <div className="footer__contact">
-              <a href="mailto:fitz@fitzhughanalytics.com" className="footer__link">
-                <svg className="footer__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
-                <span>fitz@fitzhughanalytics.com</span>
-              </a>
-            </div>
-            
-            <div className="footer__contact">
               <a href="https://www.linkedin.com/in/fitzhaile/" target="_blank" rel="noopener noreferrer" className="footer__link">
                 <svg className="footer__icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
@@ -229,17 +220,17 @@ export default function HomePageClient({ section }) {
             </div>
             
             <div className="footer__contact">
-              <a href="tel:+15555551234" className="footer__link">
+              <a href="mailto:fitz@fitzhaile.com" className="footer__link">
                 <svg className="footer__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                 </svg>
-                <span>(555) 555-1234</span>
+                <span>fitz@fitzhaile.com</span>
               </a>
             </div>
           </div>
           
           <div className="footer__bottom">
-            <p className="footer__copyright">&copy; 2025 Fitzhugh Consulting. All rights reserved.</p>
+            <p className="footer__copyright">&copy; 2025 Fitz Haile. All rights reserved.</p>
           </div>
         </div>
       </footer>

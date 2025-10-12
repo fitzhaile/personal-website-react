@@ -63,14 +63,8 @@
   margin: 0;
 }
 
-/* Tablet and up: Horizontal layout */
+/* Tablet and up: Keep vertical layout */
 @media (min-width: 768px) {
-  .footer__content {
-    flex-direction: row;
-    justify-content: center;
-    gap: 3rem;
-  }
-  
   .footer__link {
     font-size: 1.0625rem;
   }
@@ -80,10 +74,6 @@
 @media (min-width: 1024px) {
   .footer {
     padding: 4rem 0 2rem;
-  }
-  
-  .footer__content {
-    gap: 4rem;
   }
 }
 
