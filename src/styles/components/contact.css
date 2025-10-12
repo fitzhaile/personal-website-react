@@ -4,9 +4,9 @@
  */
 
 .contact {
-  padding: 5rem 0;
-  color: white;
-  background-color: #1E3A8A;
+  padding: 3rem 0;
+  color: #1f2937;
+  background-color: #ffffff;
 }
 
 .contact__container {
@@ -17,15 +17,17 @@
 }
 
 .contact__title {
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-navy);
 }
 
 .contact__subtitle {
-  font-size: 1.25rem;
-  opacity: 0.9;
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .contact__actions {
@@ -36,21 +38,22 @@
 }
 
 .contact__button {
-  padding: 0.75rem 2rem;
-  font-size: 1.25rem;
+  padding: 0.625rem 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
-  background-color: var(--color-white);
-  color: var(--color-text);
+  background-color: var(--color-primary);
+  color: var(--color-white);
   /* border, border-radius, cursor, transition inherited from button defaults */
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
   text-decoration: none;
   display: inline-block;
 }
 
 .contact__button:hover {
-  background-color: #f3f4f6;
-  transform: scale(1.05);
+  background-color: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
 }
 
 .contact__button--secondary {
@@ -78,11 +81,15 @@
 
 @media (min-width: 768px) {
   .contact {
-    padding: 6rem 0;
+    padding: 3rem 0;
   }
 
   .contact__title {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
+  }
+  
+  .contact__subtitle {
+    font-size: 1.0625rem;
   }
 }
 
