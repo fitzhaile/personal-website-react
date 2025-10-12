@@ -20,7 +20,11 @@
 @import './base/defaults.css';
 
 /* ===== UTILITIES ===== */
-/* Reusable utility classes */
+/* Utility classes that map directly to CSS variables */
+@import './utilities/spacing.css';
+@import './utilities/colors.css';
+@import './utilities/typography.css';
+@import './utilities/effects.css';
 @import './utilities/containers.css';
 @import './utilities/layout.css';
 

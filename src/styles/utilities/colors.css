@@ -1,0 +1,23 @@
+/**
+ * ===== COLOR UTILITIES =====
+ * Utility classes that map directly to color variables
+ */
+
+/* Text colors */
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-base { color: var(--color-text); }
+.text-light { color: var(--color-text-light); }
+.text-white { color: var(--color-white); }
+
+/* Background colors */
+.bg-primary { background-color: var(--color-primary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-white { background-color: var(--color-white); }
+.bg-background { background-color: var(--color-background); }
+
+/* Border colors */
+.border-primary { border-color: var(--color-primary); }
+.border-secondary { border-color: var(--color-secondary); }
+.border-base { border-color: var(--color-border); }
+
