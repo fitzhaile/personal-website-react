@@ -27,7 +27,7 @@ export default function About({ handleContactTrigger }) {
         
         <div className="about__image-container">
           <img 
-            src={`${basePath}/img/my_nyc.jpeg`}
+            src={`${basePath}/img/me_nyc.jpeg`}
             alt="Fitz Haile" 
             className="about__image"
           />
