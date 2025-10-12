@@ -2,6 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 
+// Base path for GitHub Pages deployment
+const basePath = process.env.NODE_ENV === 'production' ? '/personal-website-react' : '';
+
 export default function HomePageClient({ section }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -177,7 +180,7 @@ export default function HomePageClient({ section }) {
             
             <div className="about__image-container">
               <img 
-                src="/img/IMG_2044.jpeg"
+                src={`${basePath}/img/IMG_2044.jpeg`}
                 alt="Fitz Haile" 
                 className="about__image"
               />
