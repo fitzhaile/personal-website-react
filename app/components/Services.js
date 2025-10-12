@@ -36,7 +36,7 @@ export default function Services() {
               className="service-card"
             >
               <h3 className="service-card__title">{service.title}</h3>
-              <p className="service-card__content" dangerouslySetInnerHTML={{ __html: service.content }} />
+              <div className="service-card__content" dangerouslySetInnerHTML={{ __html: service.content }} />
             </div>
           ))}
         </div>
