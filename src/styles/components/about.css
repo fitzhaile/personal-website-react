@@ -57,7 +57,7 @@
   box-shadow: var(--shadow-2xl);
   border: 3px solid var(--color-border); /* More visible gray border */
   width: 100%;
-  max-width: 550px;
+  max-width: 500px;
   height: 400px;
   margin: 0 auto; /* Center on mobile */
   background-color: #e5e7eb;
@@ -71,7 +71,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8;
 }
 
 /* Responsive: Two-column layout on large screens */
