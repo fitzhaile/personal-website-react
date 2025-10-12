@@ -4,8 +4,8 @@
  */
 
 .header {
-  background-color: white;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -14,7 +14,7 @@
 .header__container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--spacing-md);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,8 +22,8 @@
 }
 
 .header__logo {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-extrabold);
   letter-spacing: -0.025em;
   text-decoration: none;
   color: inherit;
@@ -36,7 +36,7 @@
 
 .header__logo-navy {
   color: var(--color-primary);
-  font-weight: 700;
+  font-weight: var(--font-bold);
 }
 
 .header__logo:focus {
@@ -47,15 +47,15 @@
 /* Desktop Navigation */
 .nav {
   display: none;
-  gap: 2rem;
-  font-size: 1.125rem;
-  font-weight: 500;
+  gap: var(--spacing-xl);
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
   align-items: center;
 }
 
 .nav__link {
-  font-weight: 500;
-  transition: color 0.3s;
+  font-weight: var(--font-medium);
+  transition: color var(--transition-base);
   text-decoration: none;
   color: inherit;
   outline: none;
@@ -71,12 +71,12 @@
 }
 
 .nav__link--cta {
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-sm) var(--spacing-md);
   color: var(--color-white);
   background-color: var(--color-primary);
-  /* border-radius inherited from button defaults (0.5rem) */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s;
+  /* border-radius inherited from button defaults */
+  box-shadow: var(--shadow-md);
+  transition: background-color var(--transition-base);
   outline: none;
 }
 
@@ -86,18 +86,18 @@
 
 .nav__link--cta:focus {
   outline: none;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 /* Mobile Menu Button */
 .header__menu-button {
   display: block;
-  padding: 0.5rem;
-  /* border-radius inherited from button defaults (0.5rem) */
+  padding: var(--spacing-sm);
+  /* border-radius inherited from button defaults */
   /* border, cursor, transition inherited from button defaults */
   color: var(--color-text);
   background: var(--color-white);
-  transition: background-color 0.3s;
+  transition: background-color var(--transition-base);
 }
 
 .header__menu-button:hover {
@@ -110,16 +110,16 @@
 }
 
 .header__menu-icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: var(--spacing-lg);
+  height: var(--spacing-lg);
 }
 
 /* Mobile Menu */
 .mobile-menu {
   display: block;
-  background-color: white;
+  background-color: var(--color-white);
   border-top: 1px solid #f3f4f6;
-  padding: 0.5rem 0;
+  padding: var(--spacing-sm) 0;
 }
 
 .mobile-menu--hidden {
@@ -128,12 +128,12 @@
 
 .mobile-menu__link {
   display: block;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 500;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
   text-decoration: none;
   color: inherit;
-  transition: background-color 0.3s;
+  transition: background-color var(--transition-base);
   outline: none;
 }
 
@@ -148,26 +148,26 @@
 
 .mobile-menu__link--cta {
   display: block;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 1rem 0;
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin: var(--spacing-sm) var(--spacing-md) 0;
   text-align: center;
   color: var(--color-white);
   background-color: var(--color-primary);
-  /* border-radius inherited from button defaults (0.5rem) */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  /* border-radius inherited from button defaults */
+  box-shadow: var(--shadow-md);
   text-decoration: none;
   outline: none;
 }
 
 .mobile-menu__link--cta:focus {
   outline: none;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 /* Responsive: Show desktop nav on medium+ screens */
 @media (min-width: 768px) {
   .header__logo {
-    font-size: 2.5rem;
+    font-size: var(--text-5xl);
   }
 
   .nav {
@@ -182,4 +182,3 @@
     display: none !important;
   }
 }
-

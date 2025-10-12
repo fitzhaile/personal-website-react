@@ -15,24 +15,24 @@
 
 .modal__content {
   background-color: var(--color-white);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2xl);
   max-width: 32rem;
   width: 100%;
-  margin: 1rem;
+  margin: var(--spacing-md);
 }
 
 .modal__title {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
   color: var(--color-secondary);
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
 }
 
 .modal__description {
   color: var(--color-text-light);
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-lg);
 }
 
 .modal__form {
@@ -41,8 +41,8 @@
 
 .modal__input {
   /* width, padding, border, border-radius, font-family, font-size, transition inherited from input defaults */
-  margin-bottom: 1rem;
-  font-size: 1rem; /* Override default to be explicit */
+  margin-bottom: var(--spacing-md);
+  font-size: var(--text-base); /* Override default to be explicit */
 }
 
 .modal__input:focus {
@@ -51,8 +51,8 @@
 
 .modal__textarea {
   /* width, padding, border, border-radius, font-family, font-size, transition, resize inherited from textarea defaults */
-  margin-bottom: 1.5rem;
-  font-size: 1rem; /* Override default to be explicit */
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--text-base); /* Override default to be explicit */
 }
 
 .modal__textarea:focus {
@@ -62,14 +62,14 @@
 .modal__actions {
   display: flex;
   justify-content: flex-end;
-  gap: 0.75rem;
+  gap: var(--spacing-sm);
 }
 
 .modal__button {
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-sm) var(--spacing-md);
   /* border, border-radius, cursor, transition inherited from button defaults */
-  font-weight: 500;
-  transition: all 0.2s;
+  font-weight: var(--font-medium);
+  transition: all var(--transition-fast);
 }
 
 .modal__button--close {
@@ -78,7 +78,7 @@
 }
 
 .modal__button--close:hover {
-  background-color: #d1d5db;
+  background-color: var(--color-border);
 }
 
 .modal__button--submit {
@@ -92,23 +92,22 @@
 
 .modal__success {
   text-align: center;
-  padding: 2rem 0;
+  padding: var(--spacing-xl) 0;
 }
 
 .modal__success-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: var(--text-5xl);
+  margin-bottom: var(--spacing-md);
 }
 
 .modal__success-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1E3A8A;
-  margin-bottom: 0.75rem;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
 }
 
 .modal__success-message {
   color: #374151;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-lg);
 }
-
