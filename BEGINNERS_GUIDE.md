@@ -665,7 +665,7 @@ Edit the array in the Services section of `src/App.jsx`:
 
 ### Your Project Documentation:
 - **README.md** - Project overview and getting started
-- **NEXTJS_MIGRATION.md** - Migration guide and SEO benefits
+- **BEGINNERS_GUIDE.md** - This file! Learning guide for React, Next.js, and BEM
 - **Inline Comments** - Every file has comprehensive comments!
 
 ## 🐛 Debugging Tips
