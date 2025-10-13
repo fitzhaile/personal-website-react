@@ -1,14 +1,28 @@
-# React Beginner's Guide for Your Website
+# Next.js & React Beginner's Guide for Your Website
 
-Welcome! This guide will help you understand how your React website works. 🎉
+Welcome! This guide will help you understand how your Next.js website works. 🎉
 
 ## 📁 File Structure Overview
 
 ```
 personal-website-react/
+├── app/                           ← Next.js App Router
+│   ├── layout.js                  ← Root layout (metadata, fonts)
+│   ├── [[...section]]/            ← Dynamic routes
+│   │   ├── page.js                ← Server component (SEO)
+│   │   └── HomePageClient.js      ← Client component (interactive)
+│   └── components/                ← Modular React components
+│       ├── Header.js              ← Navigation
+│       ├── Hero.js                ← Landing section
+│       ├── Services.js            ← Service cards
+│       ├── About.js               ← About section
+│       ├── Contact.js             ← CTA section
+│       ├── Footer.js              ← Footer
+│       └── ContactModal.js        ← Contact form
 ├── src/
 │   ├── styles/                    ← Modular CSS files
 │   │   ├── base/                  ← Global resets & defaults
+│   │   │   ├── variables.css      ← Design tokens
 │   │   │   ├── reset.css
 │   │   │   ├── typography.css
 │   │   │   └── defaults.css
@@ -21,28 +35,123 @@ personal-website-react/
 │   │   │   ├── footer.css
 │   │   │   └── modal.css
 │   │   ├── utilities/             ← Helper classes
+│   │   │   ├── spacing.css
+│   │   │   ├── colors.css
+│   │   │   ├── typography.css
+│   │   │   ├── effects.css
 │   │   │   ├── containers.css
 │   │   │   └── layout.css
 │   │   └── main.css               ← Imports all styles
-│   ├── App.jsx                    ← Main website component
-│   ├── main.jsx                   ← Entry point
-│   └── index.css                  ← Imports styles/main.css
-├── index.html                     ← HTML template
-├── package.json                   ← Dependencies
-└── vite.config.js                 ← Build tool config
+│   └── index.css                  ← Entry (imports main.css)
+├── public/                        ← Static assets
+│   ├── img/                       ← Images
+│   └── favicon-*.png              ← Favicons
+├── next.config.js                 ← Next.js config
+└── package.json                   ← Dependencies
 ```
 
 ## 🎯 How It All Connects
 
-1. **Browser loads** `index.html`
-2. **index.html** loads `src/main.jsx`
-3. **main.jsx** imports and renders `src/App.jsx`
-4. **main.jsx** also imports `src/index.css`
-5. **index.css** imports `styles/main.css`
-6. **main.css** imports all component styles
-7. **App.jsx** uses BEM class names that match the CSS
+1. **User visits** `yoursite.com/services`
+2. **Next.js** matches route to `app/[[...section]]/page.js`
+3. **page.js** (server) generates SEO metadata for "services"
+4. **page.js** renders `HomePageClient.js` component
+5. **HomePageClient.js** (client) renders all page components
+6. **Components** use modular files from `app/components/`
+7. **Styles** are imported from `src/index.css`
+8. **index.css** imports `main.css` which imports all component styles
+9. **Page scrolls** to the services section automatically
 
-Think of it like Russian nesting dolls - each file loads the next one.
+Think of it like this:
+- **Server Component** (page.js) = SEO brain, generates metadata
+- **Client Component** (HomePageClient.js) = Interactive body, handles clicks/scrolling
+- **Child Components** = Individual sections (Header, Hero, Services, etc.)
+
+## 🚀 Key Next.js Concepts
+
+### 1. Server vs. Client Components
+
+**What's the difference?**
+
+Next.js has TWO types of components:
+
+**Server Components** (default):
+- Run on the server (or at build time)
+- Can't use hooks like `useState` or `useEffect`
+- Can't handle browser events (clicks, etc.)
+- Perfect for SEO metadata and static content
+- Example: `app/[[...section]]/page.js`
+
+**Client Components** (marked with `'use client'`):
+- Run in the browser
+- CAN use hooks and handle events
+- Interactive features like modals, menus
+- Example: `app/[[...section]]/HomePageClient.js`
+
+**In your code:**
+```javascript
+// page.js - Server Component
+export async function generateMetadata({ params }) {
+  // Runs on server, generates SEO tags
+  return {
+    title: 'Services - Fitz Haile',
+    description: '...'
+  };
+}
+
+// HomePageClient.js - Client Component
+'use client'  // This line makes it a Client Component
+export default function HomePageClient({ section }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  // Can use hooks and handle clicks!
+}
+```
+
+### 2. File-Based Routing
+
+**What is it?**
+In Next.js, your file structure IS your routing!
+
+```
+app/
+└── [[...section]]/
+    ├── page.js        → Handles /, /services, /about, /contact
+```
+
+The `[[...section]]` is a "catch-all route" that matches:
+- `/` (home)
+- `/services`
+- `/about`
+- `/contact`
+
+### 3. Metadata for SEO
+
+**What is it?**
+Next.js lets you define unique SEO data for each page:
+
+```javascript
+export const metadata = {
+  title: 'About - Fitz Haile',
+  description: 'Learn about Fitz...',
+  openGraph: {
+    title: 'About',
+    description: '...',
+  }
+};
+```
+
+This generates proper `<title>`, `<meta>` tags that Google can crawl!
+
+### 4. Static Site Generation (SSG)
+
+**What is it?**
+Next.js pre-renders your pages at build time:
+
+```bash
+npm run build  # Generates static HTML files
+```
+
+Result: Instant page loads + SEO-friendly HTML!
 
 ## 🧩 Key React Concepts Explained
 
@@ -383,24 +492,53 @@ const greet = (name) => {
 
 ### Change Colors:
 
-**Option 1: Edit Color Constants in App.jsx**
-```jsx
-// src/App.jsx (top of file)
-const PRIMARY_NAVY = '#1E3A8A'      // Change this
-const SECONDARY_GREEN = '#059669'   // And this
-const BACKGROUND_LIGHT = '#f7f9fb'  // And this
+**Best way: Edit CSS Variables**
+```css
+/* src/styles/base/variables.css */
+:root {
+  --color-primary: #1E3A8A;    /* Change this - updates everywhere! */
+  --color-secondary: #059669;   /* And this */
+  --color-background: #f7f9fb;  /* And this */
+}
 ```
 
-**Option 2: Edit CSS Files Directly**
+Changing these once updates the entire site automatically!
+
+**Alternative: Find and replace**
 Find and replace color values in component CSS files:
 - `#1E3A8A` (navy) → your new color
 - `#059669` (green) → your new color
 
 ### Change Text Content:
-Find the section in `src/App.jsx` and edit the text directly:
+
+**Hero Section:**
 ```jsx
-<h1 className="hero__title">Your New Headline Here</h1>
-<p className="hero__subtitle">Your new description here</p>
+// app/components/Hero.js
+<h1 className="hero__title">
+  Your New Headline <span>Here</span>
+</h1>
+<p className="hero__subtitle">
+  Your new description here
+</p>
+```
+
+**About Section:**
+```jsx
+// app/components/About.js
+<h2 className="about__title">Your Title</h2>
+<p className="about__text">Your bio text...</p>
+```
+
+**Services:**
+```jsx
+// app/components/Services.js
+const services = [
+  { 
+    title: "Your Service", 
+    content: "<p>Description...</p><ul>...</ul>" 
+  },
+  // Add more...
+];
 ```
 
 ### Change Styles:
@@ -498,6 +636,12 @@ Edit the array in the Services section of `src/App.jsx`:
 
 ## 📚 Learning Resources
 
+### Next.js:
+- [Next.js Official Docs](https://nextjs.org/docs)
+- [Next.js Learn Course](https://nextjs.org/learn)
+- [App Router Guide](https://nextjs.org/docs/app)
+- [Server vs Client Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components)
+
 ### React Basics:
 - [React Official Tutorial](https://react.dev/learn)
 - [React in 100 Seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
@@ -512,6 +656,7 @@ Edit the array in the Services section of `src/App.jsx`:
 - [MDN CSS Guide](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [CSS Tricks](https://css-tricks.com/)
 - [Modern CSS](https://moderncss.dev/)
+- [CSS Variables Guide](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
 ### JavaScript:
 - [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
@@ -519,8 +664,9 @@ Edit the array in the Services section of `src/App.jsx`:
 - [ES6 Features](https://github.com/lukehoban/es6features)
 
 ### Your Project Documentation:
-- **MODULAR_CSS_GUIDE.md** - Complete guide to your CSS structure
 - **README.md** - Project overview and getting started
+- **NEXTJS_MIGRATION.md** - Migration guide and SEO benefits
+- **Inline Comments** - Every file has comprehensive comments!
 
 ## 🐛 Debugging Tips
 
@@ -550,17 +696,27 @@ Edit the array in the Services section of `src/App.jsx`:
 
 | Want to change... | Edit this file... |
 |------------------|-------------------|
-| Page content | `src/App.jsx` |
+| **Content** | |
+| Hero text | `app/components/Hero.js` |
+| Services text | `app/components/Services.js` |
+| About text | `app/components/About.js` |
+| Contact CTA | `app/components/Contact.js` |
+| Footer links | `app/components/Footer.js` |
+| Modal form | `app/components/ContactModal.js` |
+| SEO metadata | `app/[[...section]]/page.js` |
+| **Styles** | |
 | Header/navigation | `src/styles/components/header.css` |
 | Hero section | `src/styles/components/hero.css` |
 | Service cards | `src/styles/components/services.css` |
 | About section | `src/styles/components/about.css` |
-| Contact section | `src/styles/components/contact.css` |
+| Contact CTA | `src/styles/components/contact.css` |
 | Footer | `src/styles/components/footer.css` |
 | Modal popup | `src/styles/components/modal.css` |
-| Global resets | `src/styles/base/reset.css` |
+| **Global** | |
+| Colors/spacing | `src/styles/base/variables.css` |
+| Browser resets | `src/styles/base/reset.css` |
 | Fonts | `src/styles/base/typography.css` |
-| Default styles (buttons, inputs) | `src/styles/base/defaults.css` |
+| Default element styles | `src/styles/base/defaults.css` |
 
 ### CSS Class Name Patterns:
 
@@ -600,13 +756,33 @@ setValue(true)
 ## 🔥 Hot Tips
 
 - **Auto-reload works!** Just save your files - no refresh needed
+- **Next.js is smart** - Only rebuilds what changed for fast development
 - **BEM keeps styles isolated** - changes to one component won't break others
-- **Small files = easy to find** - each component has its own CSS file
-- **Comments are your friend** - all code is thoroughly commented
-- **Break things!** That's how you learn (you can always undo with Cmd+Z)
+- **Small files = easy to find** - each component has its own file
+- **Comments everywhere** - Every file has comprehensive inline comments
+- **CSS variables save time** - Change colors/spacing in one place
+- **Server vs Client matters** - Use Server for SEO, Client for interactivity
+- **Break things!** That's how you learn (Cmd+Z / Ctrl+Z to undo)
+
+## 💡 Next.js Tips
+
+1. **Always use 'use client' for hooks** - `useState`, `useEffect`, event handlers need it
+2. **Keep SEO in mind** - Update metadata in `page.js` for each section
+3. **Test both local and production** - `npm run dev` vs `npm run build`
+4. **Check the console** - Next.js gives helpful error messages
+5. **Read the comments** - Every file explains what it does!
 
 Remember: **It's okay to break things!** That's how you learn. You can always undo changes with Cmd+Z (Mac) or Ctrl+Z (Windows).
 
-Your website now uses **professional-grade architecture** with BEM and modular CSS! 🚀
+Your website now uses:
+- ✅ **Next.js 15** - Latest framework with App Router
+- ✅ **Server Components** - SEO-optimized metadata
+- ✅ **Client Components** - Interactive features
+- ✅ **Modular Architecture** - Easy to maintain and scale
+- ✅ **BEM CSS** - Professional styling methodology
+- ✅ **Design Tokens** - Consistent theming with CSS variables
+- ✅ **Comprehensive Comments** - Every file thoroughly documented
+
+**Professional-grade architecture** that's both powerful and maintainable! 🚀
 
 Happy coding! 🎉
