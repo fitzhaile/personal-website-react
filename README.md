@@ -293,7 +293,7 @@ Each URL generates unique metadata and scrolls to the appropriate section.
 - **Inline Comments** - Every file has comprehensive documentation
 - **Next.js Docs** - https://nextjs.org/docs
 - **React Docs** - https://react.dev/learn
-- **BEM Guide** - https://en.bem.info/
+- **BEM Guide** - https://getbem.com/
 
 ## Result
 
