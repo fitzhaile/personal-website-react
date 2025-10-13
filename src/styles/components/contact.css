@@ -1,13 +1,19 @@
 /**
  * ===== CONTACT COMPONENT =====
- * Contact/CTA section with action buttons
+ * Call-to-action section before footer
+ * Features:
+ * - Centered content with heading and CTA button
+ * - Light blue background for visual separation
+ * - Provides vertical spacing for proper section scrolling
+ * - Single primary action button
  */
 
+/* Main contact/CTA section */
 .contact {
-  padding: var(--spacing-3xl) 0 var(--spacing-4xl);
+  padding: var(--spacing-3xl) 0 var(--spacing-4xl); /* Extra bottom padding */
   color: var(--color-text);
-  background-color: #f0f4f8;
-  border-top: 2px solid #dbeafe;
+  background-color: #f0f4f8; /* Light blue-gray for subtle contrast */
+  border-top: 2px solid #dbeafe; /* Light blue border for separation */
 }
 
 .contact__container {

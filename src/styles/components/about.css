@@ -1,21 +1,28 @@
 /**
  * ===== ABOUT COMPONENT =====
- * About section with text and image
+ * About section with text content and profile photo
+ * Features:
+ * - Two-column layout on desktop (text left, photo right)
+ * - Single column on mobile (stacks vertically)
+ * - Underline-style CTA button
+ * - Bordered profile photo with shadow
  */
 
+/* Main about section */
 .about {
-  padding: var(--spacing-2xl) 0 var(--spacing-3xl);
+  padding: var(--spacing-2xl) 0 var(--spacing-3xl); /* Vertical padding */
   background-color: var(--color-white);
 }
 
+/* Container with responsive grid layout */
 .about__container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-2xl);
-  align-items: start; /* Align text to top of image */
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: var(--spacing-2xl); /* Space between text and image */
+  align-items: start; /* Align text to top of image for better visual balance */
 }
 
 .about__content {
@@ -34,43 +41,46 @@
   margin-bottom: var(--spacing-lg);
 }
 
+/* CTA button with underline style (instead of filled background) */
 .about__cta {
   display: inline-block;
   font-size: var(--text-lg);
   font-weight: var(--font-semibold);
-  color: var(--color-secondary);
-  background: transparent;
+  color: var(--color-secondary); /* Green text */
+  background: transparent; /* No background fill */
   /* border, cursor, transition inherited from button defaults */
   border: none; /* Reset default */
-  border-bottom: 2px solid var(--color-secondary); /* Specific underline style */
-  border-radius: 0; /* Remove rounded corners for straight border */
+  border-bottom: 2px solid var(--color-secondary); /* Green underline */
+  border-radius: 0; /* Remove rounded corners for clean straight border */
   transition: all var(--transition-base);
-  padding: 0;
+  padding: 0; /* No padding, just text with underline */
 }
 
 .about__cta:hover {
-  border-bottom-color: var(--color-text);
+  border-bottom-color: var(--color-text); /* Darken underline on hover */
 }
 
+/* Profile photo container */
 .about__image-container {
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-2xl);
-  border: 3px solid var(--color-border); /* More visible gray border */
+  border-radius: var(--radius-xl); /* 16px rounded corners */
+  box-shadow: var(--shadow-2xl); /* Strong shadow for depth */
+  border: 3px solid var(--color-border); /* Gray border for definition */
   width: 100%;
-  max-width: 500px;
-  height: 400px;
+  max-width: 500px; /* Maximum width */
+  height: 400px; /* Fixed height (landscape ratio) */
   margin: 0 auto; /* Center on mobile */
-  background-color: #e5e7eb;
+  background-color: #e5e7eb; /* Light gray placeholder */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  align-items: center; /* Center image vertically */
+  justify-content: center; /* Center image horizontally */
+  overflow: hidden; /* Crop image to container bounds */
 }
 
+/* Profile photo */
 .about__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Cover entire container while maintaining aspect ratio */
 }
 
 /* Responsive: Two-column layout on large screens */

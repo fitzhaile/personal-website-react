@@ -1,7 +1,24 @@
+/**
+ * ===== HEADER COMPONENT =====
+ * Sticky header with logo, desktop navigation, and mobile menu
+ * Handles navigation between sections with smooth scrolling
+ */
+
 'use client'
 
+// Base path for GitHub Pages deployment
 const basePath = process.env.NODE_ENV === 'production' ? '/personal-website-react' : '';
 
+/**
+ * Header component with responsive navigation
+ * 
+ * @param {Object} props - Component props
+ * @param {boolean} props.isMobileMenuOpen - Whether mobile menu is currently visible
+ * @param {Function} props.toggleMobileMenu - Function to toggle mobile menu visibility
+ * @param {Function} props.handleNavClick - Function to handle section navigation
+ * @param {Function} props.handleContactTrigger - Function to open contact modal
+ * @returns {JSX.Element} Header with navigation
+ */
 export default function Header({ 
   isMobileMenuOpen, 
   toggleMobileMenu, 
@@ -11,6 +28,7 @@ export default function Header({
   return (
     <header className="header">
       <div className="header__container">
+        {/* Logo with two-tone styling */}
         <a 
           href={`${basePath}/`}
           onClick={(e) => handleNavClick(e, 'hero', '/')}
@@ -20,6 +38,7 @@ export default function Header({
           <span className="header__logo-navy">Haile</span>
         </a>
         
+        {/* Desktop navigation */}
         <nav className="nav">
           <a href={`${basePath}/services`} onClick={(e) => handleNavClick(e, 'services', '/services')} className="nav__link">Services</a>
           <a href={`${basePath}/about`} onClick={(e) => handleNavClick(e, 'about', '/about')} className="nav__link">About</a>
@@ -32,9 +51,11 @@ export default function Header({
           </a>
         </nav>
         
+        {/* Mobile menu hamburger button */}
         <button 
           onClick={toggleMobileMenu} 
           className="header__menu-button"
+          aria-label="Toggle mobile menu"
         >
           <svg className="header__menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -42,6 +63,7 @@ export default function Header({
         </button>
       </div>
 
+      {/* Mobile navigation menu */}
       <div className={`mobile-menu ${isMobileMenuOpen ? '' : 'mobile-menu--hidden'}`}>
         <a href={`${basePath}/services`} onClick={(e) => handleNavClick(e, 'services', '/services')} className="mobile-menu__link">Services</a>
         <a href={`${basePath}/about`} onClick={(e) => handleNavClick(e, 'about', '/about')} className="mobile-menu__link">About</a>

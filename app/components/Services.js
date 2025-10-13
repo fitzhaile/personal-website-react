@@ -1,5 +1,15 @@
+/**
+ * ===== SERVICES COMPONENT =====
+ * Displays service offerings in a responsive grid layout
+ * Each service card contains a title, summary, and bullet points
+ */
+
 'use client'
 
+/**
+ * Service offerings data
+ * HTML content includes formatted paragraphs and unordered lists
+ */
 const services = [
   { 
     title: "Research & Insight Development", 
@@ -19,16 +29,25 @@ const services = [
   },
 ];
 
+/**
+ * Services section component
+ * Renders a grid of service cards with detailed descriptions
+ * 
+ * @returns {JSX.Element} Services section with grid layout
+ */
 export default function Services() {
   return (
     <section id="services" className="services">
       <div className="services__container">
+        {/* Section heading */}
         <h2 className="services__title">Data-Driven Consulting Services</h2>
 
+        {/* Section description */}
         <p className="services__subtitle">
           We specialize in transforming complex data challenges into clear, actionable strategies across four key pillars of organizational growth.
         </p>
 
+        {/* Responsive grid of service cards */}
         <div className="services__grid">
           {services.map((service, index) => (
             <div
@@ -36,6 +55,7 @@ export default function Services() {
               className="service-card"
             >
               <h3 className="service-card__title">{service.title}</h3>
+              {/* Using dangerouslySetInnerHTML for formatted HTML content */}
               <div className="service-card__content" dangerouslySetInnerHTML={{ __html: service.content }} />
             </div>
           ))}

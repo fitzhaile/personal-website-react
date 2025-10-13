@@ -1,42 +1,51 @@
 /**
  * ===== HEADER COMPONENT =====
- * Top navigation bar and logo
+ * Top navigation bar with logo and navigation links
+ * Features:
+ * - Sticky positioning (stays at top while scrolling)
+ * - Responsive navigation (hamburger menu on mobile, links on desktop)
+ * - Two-tone logo (green "Fitz" + navy "Haile")
+ * - CTA button for primary action
  */
 
+/* Main header container */
 .header {
   background-color: var(--color-white);
-  box-shadow: var(--shadow-sm);
-  position: sticky;
+  box-shadow: var(--shadow-sm); /* Subtle shadow for depth */
+  position: sticky; /* Stays at top when scrolling */
   top: 0;
-  z-index: 50;
+  z-index: 50; /* High z-index to appear above other content */
 }
 
+/* Inner container for header content with max-width constraint */
 .header__container {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 1280px; /* Prevent content from becoming too wide */
+  margin: 0 auto; /* Center the container */
   padding: 0 var(--spacing-md);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 5rem;
+  justify-content: space-between; /* Logo on left, nav/menu on right */
+  align-items: center; /* Vertical centering */
+  height: 5rem; /* Fixed height (80px) for consistent header size */
 }
 
+/* Logo text styling */
 .header__logo {
-  font-size: var(--text-2xl);
+  font-size: var(--text-2xl); /* Mobile size, increased on tablet+ */
   font-weight: var(--font-extrabold);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.025em; /* Tighter letter spacing for modern look */
   text-decoration: none;
   color: inherit;
-  outline: none;
+  outline: none; /* Remove default focus outline (custom styles handle accessibility) */
 }
 
+/* Two-tone logo colors */
 .header__logo-green {
-  color: var(--color-secondary);
+  color: var(--color-secondary); /* Green for "Fitz" */
 }
 
 .header__logo-navy {
-  color: var(--color-primary);
-  font-weight: var(--font-bold);
+  color: var(--color-primary); /* Navy for "Haile" */
+  font-weight: var(--font-bold); /* Slightly lighter weight for contrast */
 }
 
 .header__logo:focus {
@@ -44,10 +53,11 @@
   box-shadow: none;
 }
 
-/* Desktop Navigation */
+/* ===== DESKTOP NAVIGATION ===== */
+/* Hidden on mobile, shown on tablet+ screens */
 .nav {
-  display: none;
-  gap: var(--spacing-xl);
+  display: none; /* Hidden on mobile (shown via media query at 768px+) */
+  gap: var(--spacing-xl); /* Space between navigation items */
   font-size: var(--text-lg);
   font-weight: var(--font-medium);
   align-items: center;
@@ -89,9 +99,10 @@
   box-shadow: var(--shadow-md);
 }
 
-/* Mobile Menu Button */
+/* ===== MOBILE MENU BUTTON (Hamburger) ===== */
+/* Visible only on mobile, hidden on tablet+ screens */
 .header__menu-button {
-  display: block;
+  display: block; /* Shown on mobile (hidden via media query at 768px+) */
   padding: var(--spacing-sm);
   /* border-radius inherited from button defaults */
   /* border, cursor, transition inherited from button defaults */
@@ -101,7 +112,7 @@
 }
 
 .header__menu-button:hover {
-  background-color: #f3f4f6;
+  background-color: #f3f4f6; /* Subtle hover effect */
 }
 
 .header__menu-button:focus {
@@ -114,14 +125,16 @@
   height: var(--spacing-lg);
 }
 
-/* Mobile Menu */
+/* ===== MOBILE MENU DROPDOWN ===== */
+/* Dropdown navigation that appears when hamburger button is clicked */
 .mobile-menu {
   display: block;
   background-color: var(--color-white);
-  border-top: 1px solid #f3f4f6;
+  border-top: 1px solid #f3f4f6; /* Subtle separator from header */
   padding: var(--spacing-sm) 0;
 }
 
+/* Hidden state (toggled by JavaScript) */
 .mobile-menu--hidden {
   display: none;
 }
@@ -164,21 +177,26 @@
   box-shadow: var(--shadow-md);
 }
 
-/* Responsive: Show desktop nav on medium+ screens */
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+/* Tablet and larger: Switch from mobile to desktop navigation */
 @media (min-width: 768px) {
+  /* Make logo larger on tablet+ */
   .header__logo {
     font-size: var(--text-5xl);
   }
 
+  /* Show desktop navigation */
   .nav {
     display: flex;
   }
 
+  /* Hide mobile menu button */
   .header__menu-button {
     display: none;
   }
 
+  /* Hide mobile menu dropdown */
   .mobile-menu {
-    display: none !important;
+    display: none !important; /* !important to override JavaScript open state */
   }
 }

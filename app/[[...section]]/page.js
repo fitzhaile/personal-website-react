@@ -1,6 +1,21 @@
+/**
+ * ===== DYNAMIC ROUTING PAGE =====
+ * Server component that handles dynamic routing for section-based navigation
+ * Generates SEO-friendly metadata for each section and pre-renders static paths
+ * 
+ * Routes handled:
+ * - / (home)
+ * - /services
+ * - /about
+ * - /contact
+ */
+
 import HomePageClient from './HomePageClient';
 
-// Section metadata for SEO
+/**
+ * Section-specific metadata for SEO optimization
+ * Each section has unique title and description for better search engine visibility
+ */
 const sectionMeta = {
   home: {
     title: 'Fitzhugh Analytics - Data-driven Guidance',
@@ -20,8 +35,16 @@ const sectionMeta = {
   },
 };
 
-// Generate metadata for each route (Server Component)
+/**
+ * Generate dynamic metadata for each route
+ * This runs on the server and provides unique metadata for each section
+ * 
+ * @param {Object} props - Component props
+ * @param {Promise<Object>} props.params - Route parameters (async in Next.js 15)
+ * @returns {Object} Metadata object with title, description, and Open Graph data
+ */
 export async function generateMetadata({ params }) {
+  // Await params as required by Next.js 15
   const resolvedParams = await params;
   const section = resolvedParams.section?.[0] || 'home';
   const meta = sectionMeta[section] || sectionMeta.home;
@@ -37,18 +60,31 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// Generate static params for all sections
+/**
+ * Generate static paths for all sections at build time
+ * Required for static export (output: 'export' in next.config.js)
+ * 
+ * @returns {Array<Object>} Array of path objects for static generation
+ */
 export function generateStaticParams() {
   return [
-    { section: [] }, // home
-    { section: ['services'] },
-    { section: ['about'] },
-    { section: ['contact'] },
+    { section: [] },           // Home page
+    { section: ['services'] }, // Services section
+    { section: ['about'] },    // About section
+    { section: ['contact'] },  // Contact modal trigger
   ];
 }
 
-// Server Component that passes section to Client Component
+/**
+ * HomePage server component
+ * Extracts the section from route params and passes it to the client component
+ * 
+ * @param {Object} props - Component props
+ * @param {Promise<Object>} props.params - Route parameters (async in Next.js 15)
+ * @returns {JSX.Element} HomePageClient component with section prop
+ */
 export default async function HomePage({ params }) {
+  // Await params as required by Next.js 15
   const resolvedParams = await params;
   const section = resolvedParams.section?.[0] || 'home';
   
