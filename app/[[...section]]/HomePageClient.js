@@ -15,7 +15,6 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import About from '../components/About';
-import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 
@@ -152,7 +151,6 @@ export default function HomePageClient({ section }) {
         <Hero handleContactTrigger={handleContactTrigger} />
         <Services />
         <About handleContactTrigger={handleContactTrigger} />
-        <Contact handleContactTrigger={handleContactTrigger} />
       </main>
 
       {/* Footer with contact links */}
