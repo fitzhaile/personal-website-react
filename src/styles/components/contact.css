@@ -31,7 +31,6 @@
 }
 
 .contact__subtitle {
-  font-size: var(--text-base);
   color: var(--color-text-light);
   margin-bottom: var(--spacing-lg);
   line-height: var(--leading-relaxed);
@@ -42,25 +41,6 @@
   flex-direction: column;
   justify-content: center;
   gap: var(--spacing-md);
-}
-
-.contact__button {
-  padding: var(--spacing-sm) var(--spacing-lg);
-  font-size: var(--text-base);
-  font-weight: var(--font-semibold);
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  /* border, border-radius, cursor, transition inherited from button defaults */
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-base);
-  text-decoration: none;
-  display: inline-block;
-}
-
-.contact__button:hover {
-  background-color: #1e40af;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
 }
 
 .contact__button--secondary {

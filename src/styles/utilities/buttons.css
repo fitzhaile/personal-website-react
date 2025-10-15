@@ -1,0 +1,56 @@
+/**
+ * ===== BUTTONS =====
+ * Button base styles and size variations
+ * Reusable button classes for consistent UI
+ */
+
+/* ===== BASE BUTTON STYLES ===== */
+button, .button, .btn {
+  /* Reset default button styles */
+  font-size: var(--text-lg);
+  font-family: inherit;
+  font-weight: var(--font-semibold);
+  line-height: inherit;
+  cursor: pointer;
+  
+  /* Default button styling */
+  border: none;
+  color: var(--color-background);
+  background-color: var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  transition: all 0.3s ease;
+  
+  /* Prevent text selection on buttons */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+button:focus, .button:focus {
+  outline: 2px solid #1E3A8A; /* Navy focus outline */
+  outline-offset: 2px;
+}
+
+button:disabled, .button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== BUTTON SIZES ===== */
+/* Standard button size classes for consistency across the site */
+
+.button--sm, .btn--sm {
+  padding: var(--spacing-sm) var(--spacing-md); /* 8px 16px */
+  font-size: var(--text-sm); /* 14px */
+}
+
+.button--md, .btn--md {
+  padding: var(--spacing-md) var(--spacing-lg); /* 16px 24px */
+  font-size: var(--text-base); /* 16px */
+}
+
+.button--lg, .btn--lg {
+  padding: var(--spacing-lg) var(--spacing-xl); /* 24px 32px */
+  font-size: var(--text-xl); /* 20px */
+}
+

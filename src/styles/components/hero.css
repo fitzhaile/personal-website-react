@@ -36,7 +36,7 @@
   /* Subtle dot grid pattern with gradient - minimal, professional, data-inspired */
   background: 
     radial-gradient(circle, rgba(30, 58, 138, 0.08) 1px, transparent 1px),
-    linear-gradient(135deg, #f7f9fb 0%, rgba(5, 150, 105, 0.08) 50%, #f7f9fb 100%);
+    linear-gradient(135deg, #f7f9fb 0%, rgba(5, 150, 105, 0.06) 50%, #f7f9fb 100%);
   background-size: 24px 24px, 100% 100%;
   background-position: 0 0;
   
@@ -133,8 +133,6 @@
   padding: var(--spacing-md) var(--spacing-2xl); /* Generous padding for emphasis */
   font-size: var(--text-xl);
   font-weight: var(--font-semibold);
-  color: var(--color-white);
-  background-color: var(--color-primary); /* Navy */
   /* border, border-radius, cursor, transition inherited from button defaults */
   box-shadow: var(--shadow-lg); /* Strong shadow for prominence */
   transition: all var(--transition-base);

@@ -46,6 +46,7 @@ export default function ContactModal({
               {/* Name input */}
               <input
                 type="text"
+                name="name"
                 placeholder="Your Name"
                 className="modal__input"
                 required
@@ -54,6 +55,7 @@ export default function ContactModal({
               {/* Email input */}
               <input
                 type="email"
+                name="email"
                 placeholder="Your Email"
                 className="modal__input"
                 required
@@ -61,9 +63,11 @@ export default function ContactModal({
               
               {/* Message textarea */}
               <textarea
+                name="message"
                 placeholder="What's on your mind? Tell me about your data challenges..."
                 rows="4"
                 className="modal__textarea"
+                required
               />
               
               {/* Form action buttons */}
@@ -96,10 +100,10 @@ export default function ContactModal({
               I got your message and I'll get back to you within a day. Looking forward to chatting!
             </p>
             
-            {/* Close button (reloads page to reset state) */}
+            {/* Close button */}
             <button
               type="button"
-              onClick={() => window.location.reload()}
+              onClick={closeModal}
               className="modal__button modal__button--submit"
             >
               Close

@@ -10,6 +10,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
@@ -71,6 +72,8 @@ export default function HomePageClient({ section }) {
   const closeModal = () => {
     setIsModalOpen(false);
     setFormSubmitted(false);
+    // Navigate back to home page
+    window.history.pushState({}, '', `${basePath}/`);
   };
 
   /**
@@ -79,10 +82,24 @@ export default function HomePageClient({ section }) {
    * 
    * @param {Event} e - Form submit event
    */
-  const submitContactForm = (e) => {
+  const submitContactForm = async (e) => {
     e.preventDefault();
-    console.log("Form submitted successfully!");
-    setFormSubmitted(true);
+    
+    try {
+      // Replace these with your EmailJS credentials
+      await emailjs.sendForm(
+        'service_c55tz7q',      // Get from EmailJS dashboard
+        'template_ah3wpom',     // Get from EmailJS dashboard
+        e.target,
+        'RO8Qhf_Wq9ydawbyo'       // Get from EmailJS dashboard
+      );
+      
+      console.log("Email sent successfully!");
+      setFormSubmitted(true);
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      alert('Failed to send message. Please try again or email me directly at fitz@fitzhaile.com');
+    }
   };
 
   /**

@@ -36,6 +36,17 @@
   text-decoration: none;
   color: inherit;
   outline: none; /* Remove default focus outline (custom styles handle accessibility) */
+  margin: 0; /* Reset h1 default margin */
+}
+
+.header__logo a {
+  text-decoration: none;
+  color: inherit;
+  outline: none; /* Remove focus outline */
+}
+
+.header__logo a:focus {
+  outline: none; /* Remove blue border on click/focus */
 }
 
 /* Two-tone logo colors */
@@ -81,17 +92,7 @@
 }
 
 .nav__link--cta {
-  padding: var(--spacing-sm) var(--spacing-md);
-  color: var(--color-white);
-  background-color: var(--color-primary);
-  /* border-radius inherited from button defaults */
-  box-shadow: var(--shadow-md);
-  transition: background-color var(--transition-base);
-  outline: none;
-}
-
-.nav__link--cta:hover {
-  background-color: #1e40af;
+  font-size: var(--text-lg);
 }
 
 .nav__link--cta:focus {

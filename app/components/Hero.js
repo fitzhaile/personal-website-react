@@ -18,9 +18,9 @@ export default function Hero({ handleContactTrigger }) {
     <section id="hero" className="hero">
       <div className="hero__container">
         {/* Main headline with highlighted text */}
-        <h1 className="hero__title">
+        <div className="hero__title">
           Data-Driven Strategy <span className="hero__title-highlight">That works.</span>
-        </h1>
+        </div>
 
         {/* Value proposition subtitle */}
         <p className="hero__subtitle">

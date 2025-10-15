@@ -21,6 +21,7 @@
 
 /* ===== UTILITIES ===== */
 /* Utility classes that map directly to CSS variables */
+@import './utilities/buttons.css';
 @import './utilities/spacing.css';
 @import './utilities/colors.css';
 @import './utilities/typography.css';

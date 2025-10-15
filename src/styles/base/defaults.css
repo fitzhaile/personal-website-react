@@ -4,35 +4,6 @@
  * These create a consistent design system across the site
  */
 
-/* ===== BUTTONS ===== */
-button, .button {
-  /* Reset default button styles */
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  cursor: pointer;
-  
-  /* Default button styling */
-  border: none;
-  border-radius: var(--radius-sm);
-  padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
-  
-  /* Prevent text selection on buttons */
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-button:focus, .button:focus {
-  outline: 2px solid #1E3A8A; /* Navy focus outline */
-  outline-offset: 2px;
-}
-
-button:disabled, .button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 /* ===== LINKS ===== */
 a {
   color: inherit;

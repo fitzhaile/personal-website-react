@@ -28,15 +28,16 @@ export default function Header({
   return (
     <header className="header">
       <div className="header__container">
-        {/* Logo with two-tone styling */}
-        <a 
-          href={`${basePath}/`}
-          onClick={(e) => handleNavClick(e, 'hero', '/')}
-          className="header__logo"
-        >
-          <span className="header__logo-green">Fitz</span>{' '}
-          <span className="header__logo-navy">Haile</span>
-        </a>
+        {/* Logo with two-tone styling - H1 for SEO */}
+        <h1 className="header__logo">
+          <a 
+            href={`${basePath}/`}
+            onClick={(e) => handleNavClick(e, 'hero', '/')}
+          >
+            <span className="header__logo-green">Fitz</span>{' '}
+            <span className="header__logo-navy">Haile</span>
+          </a>
+        </h1>
         
         {/* Desktop navigation */}
         <nav className="nav">
@@ -45,7 +46,7 @@ export default function Header({
           <a 
             href={`${basePath}/contact`}
             onClick={handleContactTrigger}
-            className="nav__link--cta button"
+            className="nav__link--cta button button--sm"
           >
             Get Started
           </a>
