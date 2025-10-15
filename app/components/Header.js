@@ -6,8 +6,8 @@
 
 'use client'
 
-// Base path for GitHub Pages deployment
-const basePath = process.env.NODE_ENV === 'production' ? '/personal-website-react' : '';
+// Base path for GitHub Pages deployment (empty for custom domain)
+const basePath = '';
 
 /**
  * Header component with responsive navigation

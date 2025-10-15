@@ -18,10 +18,8 @@ import About from '../components/About';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 
-// Base path for GitHub Pages deployment
-// In development: empty string
-// In production: '/personal-website-react'
-const basePath = process.env.NODE_ENV === 'production' ? '/personal-website-react' : '';
+// Base path for GitHub Pages deployment (empty for custom domain)
+const basePath = '';
 
 /**
  * HomePageClient component manages the entire application state and interactions

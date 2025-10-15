@@ -19,10 +19,10 @@ const nextConfig = {
   // Disable React strict mode to suppress hydration warnings from browser extensions
   reactStrictMode: false,
   
-  // Base path configuration for GitHub Pages project repository
-  // Uses environment variable for production builds, empty string for local development
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  // Base path configuration for GitHub Pages
+  // Leave empty when using custom domain, use '/personal-website-react' only for github.io subdomain
+  // basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  // assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
 }
 
 module.exports = nextConfig
