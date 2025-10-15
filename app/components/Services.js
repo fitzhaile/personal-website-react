@@ -44,7 +44,7 @@ export default function Services() {
 
         {/* Section description */}
         <p className="services__subtitle">
-          Secialize in transforming complex data challenges into clear, actionable strategies across four key pillars of organizational growth.
+          Specialize in transforming complex data challenges into clear, actionable strategies across four key pillars of organizational growth.
         </p>
 
         {/* Responsive grid of service cards */}
