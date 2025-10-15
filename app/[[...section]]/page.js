@@ -18,20 +18,20 @@ import HomePageClient from './HomePageClient';
  */
 const sectionMeta = {
   home: {
-    title: 'Fitzhugh Analytics - Data-driven Guidance',
-    description: 'Expert strategic guidance to transform challenges into measurable growth and sustainable success.',
+    title: 'Fitz Haile - Data Driven Decision Making',
+    description: 'Strategic guidance to transform data into measurable growth and smarter decision making.',
   },
   services: {
-    title: 'Services - Fitzhugh Analytics',
+    title: 'Services - Fitz Haile',
     description: 'Data-driven consulting services including Google Analytics strategy, data governance, fundraising BI, and operational tools.',
   },
   about: {
-    title: 'About - Fitzhugh Analytics',
-    description: 'Learn about Fitz Haile and Fitzhugh Consulting. Over 15 years of experience in scalable growth and turnaround management.',
+    title: 'About - Fitz Haile',
+    description: 'Learn about Fitz Haile and Fitz Haile Consulting. Over 15 years of experience in scalable growth and turnaround management.',
   },
   contact: {
-    title: 'Contact - Fitzhugh Analytics',
-    description: 'Get in touch with Fitzhugh Analytics. Schedule a free discovery call to explore how we can help your business.',
+    title: 'Contact - Fitz Haile',
+    description: 'Get in touch with Fitz Haile. Schedule a free discovery call to explore how we can help your business.',
   },
 };
 
