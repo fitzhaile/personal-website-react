@@ -12,7 +12,7 @@
  */
 const services = [
   { 
-    title: "Donor & Idustry Insight", 
+    title: "Donor & Industry Insight", 
     content: "<p>Turn data into direction — uncovering patterns, opportunities, and actionable insights.</p><ul><li>Conduct industry and donor analysis to identify sector-based fundraising potential.</li><li>Design donor surveys to inform pricing and engagement strategies.</li><li>Analyze caller characteristics and behavior to improve service outcomes.</li></ul>" 
   },
   { 
@@ -44,7 +44,7 @@ export default function Services() {
 
         {/* Section description */}
         <p className="services__subtitle">
-          Specialize in transforming complex data challenges into clear, actionable strategies across four key pillars of organizational growth.
+          I specialize in transforming complex data challenges into clear, actionable strategies across four key pillars of organizational growth.
         </p>
 
         {/* Responsive grid of service cards */}
