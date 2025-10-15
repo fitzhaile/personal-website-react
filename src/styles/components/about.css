@@ -14,31 +14,46 @@
   background-color: var(--color-white);
 }
 
-/* Container with responsive grid layout */
+/* Container with responsive layout */
 .about__container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
-  display: grid;
-  grid-template-columns: 1fr; /* Single column on mobile */
-  gap: var(--spacing-2xl); /* Space between text and image */
-  align-items: start; /* Align text to top of image for better visual balance */
 }
 
 .about__content {
-  /* Text content container */
+  /* Text content container - text flows naturally around the image */
+}
+
+/* Clearfix for floated image */
+.about__content::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .about__title {
   font-size: var(--text-3xl);
   font-weight: var(--font-bold);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  clear: both; /* Prevents wrapping around floated image */
 }
 
 .about__text {
   font-size: var(--text-lg);
   color: var(--color-text-light);
   margin-bottom: var(--spacing-lg);
+}
+
+.about__greeting {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid rgba(30, 58, 138, 0.15); /* Subtle navy border */
+  display: block; /* Force it to be on its own line */
+  overflow: hidden; /* Makes it wrap around the float properly */
 }
 
 /* CTA button with underline style (instead of filled background) */
@@ -62,13 +77,13 @@
 
 /* Profile photo container */
 .about__image-container {
-  border-radius: var(--radius-xl); /* 16px rounded corners */
-  box-shadow: var(--shadow-2xl); /* Strong shadow for depth */
-  border: 3px solid var(--color-border); /* Gray border for definition */
+  border-radius: var(--radius-lg); /* Smaller rounded corners */
+  box-shadow: var(--shadow-lg); /* Lighter shadow for smaller size */
+  border: 2px solid var(--color-border); /* Thinner border */
   width: 100%;
-  max-width: 500px; /* Maximum width */
-  height: 400px; /* Fixed height (landscape ratio) */
-  margin: 0 auto; /* Center on mobile */
+  max-width: 200px; /* Very compact on mobile */
+  height: 200px; /* Square aspect ratio */
+  margin: 0 auto var(--spacing-lg) auto; /* Center on mobile, space below */
   background-color: #e5e7eb; /* Light gray placeholder */
   display: flex;
   align-items: center; /* Center image vertically */
@@ -83,7 +98,7 @@
   object-fit: cover; /* Cover entire container while maintaining aspect ratio */
 }
 
-/* Responsive: Two-column layout on large screens */
+/* Responsive: Tablet and desktop - text wraps around image */
 @media (min-width: 768px) {
   .about {
     padding: var(--spacing-3xl) 0 var(--spacing-3xl);
@@ -92,11 +107,16 @@
   .about__title {
     font-size: var(--text-4xl);
   }
-}
-
-@media (min-width: 1024px) {
-  .about__container {
-    grid-template-columns: repeat(2, 1fr);
+  
+  .about__image-container {
+    float: left; /* Float image to the left */
+    margin: 0 var(--spacing-2xl) var(--spacing-lg) 0; /* Space on right and bottom */
+    max-width: 220px; /* Very compact for maximum text space */
+    height: 220px; /* Square for compact footprint */
+  }
+  
+  .about__cta {
+    clear: both; /* Button appears below floated content */
   }
 }
 

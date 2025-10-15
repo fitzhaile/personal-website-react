@@ -21,18 +21,32 @@ export default function About({ handleContactTrigger }) {
   return (
     <section id="about" className="about">
       <div className="about__container">
-        {/* Text content column */}
         <div className="about__content">
-          <h2 className="about__title">Hi, I'm Fitz</h2>
+          {/* Profile photo - floats to the left, text wraps around it */}
+          <div className="about__image-container">
+            <img 
+              src={`${basePath}/img/me_nyc.jpeg`}
+              alt="Fitz Haile" 
+              className="about__image"
+            />
+          </div>
           
-          {/* Career background paragraph */}
+          <p className="about__greeting">Hi, I'm Fitz</p>
+          
           <p className="about__text">
-            Fitz Haile is a Savannah-based data and analytics consultant who helps organizations turn information into insight. He began his career at the Creative Coast Alliance as an economic analyst and later co-executive director before spending a decade in New York and San Francisco leading web and software development teams, including at SurveyMonkey.
+          I'm an independent data and analytics consultant based in Savannah, GA, helping organizations make sense of their data and use it to make smarter decisions.
           </p>
           
-          {/* Specializations and community involvement paragraph */}
           <p className="about__text">
-            Fitz specializes in Google Analytics, data quality management, and visualization—using clean, reliable data to measure performance and inform strategy. A founding member of the Metro Savannah Rotary Club, he remains deeply engaged in the Savannah community.
+          My career began in economic development, creating methods to identify and analyze local industries, using large datasets to understand economic patterns and produce reporting that helped substantiate emerging sectors and attract funding.
+          </p>
+          
+          <p className="about__text">
+          I later spent several years in New York and San Francisco building content management systems and the infrastructure behind them—tools that helped organizations organize and deliver information both to the web and within larger applications. That work gave me a strong foundation for how I now approach managing and structuring datasets, combining technical understanding with clear, practical analysis.
+          </p>
+
+          <p className="about__text">
+          Today, I help organizations bring consistency and clarity to their data, turning complex information into insight that supports stronger strategy, clearer communication, and more confident decision-making. My work blends analytical rigor with an appreciation for the systems that keep information reliable, usable, and ready to put to work.
           </p>
           
           {/* Call-to-action button */}
@@ -42,15 +56,6 @@ export default function About({ handleContactTrigger }) {
           >
             Let's Talk →
           </button>
-        </div>
-        
-        {/* Profile photo column */}
-        <div className="about__image-container">
-          <img 
-            src={`${basePath}/img/me_nyc.jpeg`}
-            alt="Fitz Haile" 
-            className="about__image"
-          />
         </div>
       </div>
     </section>

@@ -12,20 +12,20 @@
  */
 const services = [
   { 
-    title: "Research & Insight Development", 
-    content: "<p>Turned data into direction — uncovering patterns, opportunities, and actionable insights.</p><ul><li>Conducted industry and donor analysis to identify sector-based fundraising potential.</li><li>Designed donor surveys to inform pricing and engagement strategies.</li><li>Analyzed caller characteristics and behavior with Tableau to improve service outcomes.</li></ul>" 
+    title: "Donor & Idustry Insight", 
+    content: "<p>Turn data into direction — uncovering patterns, opportunities, and actionable insights.</p><ul><li>Conduct industry and donor analysis to identify sector-based fundraising potential.</li><li>Design donor surveys to inform pricing and engagement strategies.</li><li>Analyze caller characteristics and behavior to improve service outcomes.</li></ul>" 
   },
   { 
-    title: "Google Analytics & Measurement", 
-    content: "<p>Measured what matters, translating web and campaign data into meaningful results.</p><ul><li>Measured campaign performance via acquisition and funnel analysis in Google Analytics.</li><li>Built backend Google Analytics infrastructure for a new fundraising platform.</li><li>Created performance reports to guide marketing and outreach decisions.</li></ul>" 
+    title: "Google Analytics & Campaign Insight", 
+    content: "<p>Measure what matters, translating web and campaign data into meaningful results.</p><ul><li>Measure campaign performance via acquisition and funnel analysis in Google Analytics.</li><li>Build backend Google Analytics infrastructure for a new fundraising platform.</li><li>Create performance reports to guide marketing and outreach decisions.</li></ul>" 
   },
   { 
     title: "Data Management & Quality Control", 
-    content: "<p>Ensured clean, consistent, and reliable data across complex organizational systems.</p><ul><li>Identified and corrected data quality issues in large, multi-source databases.</li><li>Developed and enforced consistent data collection and entry standards.</li><li>Managed and refined datasets to support accurate and repeatable analysis.</li></ul>" 
+    content: "<p>Ensure clean, consistent, and reliable data across complex organizational systems.</p><ul><li>Identify and correct data quality issues in large, multi-source databases.</li><li>Develop and enforce consistent data collection and entry standards.</li><li>Manage and refine datasets to support accurate and repeatable analysis.</li></ul>" 
   },
   { 
     title: "Systems & Process Optimization", 
-    content: "<p>Improved how teams work by aligning tools, communication, and workflows for better outcomes.</p><ul><li>Advocated for and implemented organization-wide communication and project management platforms.</li><li>Improved data workflows to strengthen cross-department collaboration.</li><li>Streamlined reporting processes to reduce errors and improve efficiency.</li></ul>" 
+    content: "<p>Improve how teams work by aligning tools, communication, and workflows for better outcomes.</p><ul><li>Advocate for and implement organization-wide communication and project management platforms.</li><li>Improve data workflows to strengthen cross-department collaboration.</li><li>Streamline reporting processes to reduce errors and improve efficiency.</li></ul>" 
   },
 ];
 
