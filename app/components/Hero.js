@@ -16,6 +16,11 @@
 export default function Hero({ handleContactTrigger }) {
   return (
     <section id="hero" className="hero">
+      {/* Simple decorative shapes for visual interest */}
+      <div className="hero__shape hero__shape--1"></div>
+      <div className="hero__shape hero__shape--2"></div>
+      <div className="hero__shape hero__shape--3"></div>
+      
       <div className="hero__container">
         {/* Main headline with highlighted text */}
         <h1 className="hero__title">

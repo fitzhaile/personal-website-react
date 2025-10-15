@@ -5,16 +5,88 @@
  * - Large headline with highlighted text
  * - Subtitle/value proposition
  * - Primary CTA button
- * - Subtle gradient background for visual interest
+ * - Optional background image
+ * 
+ * BACKGROUND IMAGE RECOMMENDATIONS:
+ * Look for images on Unsplash (free, high quality):
+ * 1. Search: "workspace desk aerial view" - clean, professional desk shots
+ * 2. Search: "office space minimal" - modern, simple office environments
+ * 3. Search: "laptop workspace" - focused workspace shots
+ * 4. Search: "abstract blue gradient" - subtle, non-distracting patterns
+ * 
+ * Image guidelines:
+ * - Should be SUBTLE (not busy) - text needs to be readable
+ * - Light/bright images work best (or use dark overlay)
+ * - Avoid stock-looking posed photos
+ * - 1920x1080px or larger recommended
+ * 
+ * To add your image:
+ * 1. Save it to /public/img/ (e.g., hero-bg.jpg)
+ * 2. Uncomment the background-image line below
+ * 3. Adjust overlay opacity if needed
  */
 
 /* Main hero section */
 .hero {
   padding: var(--spacing-3xl) 0;
   text-align: center;
-  /* Diagonal gradient from gray to light blue and back - subtle but adds depth */
-  background: linear-gradient(135deg, #f8f9fa 0%, #dbeafe 50%, #f8f9fa 100%);
   position: relative;
+  overflow: hidden;
+  
+  /* Large soft data point circles with warm gradient */
+  background:
+    /* Large soft circles - like data points on a chart */
+    radial-gradient(circle at 20% 30%, rgba(30, 58, 138, 0.15) 0%, transparent 30%),
+    radial-gradient(circle at 80% 40%, rgba(5, 150, 105, 0.12) 0%, transparent 30%),
+    radial-gradient(circle at 50% 80%, rgba(30, 58, 138, 0.1) 0%, transparent 25%),
+    /* Warm cream gradient base */
+    linear-gradient(135deg, #fefaf5 0%, #f4f8f5 100%);
+  
+  /* Bottom border to separate from next section */
+  border-bottom: 1px solid rgba(30, 58, 138, 0.1);
+  
+  /* PREVIOUS VERSION - horizontal grid lines: */
+  /*
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 49px,
+      rgba(30, 58, 138, 0.06) 49px,
+      rgba(30, 58, 138, 0.06) 50px
+    ),
+    linear-gradient(to bottom, #fef8f3 0%, #f5f9f7 100%);
+  */
+  
+  /* PREVIOUS VERSION - diagonal trend lines: */
+  /* 
+  background: 
+    repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 80px,
+      rgba(30, 58, 138, 0.09) 80px,
+      rgba(30, 58, 138, 0.09) 82px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 100px,
+      rgba(5, 150, 105, 0.09) 100px,
+      rgba(5, 150, 105, 0.00) 102px
+    ),
+    linear-gradient(135deg, #fdfbf7 0%, #f0f7f4 50%, #faf8f5 100%);
+  */
+  
+  /* UNCOMMENT TO USE BACKGROUND IMAGE INSTEAD: */
+  /* 
+  background-image: 
+    linear-gradient(rgba(248, 249, 250, 0.85), rgba(248, 249, 250, 0.85)),
+    url('/img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  */
 }
 
 /* Container to constrain width and add horizontal padding */
@@ -22,6 +94,8 @@
   max-width: 896px; /* Narrower than page width for better readability */
   margin: 0 auto; /* Center horizontally */
   padding: 0 var(--spacing-md); /* Horizontal padding for mobile */
+  position: relative; /* Ensure content appears above decorative shapes */
+  z-index: 1;
 }
 
 /* Main headline */
