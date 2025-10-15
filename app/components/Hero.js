@@ -19,12 +19,12 @@ export default function Hero({ handleContactTrigger }) {
       <div className="hero__container">
         {/* Main headline with highlighted text */}
         <div className="hero__title">
-          Data-Driven Strategy <span className="hero__title-highlight">That works.</span>
+          Make smarter decisions. <span className="hero__title-highlight">I can help.</span>
         </div>
 
         {/* Value proposition subtitle */}
         <p className="hero__subtitle">
-          I help organizations turn their data into actionable insights—building analytics systems, measuring what matters, and making better decisions.
+          I help organizations turn their data into actionable insights. Building analytics systems, measuring what matters, and making smarter decisions.
         </p>
 
         {/* Primary call-to-action button */}
