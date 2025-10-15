@@ -20,6 +20,9 @@ export const metadata = {
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   
   // Open Graph metadata for social media sharing
@@ -45,6 +48,9 @@ export default function RootLayout({ children }) {
         
         {/* Inter font family with multiple weights */}
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        
+        {/* Web App Manifest for PWA support */}
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body>{children}</body>
     </html>
