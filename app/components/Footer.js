@@ -46,7 +46,7 @@ export default function Footer() {
         
         {/* Copyright notice */}
         <div className="footer__bottom">
-          <p className="footer__copyright">&copy; 2025 Fitz Haile. All rights reserved.</p>
+          <p className="footer__copyright">&copy; {new Date().getFullYear()} Fitz Haile. All rights reserved.</p>
         </div>
       </div>
     </footer>
