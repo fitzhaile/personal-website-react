@@ -34,11 +34,11 @@ export default function ContactModal({
         {!formSubmitted ? (
           <>
             {/* Modal heading */}
-            <h3 className="modal__title">Give me a shout</h3>
+            <h3 className="modal__title">Let's Connect</h3>
             
             {/* Introduction text */}
             <p className="modal__description">
-              Let me know what's on your mind. I'll be in touch shortly.
+              Drop me a note about what you're working on—I usually respond within a day.
             </p>
             
             {/* Contact form */}
@@ -61,7 +61,7 @@ export default function ContactModal({
               
               {/* Message textarea */}
               <textarea
-                placeholder="Tell us about your project..."
+                placeholder="What's on your mind? Tell me about your data challenges..."
                 rows="4"
                 className="modal__textarea"
               />
@@ -89,11 +89,11 @@ export default function ContactModal({
           /* Show success message after form submission */
           <div className="modal__success">
             {/* Success heading */}
-            <h3 className="modal__success-title">Thank You!</h3>
+            <h3 className="modal__success-title">Thanks for reaching out!</h3>
             
             {/* Success message */}
             <p className="modal__success-message">
-              Your inquiry has been received. We will be in touch within 24 hours.
+              I got your message and I'll get back to you within a day. Looking forward to chatting!
             </p>
             
             {/* Close button (reloads page to reset state) */}
