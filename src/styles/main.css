@@ -32,7 +32,6 @@
 /* ===== COMPONENTS ===== */
 /* Individual UI components in alphabetical order for easy finding */
 @import './components/about.css';
-@import './components/contact.css';
 @import './components/footer.css';
 @import './components/header.css';
 @import './components/hero.css';

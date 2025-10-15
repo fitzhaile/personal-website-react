@@ -16,7 +16,6 @@ personal-website-react/
 │       ├── Hero.js                ← Landing section
 │       ├── Services.js            ← Service cards
 │       ├── About.js               ← About section
-│       ├── Contact.js             ← CTA section
 │       ├── Footer.js              ← Footer
 │       └── ContactModal.js        ← Contact form
 ├── src/
@@ -31,7 +30,6 @@ personal-website-react/
 │   │   │   ├── hero.css
 │   │   │   ├── services.css
 │   │   │   ├── about.css
-│   │   │   ├── contact.css
 │   │   │   ├── footer.css
 │   │   │   └── modal.css
 │   │   ├── utilities/             ← Helper classes
@@ -398,7 +396,6 @@ Your styles are split into logical files for better organization:
 - **hero.css** - Main banner styles
 - **services.css** - Service cards styles
 - **about.css** - About section styles
-- **contact.css** - Contact section styles
 - **footer.css** - Footer styles
 - **modal.css** - Contact form popup styles
 
@@ -700,7 +697,6 @@ Edit the array in the Services section of `src/App.jsx`:
 | Hero text | `app/components/Hero.js` |
 | Services text | `app/components/Services.js` |
 | About text | `app/components/About.js` |
-| Contact CTA | `app/components/Contact.js` |
 | Footer links | `app/components/Footer.js` |
 | Modal form | `app/components/ContactModal.js` |
 | SEO metadata | `app/[[...section]]/page.js` |
@@ -709,7 +705,6 @@ Edit the array in the Services section of `src/App.jsx`:
 | Hero section | `src/styles/components/hero.css` |
 | Service cards | `src/styles/components/services.css` |
 | About section | `src/styles/components/about.css` |
-| Contact CTA | `src/styles/components/contact.css` |
 | Footer | `src/styles/components/footer.css` |
 | Modal popup | `src/styles/components/modal.css` |
 | **Global** | |

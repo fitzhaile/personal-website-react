@@ -7,7 +7,7 @@ A modern, SEO-optimized consulting website built with **Next.js 15**, React 19, 
 - ✅ **SEO-Optimized** - Each section has its own crawlable URL (`/`, `/services`, `/about`, `/contact`)
 - ✅ **Server-Side Rendering** - Instant page loads with unique metadata for every route
 - ✅ **Static Site Generation** - Blazing-fast performance, deploy anywhere
-- ✅ **Modular Components** - 7 separate files for easy maintenance
+- ✅ **Modular Components** - 6 separate files for easy maintenance
 - ✅ **BEM CSS Architecture** - No style conflicts, professional methodology
 - ✅ **CSS Design Tokens** - Change colors/spacing globally in one place
 - ✅ **Comprehensive Documentation** - Inline comments in every file
@@ -96,7 +96,6 @@ personal-website-react/
 │       ├── Hero.js                # Landing section
 │       ├── Services.js            # Service cards
 │       ├── About.js               # About section
-│       ├── Contact.js             # CTA section
 │       ├── Footer.js              # Footer with links
 │       └── ContactModal.js        # Contact form modal
 ├── src/
@@ -111,7 +110,6 @@ personal-website-react/
 │   │   │   ├── hero.css
 │   │   │   ├── services.css
 │   │   │   ├── about.css
-│   │   │   ├── contact.css
 │   │   │   ├── footer.css
 │   │   │   └── modal.css
 │   │   ├── utilities/             # Utility classes
@@ -210,7 +208,6 @@ Edit the component files in `app/components/`:
 - **Hero Section** → `app/components/Hero.js`
 - **Services** → `app/components/Services.js` (service data array)
 - **About** → `app/components/About.js`
-- **Contact CTA** → `app/components/Contact.js`
 - **Footer** → `app/components/Footer.js`
 - **Contact Modal** → `app/components/ContactModal.js`
 
@@ -222,7 +219,6 @@ Edit component styles in their respective files:
 - Hero section → `src/styles/components/hero.css`
 - Services cards → `src/styles/components/services.css`
 - About section → `src/styles/components/about.css`
-- Contact/CTA section → `src/styles/components/contact.css`
 - Footer → `src/styles/components/footer.css`
 - Modal → `src/styles/components/modal.css`
 

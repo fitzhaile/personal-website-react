@@ -74,8 +74,8 @@ export default function HomePageClient({ section }) {
   };
 
   /**
-   * Handle contact form submission
-   * Currently logs to console and shows success message
+   * Handle contact form submission via EmailJS
+   * Sends email and shows success message on completion
    * 
    * @param {Event} e - Form submit event
    */
@@ -83,12 +83,12 @@ export default function HomePageClient({ section }) {
     e.preventDefault();
     
     try {
-      // Replace these with your EmailJS credentials
+      // Send email using EmailJS
       await emailjs.sendForm(
-        'service_c55tz7q',      // Get from EmailJS dashboard
-        'template_ah3wpom',     // Get from EmailJS dashboard
+        'service_c55tz7q',      // EmailJS service ID
+        'template_ah3wpom',     // EmailJS template ID
         e.target,
-        'RO8Qhf_Wq9ydawbyo'       // Get from EmailJS dashboard
+        'RO8Qhf_Wq9ydawbyo'       // EmailJS public key
       );
       
       console.log("Email sent successfully!");

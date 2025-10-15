@@ -11,7 +11,7 @@ const basePath = '';
 
 /**
  * About section component
- * Two-column layout: text content on left, photo on right (stacks on mobile)
+ * Magazine-style layout: text wraps around a small floated photo (top-left)
  * 
  * @param {Object} props - Component props
  * @param {Function} props.handleContactTrigger - Function to open contact modal

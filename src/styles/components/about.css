@@ -2,9 +2,9 @@
  * ===== ABOUT COMPONENT =====
  * About section with text content and profile photo
  * Features:
- * - Two-column layout on desktop (text left, photo right)
- * - Single column on mobile (stacks vertically)
- * - Underline-style CTA button
+ * - Magazine-style layout with text wrapping around floated photo
+ * - Photo floats left on desktop, centers on mobile
+ * - Custom greeting with bottom border
  * - Bordered profile photo with shadow
  */
 
