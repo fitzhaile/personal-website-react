@@ -27,7 +27,7 @@ export default function Header({
 }) {
   return (
     <header className="header">
-      <div className="header__container">
+      <div className="container container--header">
         {/* Logo with two-tone styling - H1 for SEO */}
         <h1 className="header__logo">
           <a 

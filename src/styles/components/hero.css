@@ -87,14 +87,7 @@
   */
 }
 
-/* Container to constrain width and add horizontal padding */
-.hero__container {
-  max-width: 896px; /* Narrower than page width for better readability */
-  margin: 0 auto; /* Center horizontally */
-  padding: 0 var(--spacing-md); /* Horizontal padding for mobile */
-  position: relative; /* Ensure content appears above decorative shapes */
-  z-index: 1;
-}
+/* Container styles handled by .container--hero modifier in containers.css */
 
 /* Main headline */
 .hero__title {

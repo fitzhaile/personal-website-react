@@ -14,24 +14,20 @@
   background-color: var(--color-background); /* Light gray background */
 }
 
-.services__container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
+/* Container styles handled by base .container in containers.css */
 
 .services__title {
-  font-size: 1.875rem;
-  font-weight: 700;
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
 }
 
 .services__subtitle {
-  font-size: 1.125rem;
+  font-size: var(--text-lg);
   color: var(--color-text-light);
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: var(--spacing-2xl);
   max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
@@ -84,17 +80,17 @@
 }
 
 .service-card__title {
-  font-size: 1.375rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--color-navy);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
   line-height: 1.3;
 }
 
 .service-card__content {
   color: var(--color-text-light);
   line-height: 1.7;
-  font-size: 1rem;
+  font-size: var(--text-base);
 }
 
 /* Style paragraphs inside cards */
@@ -127,16 +123,12 @@
 }
 
 .service-card__content strong {
-  color: var(--color-navy);
-  font-weight: 600;
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
 }
 
 /* Responsive: Grid layouts */
-@media (min-width: 640px) {
-  .services__container {
-    padding: 0 1.5rem;
-  }
-}
+/* Container responsive padding handled by .container in containers.css */
 
 @media (min-width: 768px) {
   .services {
@@ -144,7 +136,7 @@
   }
 
   .services__title {
-    font-size: 2.25rem;
+    font-size: var(--text-4xl);
   }
 
   .services__grid {
@@ -154,9 +146,7 @@
 }
 
 @media (min-width: 1024px) {
-  .services__container {
-    padding: 0 2rem;
-  }
+  /* Container responsive padding handled by .container in containers.css */
 
   .services__grid {
     grid-template-columns: repeat(2, 1fr); /* 2x2 grid for 4 cards - balanced layout */
@@ -170,11 +160,11 @@
   }
 
   .service-card__title {
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
   }
   
   .service-card__content {
-    font-size: 1.0625rem;
+    font-size: var(--text-lg);
   }
 }
 

@@ -16,7 +16,7 @@
 export default function Hero({ handleContactTrigger }) {
   return (
     <section id="hero" className="hero">
-      <div className="hero__container">
+      <div className="container container--hero">
         {/* Main headline with highlighted text */}
         <div className="hero__title">
           Make smarter decisions. <span className="hero__title-highlight">I can help.</span>

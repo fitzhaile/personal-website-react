@@ -20,7 +20,7 @@ const basePath = '';
 export default function About({ handleContactTrigger }) {
   return (
     <section id="about" className="about">
-      <div className="about__container">
+      <div className="container">
         <div className="about__content">
           {/* Profile photo - floats to the left, text wraps around it */}
           <div className="about__image-container">

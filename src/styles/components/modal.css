@@ -43,18 +43,10 @@
   margin-bottom: var(--spacing-lg);
 }
 
-.modal__form {
-  /* Form container */
-}
-
 .modal__input {
   /* width, padding, border, border-radius, font-family, font-size, transition inherited from input defaults */
   margin-bottom: var(--spacing-md);
   font-size: var(--text-base); /* Override default to be explicit */
-}
-
-.modal__input:focus {
-  /* Focus styles inherited from input defaults */
 }
 
 .modal__textarea {
@@ -62,10 +54,6 @@
   margin-bottom: var(--spacing-lg);
   font-size: var(--text-base); /* Override default to be explicit */
   min-height: 150px;
-}
-
-.modal__textarea:focus {
-  /* Focus styles inherited from textarea defaults */
 }
 
 .modal__actions {
@@ -82,8 +70,8 @@
 }
 
 .modal__button--close {
-  background-color: #e5e7eb;
-  color: #374151;
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-700);
 }
 
 .modal__button--close:hover {
@@ -117,6 +105,6 @@
 }
 
 .modal__success-message {
-  color: #374151;
+  color: var(--color-gray-700);
   margin-bottom: var(--spacing-lg);
 }

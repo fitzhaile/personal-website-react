@@ -15,7 +15,7 @@
 export default function Footer() {
   return (
     <footer id="contact" className="footer">
-      <div className="footer__container">
+      <div className="container">
         {/* Contact links section */}
         <div className="footer__content">
           {/* LinkedIn profile link */}

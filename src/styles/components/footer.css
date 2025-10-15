@@ -11,17 +11,13 @@
 
 /* Main footer section */
 .footer {
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: var(--color-gray-50); /* Light gray background */
   color: var(--color-text);
   padding: var(--spacing-2xl) 0 var(--spacing-lg); /* Vertical padding */
   border-top: 2px solid var(--color-border); /* Clear separation from content above */
 }
 
-.footer__container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
+/* Container styles handled by base .container in containers.css */
 
 .footer__content {
   display: flex;
@@ -66,7 +62,7 @@
 
 .footer__copyright {
   font-size: var(--text-sm);
-  color: #6b7280;
+  color: var(--color-gray-500);
   margin: 0;
 }
 

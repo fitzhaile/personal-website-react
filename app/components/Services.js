@@ -38,7 +38,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="services">
-      <div className="services__container">
+      <div className="container">
         {/* Section heading */}
         <h2 className="services__title">Consulting Services</h2>
 

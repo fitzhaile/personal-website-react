@@ -1,16 +1,35 @@
 /**
- * ===== CONTAINER UTILITIES =====
- * Reusable container classes for layout
+ * ===== CONTAINER BLOCK =====
+ * Base container pattern with modifiers for different contexts
+ * BEM: Block with modifiers (e.g., .container--hero)
  */
 
+/* Base container block - shared styles */
 .container {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
 }
 
+/* Hero modifier - narrower, centered text */
+.container--hero {
+  max-width: 896px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header modifier - flexbox layout */
+.container--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+
+/* Utility modifiers for optional use */
 .container--narrow {
   max-width: 896px;
 }

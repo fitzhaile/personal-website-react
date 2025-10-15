@@ -17,16 +17,7 @@
   z-index: 50; /* High z-index to appear above other content */
 }
 
-/* Inner container for header content with max-width constraint */
-.header__container {
-  max-width: 1280px; /* Prevent content from becoming too wide */
-  margin: 0 auto; /* Center the container */
-  padding: 0 var(--spacing-md);
-  display: flex;
-  justify-content: space-between; /* Logo on left, nav/menu on right */
-  align-items: center; /* Vertical centering */
-  height: 5rem; /* Fixed height (80px) for consistent header size */
-}
+/* Container styles handled by .container--header modifier in containers.css */
 
 /* Logo text styling */
 .header__logo {
@@ -35,18 +26,12 @@
   letter-spacing: -0.025em; /* Tighter letter spacing for modern look */
   text-decoration: none;
   color: inherit;
-  outline: none; /* Remove default focus outline (custom styles handle accessibility) */
   margin: 0; /* Reset h1 default margin */
 }
 
 .header__logo a {
   text-decoration: none;
   color: inherit;
-  outline: none; /* Remove focus outline */
-}
-
-.header__logo a:focus {
-  outline: none; /* Remove blue border on click/focus */
 }
 
 /* Two-tone logo colors */
@@ -59,7 +44,11 @@
   font-weight: var(--font-bold); /* Slightly lighter weight for contrast */
 }
 
-.header__logo:focus {
+/* Remove all focus outlines from logo (consolidated) */
+.header__logo,
+.header__logo a,
+.header__logo:focus,
+.header__logo a:focus {
   outline: none;
   box-shadow: none;
 }
@@ -79,20 +68,21 @@
   transition: color var(--transition-base);
   text-decoration: none;
   color: inherit;
-  outline: none;
 }
 
 .nav__link:hover {
   color: var(--color-text);
 }
 
+.nav__link--cta {
+  font-size: var(--text-lg);
+}
+
+/* Nav link focus styles (consolidated) */
+.nav__link:focus,
 .nav__link:focus {
   outline: none;
   box-shadow: none;
-}
-
-.nav__link--cta {
-  font-size: var(--text-lg);
 }
 
 .nav__link--cta:focus {
@@ -113,7 +103,7 @@
 }
 
 .header__menu-button:hover {
-  background-color: #f3f4f6; /* Subtle hover effect */
+  background-color: var(--color-gray-100); /* Subtle hover effect */
 }
 
 .header__menu-button:focus {
@@ -131,7 +121,7 @@
 .mobile-menu {
   display: block;
   background-color: var(--color-white);
-  border-top: 1px solid #f3f4f6; /* Subtle separator from header */
+  border-top: 1px solid var(--color-gray-100); /* Subtle separator from header */
   padding: var(--spacing-sm) 0;
 }
 
@@ -148,16 +138,10 @@
   text-decoration: none;
   color: inherit;
   transition: background-color var(--transition-base);
-  outline: none;
 }
 
 .mobile-menu__link:hover {
-  background-color: #f9fafb;
-}
-
-.mobile-menu__link:focus {
-  outline: none;
-  box-shadow: none;
+  background-color: var(--color-gray-50);
 }
 
 .mobile-menu__link--cta {
@@ -170,11 +154,16 @@
   /* border-radius inherited from button defaults */
   box-shadow: var(--shadow-md);
   text-decoration: none;
+}
+
+/* Mobile menu link focus styles (consolidated) */
+.mobile-menu__link:focus,
+.mobile-menu__link--cta:focus {
   outline: none;
+  box-shadow: none;
 }
 
 .mobile-menu__link--cta:focus {
-  outline: none;
   box-shadow: var(--shadow-md);
 }
 
