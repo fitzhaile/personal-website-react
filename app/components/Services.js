@@ -40,11 +40,11 @@ export default function Services() {
     <section id="services" className="services">
       <div className="services__container">
         {/* Section heading */}
-        <h2 className="services__title">Data-Driven Consulting Services</h2>
+        <h2 className="services__title">Consulting Services</h2>
 
         {/* Section description */}
         <p className="services__subtitle">
-          We specialize in transforming complex data challenges into clear, actionable strategies across four key pillars of organizational growth.
+          Secialize in transforming complex data challenges into clear, actionable strategies across four key pillars of organizational growth.
         </p>
 
         {/* Responsive grid of service cards */}
