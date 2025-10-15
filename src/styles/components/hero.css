@@ -115,6 +115,7 @@
 /* Highlighted portion of headline (green color) */
 .hero__title-highlight {
   color: var(--color-secondary); /* Green accent */
+  display: block;
 }
 
 /* Subtitle/value proposition */
