@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
-    "build": "NEXT_PUBLIC_BASE_PATH=/personal-website-react next build",
-    "export": "NEXT_PUBLIC_BASE_PATH=/personal-website-react next build",
-    "deploy": "NEXT_PUBLIC_BASE_PATH=/personal-website-react next build && touch out/.nojekyll && npx gh-pages -d out --dotfiles",
+    "build": "next build",
+    "export": "next build",
+    "deploy": "next build && touch out/.nojekyll && npx gh-pages -d out --dotfiles",
     "start": "next start",
     "lint": "next lint"
   },
