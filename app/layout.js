@@ -9,7 +9,7 @@ import '../src/index.css'
 // Global metadata for SEO and social sharing
 export const metadata = {
   title: 'Fitz Haile - Data Driven Decision Making',
-  description: 'Expert strategic guidance to transform challenges into measurable growth and sustainable success.',
+  description: 'Independent data and analytics consultant helping organizations turn complex data into actionable insights and smarter decisions.',
   keywords: ['analytics', 'consulting', 'data strategy', 'business intelligence'],
   authors: [{ name: 'Fitz Haile' }],
   
@@ -28,7 +28,7 @@ export const metadata = {
   // Open Graph metadata for social media sharing
   openGraph: {
     title: 'Fitz Haile',
-    description: 'Expert strategic guidance to transform challenges into measurable growth and sustainable success.',
+    description: 'Independent data and analytics consultant helping organizations turn complex data into actionable insights and smarter decisions.',
     type: 'website',
   },
 }

@@ -19,19 +19,19 @@ import HomePageClient from './HomePageClient';
 const sectionMeta = {
   home: {
     title: 'Fitz Haile - Data Driven Decision Making',
-    description: 'Strategic guidance to transform data into measurable growth and smarter decision making.',
+    description: 'Independent data and analytics consultant helping organizations turn complex data into actionable insights and smarter decisions.',
   },
   services: {
     title: 'Services - Fitz Haile',
-    description: 'Data-driven consulting services including Google Analytics strategy, data governance, fundraising BI, and operational tools.',
+    description: 'Data consulting services: donor & industry insights, Google Analytics expertise, data management, and systems optimization.',
   },
   about: {
     title: 'About - Fitz Haile',
-    description: 'Learn about Fitz Haile and Fitz Haile Consulting. Over 15 years of experience in scalable growth and turnaround management.',
+    description: 'Independent data and analytics consultant in Savannah, GA. Background in economic development, content systems, and data strategy.',
   },
   contact: {
     title: 'Contact - Fitz Haile',
-    description: 'Get in touch with Fitz Haile. Schedule a free discovery call to explore how we can help your business.',
+    description: 'Get in touch with Fitz Haile. Send a message to discuss your data challenges and analytics needs.',
   },
 };
 
