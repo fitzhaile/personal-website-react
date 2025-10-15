@@ -1,0 +1,122 @@
+/**
+ * ===== MODAL COMPONENT =====
+ * Contact form modal popup overlay
+ * Features:
+ * - Full-screen dark overlay backdrop
+ * - Centered modal content box
+ * - Contact form with name, email, message fields
+ * - Success state after form submission
+ * - Responsive sizing (full-width on mobile with margins)
+ */
+
+/* Modal overlay (backdrop) */
+.modal {
+  position: fixed; /* Cover entire viewport */
+  inset: 0; /* Shorthand for top: 0, right: 0, bottom: 0, left: 0 */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  z-index: 99; /* High z-index to appear above all content */
+}
+
+/* Modal content box */
+.modal__content {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl); /* Internal spacing */
+  border-radius: var(--radius-md); /* Rounded corners */
+  box-shadow: var(--shadow-2xl); /* Strong shadow for elevation */
+  max-width: 36rem; /* 576px maximum width */
+  width: 100%; /* Full width up to max-width */
+  margin: var(--spacing-md); /* Margin from screen edges on mobile */
+}
+
+.modal__title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.modal__description {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+.modal__form {
+  /* Form container */
+}
+
+.modal__input {
+  /* width, padding, border, border-radius, font-family, font-size, transition inherited from input defaults */
+  margin-bottom: var(--spacing-md);
+  font-size: var(--text-base); /* Override default to be explicit */
+}
+
+.modal__input:focus {
+  /* Focus styles inherited from input defaults */
+}
+
+.modal__textarea {
+  /* width, padding, border, border-radius, font-family, font-size, transition, resize inherited from textarea defaults */
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--text-base); /* Override default to be explicit */
+  min-height: 150px;
+}
+
+.modal__textarea:focus {
+  /* Focus styles inherited from textarea defaults */
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+}
+
+.modal__button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  /* border, border-radius, cursor, transition inherited from button defaults */
+  font-weight: var(--font-medium);
+  transition: all var(--transition-fast);
+}
+
+.modal__button--close {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.modal__button--close:hover {
+  background-color: var(--color-border);
+}
+
+.modal__button--submit {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.modal__button--submit:hover {
+  background-color: #1e40af;
+}
+
+.modal__success {
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.modal__success-icon {
+  font-size: var(--text-5xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.modal__success-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.modal__success-message {
+  color: #374151;
+  margin-bottom: var(--spacing-lg);
+}

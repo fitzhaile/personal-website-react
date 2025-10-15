@@ -20,17 +20,17 @@ export default function Contact({ handleContactTrigger }) {
     <section id="cta" className="contact">
       <div className="contact__container">
         {/* Section heading */}
-        <h2 className="contact__title">Let's Work Together</h2>
+        <h2 className="contact__title">Ready to Get Started?</h2>
         
         {/* Description text */}
         <p className="contact__subtitle">
-          I'd love to hear about your challenges and explore how we can turn your data into a real advantage.
+          Let's discuss how data-driven insights can transform your organization.
         </p>
         
         {/* Action button */}
         <div className="contact__actions">
           <button onClick={handleContactTrigger} className="contact__button">
-            Start a Conversation
+            Schedule a Free Consultation
           </button>
         </div>
       </div>
