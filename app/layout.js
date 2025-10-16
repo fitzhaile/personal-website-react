@@ -9,7 +9,7 @@ import '../src/index.css'
 // Global metadata for SEO and social sharing
 export const metadata = {
   title: 'Fitz Haile - Data Driven Decision Making - Savannah, GA',
-  description: 'Independent data and analytics consultant helping organizations leverage their data to create actionable insights and make smarter decisions.',
+  description: 'Fitz Haile is an independent data and analytics consultant in Savannah, GA - helping organizations turn their data into more informed, smarter decisions.',
   keywords: ['analytics', 'consulting', 'data strategy', 'data analytics', 'business intelligence'],
   authors: [{ name: 'Fitz Haile' }],
 
@@ -28,7 +28,7 @@ export const metadata = {
   // Open Graph metadata for social media sharing
   openGraph: {
     title: 'Fitz Haile',
-    description: 'Independent data and analytics consultant helping organizations turn complex data into actionable insights and smarter decisions.',
+    description: 'Fitz Haile is an independent data and analytics consultant in Savannah, GA - helping organizations turn their data into more informed, smarter decisions.',
     type: 'website',
   },
 }
