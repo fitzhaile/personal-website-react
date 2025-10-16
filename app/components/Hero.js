@@ -24,7 +24,7 @@ export default function Hero({ handleContactTrigger }) {
 
         {/* Value proposition subtitle */}
         <p className="hero__subtitle">
-          I help organizations turn their data into actionable insights. Building analytics systems, measuring what matters, and making smarter decisions.
+        I help people find the story their data tells and the meaning behind it — leading to more informed, confident decisions.
         </p>
 
         {/* Primary call-to-action button */}
