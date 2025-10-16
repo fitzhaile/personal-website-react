@@ -9,10 +9,10 @@ import '../src/index.css'
 // Global metadata for SEO and social sharing
 export const metadata = {
   title: 'Fitz Haile - Data Driven Decision Making - Savannah, GA',
-  description: 'Independent data and analytics consultant helping organizations turn complex data into actionable insights and smarter decisions.',
+  description: 'Independent data and analytics consultant helping organizations leverage thier data to create actionable insights and make smarter decisions.',
   keywords: ['analytics', 'consulting', 'data strategy', 'data analytics', 'business intelligence'],
   authors: [{ name: 'Fitz Haile' }],
-  
+
   // Custom favicon configuration (PNG format for better browser compatibility)
   icons: {
     icon: [
