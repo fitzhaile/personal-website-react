@@ -34,8 +34,8 @@ export default function Header({
             href={`${basePath}/`}
             onClick={(e) => handleNavClick(e, 'hero', '/')}
           >
-            <span className="header__logo-green">Fitz</span>{' '}
-            <span className="header__logo-navy">Haile</span>
+            <span className="header__logo-link-text header__logo-link-text--first-part" >Fitz</span>{' '}
+            <span className="header__logo-link-text header__logo-link-text--second-part">Haile</span>
           </a>
         </h1>
         

@@ -32,17 +32,19 @@
 .header__logo a {
   text-decoration: none;
   color: inherit;
+  font-weight: var(--font-bold); /* Slightly lighter weight for contrast */
+}
+
+.header__logo-link-text--first-part {
+  color: var(--color-primary); /* Navy for "Haile" */
 }
 
 /* Two-tone logo colors */
-.header__logo-green {
+.header__logo-link-text--second-part {
   color: var(--color-secondary); /* Green for "Fitz" */
 }
 
-.header__logo-navy {
-  color: var(--color-primary); /* Navy for "Haile" */
-  font-weight: var(--font-bold); /* Slightly lighter weight for contrast */
-}
+
 
 /* Remove all focus outlines from logo (consolidated) */
 .header__logo,

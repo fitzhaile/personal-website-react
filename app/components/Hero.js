@@ -19,7 +19,7 @@ export default function Hero({ handleContactTrigger }) {
       <div className="container container--hero">
         {/* Main headline with highlighted text */}
         <div className="hero__title">
-          Make smarter decisions. <span className="hero__title-highlight">I can help.</span>
+          Make smarter, <span className="hero__title-highlight">data-driven <span class="hero__title-highlight-break">decisions.</span></span>
         </div>
 
         {/* Value proposition subtitle */}

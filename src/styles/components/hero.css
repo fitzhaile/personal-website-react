@@ -155,4 +155,8 @@
   .hero__subtitle {
     font-size: var(--text-2xl); /* 24px */
   }
+
+  .hero__title-highlight {
+    display: block;
+  }
 }
