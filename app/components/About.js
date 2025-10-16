@@ -46,7 +46,7 @@ export default function About({ handleContactTrigger }) {
           </p>
 
           <p className="about__text">
-          Today, I help organizations bring consistency and clarity to their data, turning complex information into insight that supports stronger strategy, clearer communication, and more confident decision-making. My work blends analytical rigor with an appreciation for the systems that keep information reliable, usable, and ready to put to work.
+          Today, I help organizations bring consistency and clarity to their data, turning complex information into insight that supports stronger strategy, clearer communication, and more confident decision making. My work blends analytical rigor with an appreciation for the systems that keep information reliable and usable - and the storytelling that turns it into strategic insight people can act on.
           </p>
           
           {/* Call-to-action button */}
