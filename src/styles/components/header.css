@@ -121,15 +121,41 @@
 /* ===== MOBILE MENU DROPDOWN ===== */
 /* Dropdown navigation that appears when hamburger button is clicked */
 .mobile-menu {
-  display: block;
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.35s ease, opacity 0.25s ease, visibility 0s linear 0s;
+  overflow: hidden;
+  visibility: visible;
+}
+
+.mobile-menu__content {
+  min-height: 0;
+  overflow: hidden;
   background-color: var(--color-white);
   border-top: 1px solid var(--color-gray-100); /* Subtle separator from header */
+  border-bottom: 2px solid var(--color-gray-200); /* Clear bottom separation */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mobile-menu__inner {
   padding: var(--spacing-sm) 0;
 }
 
 /* Hidden state (toggled by JavaScript) */
 .mobile-menu--hidden {
-  display: none;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction when hidden */
+  visibility: hidden; /* Ensure complete invisibility when collapsed */
+  transition: grid-template-rows 0.35s ease, opacity 0.25s ease, visibility 0s linear 0.35s; /* Delay visibility until animation completes */
+}
+
+.mobile-menu--hidden .mobile-menu__content {
+  background-color: transparent; /* Remove background when hidden */
+  border-top-color: transparent; /* Hide top border when hidden */
+  border-bottom-color: transparent; /* Hide bottom border when hidden */
+  box-shadow: none; /* Remove shadow when hidden */
 }
 
 .mobile-menu__link {

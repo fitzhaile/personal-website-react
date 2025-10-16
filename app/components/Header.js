@@ -66,15 +66,19 @@ export default function Header({
 
       {/* Mobile navigation menu */}
       <div className={`mobile-menu ${isMobileMenuOpen ? '' : 'mobile-menu--hidden'}`}>
-        <a href={`${basePath}/services`} onClick={(e) => handleNavClick(e, 'services', '/services')} className="mobile-menu__link">Services</a>
-        <a href={`${basePath}/about`} onClick={(e) => handleNavClick(e, 'about', '/about')} className="mobile-menu__link">About</a>
-        <a 
-          href={`${basePath}/contact`}
-          onClick={handleContactTrigger}
-          className="mobile-menu__link--cta"
-        >
-          Get Started
-        </a>
+        <div className="mobile-menu__content">
+          <div className="mobile-menu__inner">
+            <a href={`${basePath}/services`} onClick={(e) => handleNavClick(e, 'services', '/services')} className="mobile-menu__link">Services</a>
+            <a href={`${basePath}/about`} onClick={(e) => handleNavClick(e, 'about', '/about')} className="mobile-menu__link">About</a>
+            <a 
+              href={`${basePath}/contact`}
+              onClick={handleContactTrigger}
+              className="mobile-menu__link--cta"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
       </div>
     </header>
   );
