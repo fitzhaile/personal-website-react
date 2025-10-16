@@ -34,11 +34,11 @@ export default function ContactModal({
         {!formSubmitted ? (
           <>
             {/* Modal heading */}
-            <h3 className="modal__title">Let's Connect</h3>
+            <h3 className="modal__title">Give me a shout</h3>
             
             {/* Introduction text */}
             <p className="modal__description">
-              Drop me a note about what you're working on—I usually respond within a day.
+              Drop me a note about what you're working on...
             </p>
             
             {/* Contact form */}
@@ -64,7 +64,7 @@ export default function ContactModal({
               {/* Message textarea */}
               <textarea
                 name="message"
-                placeholder="What's on your mind? Tell me about your data challenges..."
+                placeholder="What's on your mind?"
                 rows="4"
                 className="modal__textarea"
                 required
