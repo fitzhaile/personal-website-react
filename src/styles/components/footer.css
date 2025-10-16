@@ -48,6 +48,21 @@
   color: var(--color-secondary);
 }
 
+/* Remove focus outline and maintain consistent link colors */
+.footer__link:focus,
+.footer__link:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.footer__link:visited {
+  color: var(--color-primary);
+}
+
+.footer__link:visited:hover {
+  color: var(--color-secondary);
+}
+
 .footer__icon {
   width: var(--spacing-lg);
   height: var(--spacing-lg);
