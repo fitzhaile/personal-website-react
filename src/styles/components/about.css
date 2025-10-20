@@ -50,7 +50,7 @@
 /* CTA button with underline style (instead of filled background) */
 .about__cta {
   display: inline-block;
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   font-weight: var(--font-semibold);
   color: var(--color-secondary); /* Green text */
   background: transparent; /* No background fill */

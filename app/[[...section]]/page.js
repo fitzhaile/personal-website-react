@@ -8,6 +8,7 @@
  * - /services
  * - /about
  * - /contact
+ * - /case-studies/:slug
  */
 
 import HomePageClient from './HomePageClient';
@@ -33,6 +34,10 @@ const sectionMeta = {
     title: 'Contact - Fitz Haile',
     description: 'Get in touch with Fitz Haile. Send a message to discuss your data challenges and analytics needs.',
   },
+  'case-studies': {
+    title: 'Case Study - Fitz Haile',
+    description: 'Real-world examples of data-driven solutions and analytics implementations.',
+  },
 };
 
 /**
@@ -47,6 +52,21 @@ export async function generateMetadata({ params }) {
   // Await params as required by Next.js 15
   const resolvedParams = await params;
   const section = resolvedParams.section?.[0] || 'home';
+  
+  // Handle case studies routes
+  if (section === 'case-studies') {
+    const meta = sectionMeta['case-studies'];
+    return {
+      title: meta.title,
+      description: meta.description,
+      openGraph: {
+        title: meta.title,
+        description: meta.description,
+        type: 'website',
+      },
+    };
+  }
+  
   const meta = sectionMeta[section] || sectionMeta.home;
   
   return {
@@ -72,6 +92,10 @@ export function generateStaticParams() {
     { section: ['services'] }, // Services section
     { section: ['about'] },    // About section
     { section: ['contact'] },  // Contact modal trigger
+    { section: ['case-studies', 'donor-industry-insight'] },    // Case study 1
+    { section: ['case-studies', 'google-analytics'] },          // Case study 2
+    { section: ['case-studies', 'data-management'] },           // Case study 3
+    { section: ['case-studies', 'systems-optimization'] },      // Case study 4
   ];
 }
 
@@ -88,6 +112,9 @@ export default async function HomePage({ params }) {
   const resolvedParams = await params;
   const section = resolvedParams.section?.[0] || 'home';
   
-  return <HomePageClient section={section} />;
+  // For case studies, scroll to services section - the Services component will handle the modal
+  const displaySection = section === 'case-studies' ? 'services' : section;
+  
+  return <HomePageClient section={displaySection} />;
 }
 
