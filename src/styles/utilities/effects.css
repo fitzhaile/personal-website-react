@@ -1,9 +1,42 @@
 /**
  * ===== EFFECTS UTILITIES =====
- * Utility classes for shadows, border radius, and transitions
+ * Utility classes for visual effects - shadows, rounded corners, and transitions
+ * All values reference CSS variables from base/variables.css
+ * 
+ * USAGE EXAMPLES:
+ * - <div class="shadow-lg rounded-xl">Card with shadow and rounded corners</div>
+ * - <button class="transition-base">Button with smooth transitions</button>
+ * - <img class="rounded-2xl shadow-md">Image with large rounded corners and shadow</img>
+ * 
+ * WHEN TO USE:
+ * - Adding depth to cards and containers (shadows)
+ * - Softening sharp corners (border-radius)
+ * - Smooth animations on hover/focus (transitions)
+ * 
+ * SHADOW SCALE (lightest to strongest):
+ * - shadow-sm: Subtle, barely visible (1px drop)
+ * - shadow-md: Light card elevation (4px drop)
+ * - shadow-lg: Standard card depth (10px drop)
+ * - shadow-xl: High elevation, prominent cards (20px drop)
+ * - shadow-2xl: Maximum depth, modals/overlays (25px drop)
+ * - shadow-none: Remove all shadows
+ * 
+ * BORDER RADIUS SCALE (smallest to largest):
+ * - rounded-sm: Subtle corners (4px) - buttons
+ * - rounded-md: Slight rounding (6px) - inputs
+ * - rounded-lg: Medium rounding (8px) - cards
+ * - rounded-xl: Large rounding (16px) - feature cards
+ * - rounded-2xl: Extra large (24px) - hero elements
+ * - rounded-none: Sharp 90-degree corners
+ * 
+ * TRANSITION SPEEDS:
+ * - transition-fast: Quick (0.15s) - small hover effects
+ * - transition-base: Standard (0.3s) - default interactions
+ * - transition-slow: Gradual (0.5s) - larger movements
  */
 
-/* Shadows */
+/* ===== SHADOWS ===== */
+/* Add depth and elevation to elements */
 .shadow-sm { box-shadow: var(--shadow-sm); }
 .shadow-md { box-shadow: var(--shadow-md); }
 .shadow-lg { box-shadow: var(--shadow-lg); }
@@ -11,7 +44,8 @@
 .shadow-2xl { box-shadow: var(--shadow-2xl); }
 .shadow-none { box-shadow: none; }
 
-/* Border radius */
+/* ===== BORDER RADIUS ===== */
+/* Round the corners of elements */
 .rounded-sm { border-radius: var(--radius-sm); }
 .rounded-md { border-radius: var(--radius-md); }
 .rounded-lg { border-radius: var(--radius-lg); }
@@ -19,7 +53,8 @@
 .rounded-2xl { border-radius: var(--radius-2xl); }
 .rounded-none { border-radius: 0; }
 
-/* Transitions */
+/* ===== TRANSITIONS ===== */
+/* Smooth animations for property changes (hover, focus, etc.) */
 .transition-fast { transition: all var(--transition-fast); }
 .transition-base { transition: all var(--transition-base); }
 .transition-slow { transition: all var(--transition-slow); }

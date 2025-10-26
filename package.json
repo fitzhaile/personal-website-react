@@ -2,6 +2,7 @@
   "name": "personal-website-react",
   "private": true,
   "version": "1.0.0",
+  "description": "Professional consulting website built with Next.js 15 and React 19. Features server-side rendering, static site generation, and SEO-optimized routing.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,6 +10,14 @@
     "deploy": "next build && touch out/.nojekyll && npx gh-pages -d out --dotfiles",
     "start": "next start",
     "lint": "next lint"
+  },
+  "comments": {
+    "dev": "Starts Next.js development server with hot-reload at localhost:3000",
+    "build": "Creates optimized production build with static HTML export in /out directory",
+    "export": "Alias for build - generates static site for deployment",
+    "deploy": "Full deployment pipeline: builds site, adds .nojekyll for GitHub Pages, deploys to gh-pages branch",
+    "start": "Runs production server (not needed for static export, use for testing production build)",
+    "lint": "Runs ESLint to check code quality and catch potential issues"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

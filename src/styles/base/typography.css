@@ -1,13 +1,49 @@
 /**
  * ===== TYPOGRAPHY =====
  * Base typography settings and text styles
+ * 
+ * FONT STACK:
+ * This project uses 'Inter' as the primary font, loaded from Google Fonts.
+ * Inter is a modern, highly legible sans-serif typeface designed specifically
+ * for computer screens and user interfaces.
+ * 
+ * WHY INTER?
+ * - Excellent legibility at small sizes
+ * - Professional, modern appearance
+ * - Variable font weights (400-900) for flexible hierarchy
+ * - Open source and free to use
+ * - Optimized for digital interfaces
+ * 
+ * FONT SMOOTHING:
+ * The -webkit-font-smoothing: antialiased property makes fonts render
+ * smoother on macOS and iOS. It uses subpixel rendering to reduce jaggedness.
+ * 
+ * TEXT SIZES:
+ * All text sizes are defined as CSS variables in base/variables.css:
+ * - Use var(--text-xs) through var(--text-6xl) for consistent sizing
+ * - Refer to variables.css for the complete type scale
+ * 
+ * FONT WEIGHTS:
+ * Available weights (defined in variables.css):
+ * - var(--font-normal): 400 - Body text, regular content
+ * - var(--font-medium): 500 - Slightly emphasized text
+ * - var(--font-semibold): 600 - Subheadings, buttons
+ * - var(--font-bold): 700 - Headings, important labels
+ * - var(--font-extrabold): 800 - Hero titles, major headings
+ * 
+ * LOADING THE FONT:
+ * Inter is loaded in app/layout.js via Google Fonts CDN:
+ * <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+ * 
+ * This loads all required weights with font-display: swap for better performance.
  */
 
 /* Main app wrapper - sets default text color and font */
 .app {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  -webkit-font-smoothing: antialiased;
+  font-family: 'Inter', sans-serif; /* Primary font with fallback to system sans-serif */
+  background-color: var(--color-background); /* Light gray background */
+  color: var(--color-text); /* Dark gray text (not pure black for better readability) */
+  -webkit-font-smoothing: antialiased; /* Smoother text rendering on macOS/iOS */
+  -moz-osx-font-smoothing: grayscale; /* Smoother text rendering on Firefox/macOS */
 }
 

@@ -1,14 +1,38 @@
 /**
  * ===== LAYOUT UTILITIES =====
- * Common layout patterns
+ * Common layout patterns and structural helpers
+ * 
+ * USAGE:
+ * These utilities help with overall page structure and scrolling behavior.
+ * 
+ * SCROLL BEHAVIOR EXPLAINED:
+ * The scroll-margin-top on sections ensures that when clicking navigation links,
+ * the section doesn't appear right at the top edge (hidden under sticky header).
+ * Instead, it leaves space for the header.
+ * 
+ * WHY 5rem?
+ * - The header is 5rem tall (80px)
+ * - scroll-margin-top: 5rem pushes the scroll target down by that amount
+ * - Result: Perfect alignment when navigating between sections
+ * 
+ * EXAMPLE:
+ * When you click "Services" in navigation, it scrolls to #services
+ * but stops 5rem before it, so the header doesn't cover the content.
  */
 
 .main {
-  /* Container for all main content sections */
+  /* Container for all main content sections
+   * Acts as a wrapper between header and footer
+   * No specific styles needed, just semantic structure
+   */
 }
 
-/* Scroll margin for sections to account for sticky header */
+/* ===== SCROLL BEHAVIOR ===== */
+/* Account for sticky header when scrolling to sections */
 section {
-  scroll-margin-top: 5rem;
+  /* Push scroll target down by header height to prevent content
+   * from being hidden under the sticky header
+   */
+  scroll-margin-top: 5rem; /* 80px - matches header height */
 }
 

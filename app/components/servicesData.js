@@ -2,12 +2,61 @@
  * ===== SERVICES DATA =====
  * Service offerings and case study content
  * 
- * Each service includes:
- * - slug: URL-friendly identifier
- * - title: Service name
- * - content: HTML string with service description and bullet points
- * - hasCaseStudy: Boolean flag to show/hide "View Example" link
- * - caseStudy: (optional) Object with subtitle and HTML content
+ * STRUCTURE OVERVIEW:
+ * This file exports a services array containing all service offerings and their case studies.
+ * Each service object represents one service card on the website.
+ * 
+ * EACH SERVICE OBJECT CONTAINS:
+ * 
+ * @property {string} slug - URL-friendly identifier used for routing
+ *   - Example: "donor-industry-insight" becomes "/case-studies/donor-industry-insight"
+ *   - Must be unique and match the route in page.js
+ *   - Use lowercase, hyphen-separated format (kebab-case)
+ * 
+ * @property {string} title - Service name displayed as card heading
+ *   - Keep concise (2-5 words ideal)
+ *   - This appears in both the card and case study modal
+ * 
+ * @property {string} content - HTML string with service description
+ *   - Can include <p> tags for paragraphs
+ *   - Can include <ul> with <li> for bullet points
+ *   - Can include <strong> for emphasis
+ *   - This HTML is rendered using dangerouslySetInnerHTML in Services.js
+ *   - Keep brief - this is the card preview, not the full case study
+ * 
+ * @property {boolean} hasCaseStudy - Controls "View Example" link visibility
+ *   - true: Shows "View Example →" link and makes card clickable
+ *   - false: No link, card is static (for services without case studies yet)
+ * 
+ * @property {object} [caseStudy] - (Optional) Full case study content
+ *   - Only required if hasCaseStudy is true
+ *   - Contains two properties:
+ *     - subtitle: Brief case study tagline (1 sentence)
+ *     - content: Full HTML content with detailed case study
+ * 
+ * CASE STUDY HTML STRUCTURE:
+ * The case study content supports these HTML elements:
+ * - <h3 class="case-study__section-title"> - Major section headers
+ * - <h4 class="case-study__subsection-title"> - Subsection headers
+ * - <p> - Regular paragraphs
+ * - <ul class="case-study__list"> with <li> - Bullet points
+ * - <strong> - Bold emphasis
+ * 
+ * ADDING A NEW SERVICE:
+ * 1. Copy an existing service object as a template
+ * 2. Update the slug (must be unique)
+ * 3. Update the title
+ * 4. Write the content (keep brief, 2-3 sentences + bullets)
+ * 5. Set hasCaseStudy to false initially (or true if you have the case study ready)
+ * 6. If hasCaseStudy is true, add the caseStudy object with subtitle and content
+ * 7. Add the new route to generateStaticParams() in app/[[...section]]/page.js
+ * 
+ * BEST PRACTICES:
+ * - Keep service card content concise (preview only)
+ * - Use case studies for detailed examples and outcomes
+ * - Maintain consistent HTML structure for styling
+ * - Test the case study modal after adding new content
+ * - Use descriptive slugs that match the service title
  */
 
 export const services = [

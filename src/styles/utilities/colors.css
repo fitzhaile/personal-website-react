@@ -1,22 +1,53 @@
 /**
  * ===== COLOR UTILITIES =====
- * Utility classes that map directly to color variables
+ * Utility classes that map directly to color variables from variables.css
+ * 
+ * USAGE:
+ * Apply these classes to elements to quickly change their colors
+ * without writing custom CSS.
+ * 
+ * EXAMPLES:
+ * - <p class="text-primary">Navy blue text</p>
+ * - <div class="bg-secondary">Green background</div>
+ * - <div class="border-primary">Navy border</div>
+ * 
+ * COLOR PALETTE:
+ * - Primary (Navy): Main brand color, headings, important elements
+ * - Secondary (Green): Accent color, CTAs, highlights
+ * - Base/Text: Default body text color (dark gray)
+ * - Light: Secondary text, descriptions (medium gray)
+ * - White: Pure white for backgrounds and contrast
+ * - Background: Light gray/off-white page background
+ * 
+ * WHEN TO USE:
+ * - Quick prototyping
+ * - One-off color changes
+ * - Maintaining brand consistency
+ * 
+ * WHEN NOT TO USE:
+ * - Complex components with many color variations (use component CSS)
+ * - Interactive states like :hover or :focus (requires custom CSS)
+ * 
+ * NOTE: All colors reference CSS variables in base/variables.css
  */
 
-/* Text colors */
+/* ===== TEXT COLORS ===== */
+/* Change the color of text content */
 .text-primary { color: var(--color-primary); }
 .text-secondary { color: var(--color-secondary); }
 .text-base { color: var(--color-text); }
 .text-light { color: var(--color-text-light); }
 .text-white { color: var(--color-white); }
 
-/* Background colors */
+/* ===== BACKGROUND COLORS ===== */
+/* Change the background color of elements */
 .bg-primary { background-color: var(--color-primary); }
 .bg-secondary { background-color: var(--color-secondary); }
 .bg-white { background-color: var(--color-white); }
 .bg-background { background-color: var(--color-background); }
 
-/* Border colors */
+/* ===== BORDER COLORS ===== */
+/* Change border colors (requires border-width to be set separately) */
 .border-primary { border-color: var(--color-primary); }
 .border-secondary { border-color: var(--color-secondary); }
 .border-base { border-color: var(--color-border); }

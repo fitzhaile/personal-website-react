@@ -1,45 +1,102 @@
 /**
  * ===== RESET & BASE STYLES =====
- * Global resets that apply to all elements
+ * Global resets that normalize browser defaults and create a consistent baseline
+ * 
+ * WHY WE NEED CSS RESETS:
+ * Different browsers (Chrome, Firefox, Safari, etc.) have different default styles
+ * for HTML elements. Without a reset, your site might look different across browsers.
+ * This file removes those inconsistencies and gives us a clean starting point.
+ * 
+ * KEY CONCEPTS:
+ * 
+ * 1. MARGIN & PADDING RESET:
+ * Browsers add default margins and padding to many elements (h1, p, ul, etc.)
+ * We remove all of them and add them back intentionally where needed.
+ * 
+ * 2. BOX-SIZING: BORDER-BOX:
+ * By default, CSS width/height only includes the content area (not padding or border).
+ * With border-box, padding and border are INCLUDED in the width/height.
+ * Example: If you set width: 300px with 20px padding:
+ * - Default: Total width = 340px (300 + 20 + 20)
+ * - Border-box: Total width = 300px (includes padding)
+ * This makes layout math much simpler and more predictable!
+ * 
+ * 3. SMOOTH SCROLLING:
+ * When clicking navigation links, the page smoothly scrolls instead of jumping.
+ * This creates a more polished, professional user experience.
+ * 
+ * 4. FONT SMOOTHING:
+ * Improves text rendering quality, especially on macOS/iOS retina screens.
+ * Makes text look crisper and more refined.
  */
 
+/* ===== UNIVERSAL RESET ===== */
 /* Apply to ALL elements (the * selector) */
 * {
-  /* Remove default margins and padding from all elements
-     Browsers add these by default, but they're inconsistent */
+  /* Remove all default margins and padding from every element
+   * Browsers add these inconsistently, causing unexpected spacing
+   * We'll add spacing back intentionally using our design system
+   */
   margin: 0;
   padding: 0;
   
-  /* box-sizing: border-box means:
-     "Include padding and border in the element's total width/height"
-     This makes sizing elements WAY easier and more predictable */
+  /* box-sizing: border-box makes width/height calculations predictable
+   * Width/height now INCLUDES padding and border, not just content
+   * This is one of the most important CSS properties for modern layouts!
+   */
   box-sizing: border-box;
 }
 
+/* ===== HTML ROOT ELEMENT ===== */
 /* Styles for the root <html> element */
 html {
-  /* scroll-behavior: smooth enables smooth scrolling when clicking nav links
-     Without this, the page would "jump" instantly to sections */
+  /* Enable smooth scrolling for the entire page
+   * When clicking navigation links that jump to sections (e.g., #services),
+   * the page will smoothly animate instead of instantly jumping
+   * Creates a more polished, professional feel
+   */
   scroll-behavior: smooth;
 }
 
+/* ===== BODY ELEMENT ===== */
 /* Styles for the <body> element (contains all visible content) */
 body {
-  margin: 0;
+  margin: 0; /* Remove default margin */
   
-  /* Font stack: tries fonts in order until it finds one that exists
-     1. 'Inter' - our custom Google Font (loaded in index.html)
-     2. -apple-system - Apple's system font (San Francisco)
-     3. BlinkMacSystemFont - Older Apple system font
-     4. 'Segoe UI' - Windows system font
-     5. 'Roboto' - Android system font
-     6. ... and several other fallbacks
-     7. sans-serif - generic sans-serif font as last resort */
+  /* FONT STACK:
+   * CSS tries fonts in order from left to right until it finds one that exists
+   * This ensures the site looks good even if the primary font fails to load
+   * 
+   * 1. 'Inter' - Our primary font (loaded from Google Fonts in layout.js)
+   * 2. -apple-system - San Francisco font on macOS/iOS
+   * 3. BlinkMacSystemFont - Older name for San Francisco
+   * 4. 'Segoe UI' - Windows 10/11 system font
+   * 5. 'Roboto' - Android system font
+   * 6. 'Oxygen', 'Ubuntu', 'Cantarell' - Linux system fonts
+   * 7. 'Fira Sans', 'Droid Sans' - Additional fallbacks
+   * 8. 'Helvetica Neue' - Classic Apple font
+   * 9. sans-serif - Generic fallback (uses system default sans-serif)
+   * 
+   * WHY SO MANY FALLBACKS?
+   * If Google Fonts fails to load (slow connection, blocked, offline),
+   * the site will still look professional using native system fonts
+   */
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   
-  /* Font smoothing: makes text look better on Mac/iOS screens
-     These are vendor-specific (webkit for Chrome/Safari, moz for Firefox) */
+  /* FONT SMOOTHING:
+   * These properties improve text rendering quality on certain browsers/OSes
+   * 
+   * -webkit-font-smoothing: antialiased
+   *   → For Chrome, Safari, Edge on macOS/iOS
+   *   → Reduces pixelation on retina displays
+   * 
+   * -moz-osx-font-smoothing: grayscale
+   *   → For Firefox on macOS
+   *   → Uses grayscale antialiasing for crisper text
+   * 
+   * NOTE: These are vendor-specific prefixes (webkit = Chrome/Safari, moz = Firefox)
+   */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

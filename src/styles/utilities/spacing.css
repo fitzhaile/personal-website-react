@@ -1,9 +1,34 @@
 /**
  * ===== SPACING UTILITIES =====
- * Utility classes that map directly to spacing variables
+ * Utility classes that map directly to spacing variables from variables.css
+ * 
+ * USAGE:
+ * These classes follow a consistent naming pattern:
+ * - First letter: p (padding) or m (margin) or gap (flexbox/grid gap)
+ * - Second letter (optional): t (top), b (bottom), l (left), r (right)
+ * - Size: xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl
+ * 
+ * EXAMPLES:
+ * - .p-md → padding: 1rem (16px) on all sides
+ * - .pt-lg → padding-top: 1.5rem (24px)
+ * - .mb-xl → margin-bottom: 2rem (32px)
+ * - .gap-md → gap: 1rem (for flexbox/grid containers)
+ * 
+ * WHEN TO USE:
+ * - Quick spacing adjustments without writing custom CSS
+ * - Prototyping and rapid development
+ * - Maintaining consistent spacing throughout the site
+ * 
+ * WHEN NOT TO USE:
+ * - Complex components with specific spacing needs (use component CSS instead)
+ * - When you need responsive spacing (write custom media queries)
+ * 
+ * NOTE: All values reference CSS variables defined in base/variables.css
+ * Changing the variable values will update all utility classes automatically
  */
 
-/* Padding utilities */
+/* ===== PADDING UTILITIES ===== */
+/* Apply padding to all sides or specific sides */
 .p-xs { padding: var(--spacing-xs); }
 .p-sm { padding: var(--spacing-sm); }
 .p-md { padding: var(--spacing-md); }
@@ -54,7 +79,8 @@
 .pr-4xl { padding-right: var(--spacing-4xl); }
 .pr-5xl { padding-right: var(--spacing-5xl); }
 
-/* Margin utilities */
+/* ===== MARGIN UTILITIES ===== */
+/* Apply margin to all sides or specific sides */
 .m-xs { margin: var(--spacing-xs); }
 .m-sm { margin: var(--spacing-sm); }
 .m-md { margin: var(--spacing-md); }
@@ -105,7 +131,8 @@
 .mr-4xl { margin-right: var(--spacing-4xl); }
 .mr-5xl { margin-right: var(--spacing-5xl); }
 
-/* Gap utilities (for flexbox/grid) */
+/* ===== GAP UTILITIES ===== */
+/* Apply gap to flexbox and grid containers for consistent spacing between children */
 .gap-xs { gap: var(--spacing-xs); }
 .gap-sm { gap: var(--spacing-sm); }
 .gap-md { gap: var(--spacing-md); }

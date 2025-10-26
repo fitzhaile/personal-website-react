@@ -243,6 +243,9 @@ const sectionMeta = {
 
 - **README.md** (this file) - Project overview, getting started, architecture
 - **BEGINNERS_GUIDE.md** - Complete learning guide for React, Next.js, and BEM
+- **CONTRIBUTING.md** - Contribution guidelines, code standards, and development workflow
+- **CHANGELOG.md** - Version history and detailed change tracking
+- **EMAILJS_SETUP.md** - Email configuration guide for contact form
 - **Inline Code Comments** - Every JavaScript and CSS file has comprehensive documentation
 
 ## Deploy Checklist
@@ -285,6 +288,7 @@ Each URL generates unique metadata and scrolls to the appropriate section.
 ## Need Help?
 
 - **BEGINNERS_GUIDE.md** - Detailed explanations of React, Next.js, and BEM concepts
+- **CONTRIBUTING.md** - Development workflow, code standards, and testing guidelines
 - **Inline Comments** - Every file has comprehensive documentation
 - **Next.js Docs** - https://nextjs.org/docs
 - **React Docs** - https://react.dev/learn
