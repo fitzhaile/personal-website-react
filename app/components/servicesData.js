@@ -76,12 +76,12 @@ export const services = [
       subtitle: "Using data to uncover new opportunities for workplace giving",
       content: `
         <h3 class="case-study__section-title">Challenge</h3>
-        <p>A regional nonprofit wanted a clearer view of where future workplace-giving growth could come from. The team already maintained strong relationships with major employers but sought a structured, data-driven way to identify which industries held the most potential for deeper engagement.</p>
-        <p>The organization had extensive donor and campaign data, but it wasn't connected to the broader business landscape. Leadership wanted to see how its donor base aligned with the local economy and where additional outreach could have the greatest impact.</p>
+        <p>A regional nonprofit with strong employer relationships wanted to expand its workplace-giving reach strategically. The team sought a structured, data-driven approach to identify which industries held the most potential for deeper engagement.</p>
+        <p>The organization had built extensive donor and campaign data over the years and was ready to connect it to the broader business landscape. Leadership wanted to understand how its donor base aligned with the local economy and where additional outreach could deliver the greatest impact.</p>
         <ul class="case-study__list">
-          <li>Donor, business, and corporate giving records were categorized differently and difficult to compare.</li>
-          <li>There was no shared baseline showing which industries were over- or under-represented.</li>
-          <li>Insights needed to be straightforward enough for staff and volunteer leaders to interpret easily.</li>
+          <li>Donor, business, and corporate giving records used different categorization systems and needed a unified framework.</li>
+          <li>The organization needed a shared baseline to identify industries with the most growth potential.</li>
+          <li>Insights needed to be accessible and actionable for both staff and volunteer leaders.</li>
         </ul>
 
         <h3 class="case-study__section-title">Approach</h3>
@@ -155,13 +155,13 @@ export const services = [
       subtitle: "Building a Marketing Analytics Framework",
       content: `
         <h3 class="case-study__section-title">Challenge</h3>
-        <p>Before this work began, marketing lacked a consistent way to see which of their campaign efforts were performing. Data was fragmented across multiple sites, and the team had no standardized way to measure conversions or understand user behavior from start to finish.</p>
-        <p>The absence of a structured reporting framework made it difficult to evaluate return on investment, track engagement trends, or understand how users interacted with digital content.</p>
+        <p>As the organization's digital presence expanded across multiple properties, the marketing team wanted a comprehensive way to measure campaign performance and understand the complete user journey. They sought a unified analytics framework that could connect activity across sites and provide clear insights into what drove conversions.</p>
+        <p>The team was ready to move from basic reporting to sophisticated measurement—tracking not just traffic, but understanding acquisition sources, user behavior, and conversion patterns that could guide strategy and resource allocation.</p>
         <ul class="case-study__list">
-          <li>Campaign data was scattered across multiple platforms with no unified view.</li>
-          <li>No standardized conversion tracking or funnel analysis existed.</li>
-          <li>Cross-site attribution was impossible, making ROI unclear.</li>
-          <li>Marketing decisions were based on incomplete data and intuition rather than comprehensive insights.</li>
+          <li>Campaign data existed across multiple platforms and needed integration into a unified view.</li>
+          <li>The organization was ready to implement standardized conversion tracking and funnel analysis.</li>
+          <li>Cross-site user journeys needed to be connected for complete attribution visibility.</li>
+          <li>Marketing decisions needed to be supported by comprehensive, data-driven insights.</li>
         </ul>
 
         <h3 class="case-study__section-title">Approach</h3>
@@ -270,13 +270,13 @@ export const services = [
       subtitle: "Aligning communication and project management",
       content: `
         <h3 class="case-study__section-title">Challenge</h3>
-        <p>A regional nonprofit wanted to improve how information and projects moved between departments. Daily communication was happening across too many disconnected tools—emails, texts, and isolated documents—causing delays and duplicated effort.</p>
-        <p>The organization's communication and task management practices had grown organically over time. Each team had its own methods, which worked individually but didn't translate well across departments. The result was slow handoffs, lost information, and a lack of shared visibility.</p>
+        <p>A growing regional nonprofit wanted to strengthen cross-department collaboration as their team and project portfolio expanded. The organization was ready to move from individualized workflows to a shared communication and project management approach that could scale with their growth.</p>
+        <p>As the organization had evolved, each team had developed its own practices—methods that served their immediate needs but created opportunities for better coordination across departments. Leadership recognized that establishing shared systems would accelerate collaboration and make organizational knowledge more accessible to everyone.</p>
         <ul class="case-study__list">
-          <li>Conversations were scattered across email and text, making updates hard to track.</li>
-          <li>Ownership and responsibilities varied, creating uncertainty about next steps.</li>
-          <li>Project boards differed by department, so progress and capacity were difficult to understand.</li>
-          <li>Onboarding new staff required navigating a patchwork of tools and informal habits.</li>
+          <li>Communication happened through various channels, and the team wanted a central hub for project discussions.</li>
+          <li>Each department had developed its own project tracking approach, creating an opportunity to establish shared standards.</li>
+          <li>The organization was ready to implement consistent task ownership and status visibility across all teams.</li>
+          <li>Growing staff size called for standardized tools and workflows that would simplify onboarding and collaboration.</li>
         </ul>
 
         <h3 class="case-study__section-title">Approach</h3>
