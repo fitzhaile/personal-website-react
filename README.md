@@ -97,6 +97,10 @@ personal-website-react/
 │       ├── About.js               # About section
 │       ├── Footer.js              # Footer with links
 │       └── ContactModal.js        # Contact form modal
+├── docs/                          # Documentation
+│   ├── BEGINNERS_GUIDE.md         # Learning guide for React & Next.js
+│   ├── CONTRIBUTING.md            # Contribution guidelines & setup
+│   └── SEO_GUIDE.md               # SEO optimization guide
 ├── src/
 │   ├── styles/                    # Modular CSS files (BEM)
 │   │   ├── base/                  # Global resets & defaults
@@ -128,7 +132,7 @@ personal-website-react/
 ├── package.json                   # Project dependencies
 ├── .gitignore                     # Git ignore file
 ├── README.md                      # This file
-└── BEGINNERS_GUIDE.md             # Learning guide
+└── CHANGELOG.md                   # Version history
 ```
 
 ## Technologies Used
@@ -242,10 +246,10 @@ const sectionMeta = {
 ## Documentation
 
 - **README.md** (this file) - Project overview, getting started, architecture
-- **BEGINNERS_GUIDE.md** - Complete learning guide for React, Next.js, and BEM
-- **CONTRIBUTING.md** - Contribution guidelines, code standards, and development workflow
 - **CHANGELOG.md** - Version history and detailed change tracking
-- **EMAILJS_SETUP.md** - Email configuration guide for contact form
+- **docs/BEGINNERS_GUIDE.md** - Complete learning guide for React, Next.js, and BEM
+- **docs/CONTRIBUTING.md** - Contribution guidelines, code standards, EmailJS setup
+- **docs/SEO_GUIDE.md** - Comprehensive SEO optimization and meta tag guide
 - **Inline Code Comments** - Every JavaScript and CSS file has comprehensive documentation
 
 ## Deploy Checklist
@@ -287,8 +291,9 @@ Each URL generates unique metadata and scrolls to the appropriate section.
 
 ## Need Help?
 
-- **BEGINNERS_GUIDE.md** - Detailed explanations of React, Next.js, and BEM concepts
-- **CONTRIBUTING.md** - Development workflow, code standards, and testing guidelines
+- **docs/BEGINNERS_GUIDE.md** - Detailed explanations of React, Next.js, and BEM concepts
+- **docs/CONTRIBUTING.md** - Development workflow, code standards, EmailJS setup, and testing guidelines
+- **docs/SEO_GUIDE.md** - Complete guide to SEO optimization and meta tags
 - **Inline Comments** - Every file has comprehensive documentation
 - **Next.js Docs** - https://nextjs.org/docs
 - **React Docs** - https://react.dev/learn
