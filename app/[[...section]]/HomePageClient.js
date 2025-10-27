@@ -37,6 +37,21 @@ export default function HomePageClient({ section }) {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   /**
+   * Effect: Update document title when section changes
+   * This ensures the browser tab title updates during client-side navigation
+   */
+  useEffect(() => {
+    const titles = {
+      home: 'Fitz Haile - Data & Analytics Consultant - Savannah, GA',
+      services: 'Services | Fitz Haile',
+      about: 'About | Fitz Haile',
+      contact: 'Contact | Fitz Haile',
+    };
+    
+    document.title = titles[section] || titles.home;
+  }, [section]);
+
+  /**
    * Effect: Handle section-based scrolling and modal opening
    * Runs when the section prop changes from URL navigation
    */
@@ -131,6 +146,15 @@ export default function HomePageClient({ section }) {
       element.scrollIntoView({ behavior: 'smooth' });
       // Update browser URL without page reload
       window.history.pushState({}, '', `${basePath}${path}`);
+      
+      // Update document title for better UX
+      const titles = {
+        '/': 'Fitz Haile - Data & Analytics Consultant - Savannah, GA',
+        '/services': 'Services | Fitz Haile',
+        '/about': 'About | Fitz Haile',
+        '/contact': 'Contact | Fitz Haile',
+      };
+      document.title = titles[path] || titles['/'];
     }
   };
 

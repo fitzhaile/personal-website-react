@@ -8,10 +8,28 @@ import '../src/index.css'
 
 // Global metadata for SEO and social sharing
 export const metadata = {
-  title: 'Fitz Haile - Data Driven Decision Making - Savannah, GA',
+  // Primary SEO tags
+  title: {
+    default: 'Fitz Haile - Data & Analytics Consultant - Savannah, GA',
+    template: '%s | Fitz Haile', // Used by child pages for consistent branding
+  },
   description: 'Fitz Haile is an independent data and analytics consultant in Savannah, GA - helping organizations turn their data into more informed, smarter decisions.',
-  keywords: ['analytics', 'consulting', 'data strategy', 'data analytics', 'business intelligence'],
+  keywords: ['analytics', 'consulting', 'data strategy', 'data analytics', 'business intelligence', 'Savannah GA consultant', 'donor analytics', 'Google Analytics expert', 'systems optimization'],
   authors: [{ name: 'Fitz Haile' }],
+  creator: 'Fitz Haile',
+  
+  // Robots - tell search engines how to crawl
+  robots: {
+    index: true, // Allow search engines to index this site
+    follow: true, // Allow search engines to follow links
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 
   // Custom favicon configuration (PNG format for better browser compatibility)
   icons: {
@@ -25,12 +43,41 @@ export const metadata = {
     ],
   },
   
-  // Open Graph metadata for social media sharing
+  // Open Graph metadata for social media sharing (Facebook, LinkedIn)
   openGraph: {
-    title: 'Fitz Haile',
-    description: 'Fitz Haile is an independent data and analytics consultant in Savannah, GA - helping organizations turn their data into more informed, smarter decisions.',
     type: 'website',
+    locale: 'en_US',
+    url: 'https://fitzhaile.com', // Update with your actual domain
+    siteName: 'Fitz Haile - Data & Analytics Consulting',
+    title: 'Fitz Haile - Data & Analytics Consultant',
+    description: 'Independent data and analytics consultant in Savannah, GA - helping organizations turn their data into more informed, smarter decisions.',
+    // Optional: Add an og:image for social sharing
+    // images: [
+    //   {
+    //     url: 'https://fitzhaile.com/og-image.jpg',
+    //     width: 1200,
+    //     height: 630,
+    //     alt: 'Fitz Haile - Data & Analytics Consulting',
+    //   },
+    // ],
   },
+  
+  // Twitter Card metadata for Twitter sharing
+  twitter: {
+    card: 'summary_large_image', // Use 'summary' for smaller card
+    title: 'Fitz Haile - Data & Analytics Consultant',
+    description: 'Independent data and analytics consultant in Savannah, GA - helping organizations turn their data into more informed, smarter decisions.',
+    creator: '@fitzhaile', // Add your Twitter handle if you have one
+    // Optional: Add a Twitter image
+    // images: ['https://fitzhaile.com/twitter-image.jpg'],
+  },
+  
+  // Verification tags (add these when you set them up)
+  // verification: {
+  //   google: 'your-google-verification-code',
+  //   yandex: 'your-yandex-verification-code',
+  //   bing: 'your-bing-verification-code',
+  // },
 }
 
 /**

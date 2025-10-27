@@ -19,24 +19,29 @@ import HomePageClient from './HomePageClient';
  */
 const sectionMeta = {
   home: {
-    title: 'Fitz Haile - Data Driven Decision Making',
+    title: 'Fitz Haile - Data & Analytics Consultant',
     description: 'Independent data and analytics consultant helping organizations turn complex data into actionable insights and smarter decisions.',
+    url: '/',
   },
   services: {
-    title: 'Services - Fitz Haile',
+    title: 'Services',
     description: 'Data consulting services: donor & industry insights, Google Analytics expertise, data management, and systems optimization.',
+    url: '/services',
   },
   about: {
-    title: 'About - Fitz Haile',
+    title: 'About',
     description: 'Independent data and analytics consultant in Savannah, GA. Background in economic development, content systems, and data strategy.',
+    url: '/about',
   },
   contact: {
-    title: 'Contact - Fitz Haile',
+    title: 'Contact',
     description: 'Get in touch with Fitz Haile. Send a message to discuss your data challenges and analytics needs.',
+    url: '/contact',
   },
   'case-studies': {
-    title: 'Case Study - Fitz Haile',
+    title: 'Case Study',
     description: 'Real-world examples of data-driven solutions and analytics implementations.',
+    url: '/case-studies',
   },
 };
 
@@ -56,26 +61,75 @@ export async function generateMetadata({ params }) {
   // Handle case studies routes
   if (section === 'case-studies') {
     const meta = sectionMeta['case-studies'];
+    const baseUrl = 'https://fitzhaile.com'; // Update with your actual domain
+    
     return {
       title: meta.title,
       description: meta.description,
+      alternates: {
+        canonical: `${baseUrl}${meta.url}`,
+      },
       openGraph: {
         title: meta.title,
         description: meta.description,
+        url: `${baseUrl}${meta.url}`,
         type: 'website',
+        locale: 'en_US',
+        siteName: 'Fitz Haile - Data & Analytics Consulting',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: meta.title,
+        description: meta.description,
       },
     };
   }
   
   const meta = sectionMeta[section] || sectionMeta.home;
+  const baseUrl = 'https://fitzhaile.com'; // Update with your actual domain
+  
+  // For home page, return metadata without title to use the default from layout.js
+  // This prevents "Fitz Haile - Data & Analytics Consultant | Fitz Haile" duplication
+  if (section === 'home') {
+    return {
+      description: meta.description,
+      alternates: {
+        canonical: `${baseUrl}${meta.url}`,
+      },
+      openGraph: {
+        title: 'Fitz Haile - Data & Analytics Consultant',
+        description: meta.description,
+        url: `${baseUrl}${meta.url}`,
+        type: 'website',
+        locale: 'en_US',
+        siteName: 'Fitz Haile - Data & Analytics Consulting',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Fitz Haile - Data & Analytics Consultant',
+        description: meta.description,
+      },
+    };
+  }
   
   return {
     title: meta.title,
     description: meta.description,
+    alternates: {
+      canonical: `${baseUrl}${meta.url}`,
+    },
     openGraph: {
       title: meta.title,
       description: meta.description,
+      url: `${baseUrl}${meta.url}`,
       type: 'website',
+      locale: 'en_US',
+      siteName: 'Fitz Haile - Data & Analytics Consulting',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: meta.title,
+      description: meta.description,
     },
   };
 }
