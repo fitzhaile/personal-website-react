@@ -3,12 +3,28 @@
  * Displays service offerings in a responsive grid layout
  * Each service card contains a title, summary, and bullet points
  * Clicking a card opens a modal with the full case study
+ * 
+ * Content is rendered from clean markdown using react-markdown
+ * CSS classes are automatically applied via custom components
  */
 
 'use client'
 
 import { useState, useEffect } from 'react';
 import { services } from './servicesData';
+import ReactMarkdown from 'react-markdown';
+
+/**
+ * Custom markdown components that automatically add semantic CSS classes
+ * - h3 headings get section-title class
+ * - h4 headings get subsection-title class  
+ * - ul lists get list class
+ */
+const caseStudyComponents = {
+  h3: ({node, ...props}) => <h3 className="case-study__section-title" {...props} />,
+  h4: ({node, ...props}) => <h4 className="case-study__subsection-title" {...props} />,
+  ul: ({node, ...props}) => <ul className="case-study__list" {...props} />,
+}
 
 /**
  * Services section component
@@ -82,8 +98,12 @@ export default function Services() {
                 {...cardProps}
               >
                 <h3 className="service-card__title">{service.title}</h3>
-                {/* Using dangerouslySetInnerHTML for formatted HTML content */}
-                <div className="service-card__content" dangerouslySetInnerHTML={{ __html: service.content }} />
+                {/* Render markdown content */}
+                <div className="service-card__content">
+                  <ReactMarkdown>
+                    {service.content}
+                  </ReactMarkdown>
+                </div>
                 {service.hasCaseStudy && (
                   <span className="service-card__cta">View Example →</span>
                 )}
@@ -108,8 +128,10 @@ export default function Services() {
                 <h2 className="case-study-modal__title">{selectedCase.title}</h2>
                 <p className="case-study-modal__subtitle">{selectedCase.caseStudy.subtitle}</p>
 
-                {/* Case study content */}
-                <div dangerouslySetInnerHTML={{ __html: selectedCase.caseStudy.content }} />
+                {/* Render markdown case study with custom components for classes */}
+                <ReactMarkdown components={caseStudyComponents}>
+                  {selectedCase.caseStudy.content}
+                </ReactMarkdown>
               </div>
             </div>
           )}

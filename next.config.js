@@ -23,6 +23,15 @@ const nextConfig = {
   // Leave empty when using custom domain, use '/personal-website-react' only for github.io subdomain
   // basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   // assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  
+  // Webpack configuration to handle markdown files
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.md$/,
+      type: 'asset/source', // Built-in webpack 5 feature to import files as strings
+    });
+    return config;
+  },
 }
 
 module.exports = nextConfig
