@@ -21,13 +21,12 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "markdown-it": "^14.1.0",
+    "markdown-it-attrs": "^4.3.1",
     "next": "^15.5.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-markdown": "^10.1.0",
-    "rehype-raw": "^7.0.0",
     "remark-directive": "^4.0.0",
-    "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "unist-util-visit": "^5.0.0"
   },

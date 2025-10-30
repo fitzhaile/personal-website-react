@@ -1,4 +1,4 @@
-### Challenge
+### Challenge {.case-study__section-title}
 
 A regional nonprofit with strong employer relationships wanted to expand its workplace-giving reach strategically. The team sought a structured, data-driven approach to identify which industries held the most potential for deeper engagement.
 
@@ -7,64 +7,71 @@ The organization had built extensive donor and campaign data over the years and 
 - Donor, business, and corporate giving records used different categorization systems and needed a unified framework.
 - The organization needed a shared baseline to identify industries with the most growth potential.
 - Insights needed to be accessible and actionable for both staff and volunteer leaders.
+{.case-study__list}
 
 
-### Approach
+### Approach {.case-study__section-title}
 
 The project developed a unified dataset linking donor information, business listings, and public labor data under a single industry classification system. This alignment made it possible to compare participation and potential across local sectors.
 
-#### Data Integration and Analysis
+#### Data Integration and Analysis {.case-study__subsection-title}
 
 - **Integrated data sources:** Combined donor, corporate giving, and wage data to provide a full picture of the regional economy.
 - **Opportunity scoring:** Weighted employment, wages, donor participation, and leadership giving to identify sectors with the strongest growth potential.
 - **Actionable materials:** Produced concise industry summaries and ranked lists that supported planning and recruitment discussions.
+{.case-study__list}
 
 
-#### Day-to-Day Impact
+#### Day-to-Day Impact {.case-study__subsection-title}
 
 The framework made it easier for staff and volunteers to use data as part of everyday planning. Instead of relying on anecdotal impressions, leadership could view each industry through consistent metrics and focus outreach where opportunity was clearest.
 
 - Industry snapshots clarified where engagement could expand.
 - Shared metrics improved coordination across departments.
 - Campaign discussions became more data-driven and efficient.
+{.case-study__list}
 
 
-#### Implementation
+#### Implementation {.case-study__subsection-title}
 
 The analysis was designed to be simple to maintain and repeat annually. Key phases included:
 
 - Aligning donor and business data using a consistent industry classification.
 - Calculating participation and wage-based opportunity indicators.
 - Summarizing insights into briefs and ranked lists for leadership review.
+{.case-study__list}
 
 
-#### Outcomes
+#### Outcomes {.case-study__subsection-title}
 
 The findings offered new perspective on the local economy and helped leadership focus planning where it could have the most impact.
 
 - Revealed several industries with untapped potential for engagement.
 - Provided a replicable process for evaluating opportunity each year.
 - Strengthened collaboration between fundraising and research teams.
+{.case-study__list}
 
 
-#### Services Mapped to Outcomes
+#### Services Mapped to Outcomes {.case-study__subsection-title}
 
 - **Donor & Industry Insight:** Created a shared structure for connecting donor and business data to uncover sector-based opportunities.
 - **Systems & Process Optimization:** Delivered usable tools that turned analysis into everyday insight for planning discussions.
 - **Data Management & Quality Control:** Built a unified dataset designed for easy updates and continued expansion.
+{.case-study__list}
 
 
-#### Representative Artifacts
+#### Representative Artifacts {.case-study__subsection-title}
 
 - Industry opportunity brief with sector rankings
 - Prioritized lead list for campaign planning
 - Scoring workbook for sector comparison and analysis
+{.case-study__list}
 
 
-#### Next Steps
+#### Next Steps {.case-study__subsection-title}
 
 Expand the model to additional industries, refresh data annually, and refine scoring based on observed campaign outcomes.
 
-#### Outcome in One Sentence
+#### Outcome in One Sentence {.case-study__subsection-title}
 
 A unified data framework gave the organization a clear, repeatable way to identify high-potential industries—turning existing information into practical guidance for future fundraising growth.

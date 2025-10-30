@@ -1,4 +1,4 @@
-### Challenge
+### Challenge {.case-study__section-title}
 
 As the organization's digital presence expanded across multiple properties, the marketing team wanted a comprehensive way to measure campaign performance and understand the complete user journey. They sought a unified analytics framework that could connect activity across sites and provide clear insights into what drove conversions.
 
@@ -8,13 +8,14 @@ The team was ready to move from basic reporting to sophisticated measurement—t
 - The organization was ready to implement standardized conversion tracking and funnel analysis.
 - Cross-site user journeys needed to be connected for complete attribution visibility.
 - Marketing decisions needed to be supported by comprehensive, data-driven insights.
+{.case-study__list}
 
 
-### Approach
+### Approach {.case-study__section-title}
 
 A comprehensive analytics framework was built from the ground up, implementing event-based measurement, funnel analysis, cross-site tracking, and accessible reporting dashboards.
 
-#### Acquisition and Conversion Reporting
+#### Acquisition and Conversion Reporting {.case-study__subsection-title}
 
 A new event-based measurement strategy was implemented to capture key interactions such as donations, purchases, and engagement actions. The marketing team gained visibility into where users were coming from, how they engaged across channels, and what influenced conversion outcomes.
 
@@ -22,9 +23,10 @@ A new event-based measurement strategy was implemented to capture key interactio
 - Built automated reports tracking conversion rate, engagement rate, revenue, and average purchase value.
 - Created segmentation by source, medium, campaign, and user characteristics.
 - Enabled comparison across channels to identify which initiatives drove the most value.
+{.case-study__list}
 
 
-#### User Behavior and Funnel Analysis
+#### User Behavior and Funnel Analysis {.case-study__subsection-title}
 
 To help interpret how visitors moved through the purchase and donation process, a series of user funnels was developed to visualize the complete user journey.
 
@@ -32,9 +34,10 @@ To help interpret how visitors moved through the purchase and donation process, 
 - Analyzed conversion rate variations across acquisition channels and devices.
 - Identified audience segments with the highest and lowest completion rates.
 - Revealed opportunities for optimization such as form simplification and improved calls to action.
+{.case-study__list}
 
 
-#### Cross-Site Attribution
+#### Cross-Site Attribution {.case-study__subsection-title}
 
 An additional layer of work unified tracking across the organization's digital properties to create a complete picture of marketing effectiveness.
 
@@ -42,18 +45,20 @@ An additional layer of work unified tracking across the organization's digital p
 - Passed campaign tracking data across domains to maintain attribution.
 - Connected awareness-driven campaigns directly to completed actions and donations.
 - Enabled the team to identify which marketing activities generated meaningful outcomes, not just traffic.
+{.case-study__list}
 
 
-#### Day-to-Day Impact
+#### Day-to-Day Impact {.case-study__subsection-title}
 
 The new framework consolidated marketing metrics into visual, easily interpreted reports that became part of everyday decision-making.
 
 - Created dashboards showing what was changing, drivers of change, and where to focus next.
 - Designed reports for non-technical users to interpret trends independently.
 - Made analytics a functional part of everyday planning, not just a reporting exercise.
+{.case-study__list}
 
 
-#### Implementation
+#### Implementation {.case-study__subsection-title}
 
 The analytics framework was rolled out systematically to ensure adoption and sustainability:
 
@@ -61,9 +66,10 @@ The analytics framework was rolled out systematically to ensure adoption and sus
 - Built automated dashboards and reports in Looker Studio.
 - Provided training on maintaining reports and applying insights to future campaigns.
 - Established regular review cycles to refine tracking and reporting based on team feedback.
+{.case-study__list}
 
 
-#### Outcomes
+#### Outcomes {.case-study__subsection-title}
 
 The project established a complete, scalable foundation for marketing analytics. The team now has reliable visibility into acquisition, engagement, and conversion performance, supported by clear and consistent data.
 
@@ -71,27 +77,30 @@ The project established a complete, scalable foundation for marketing analytics.
 - Conversion funnel insights led to 25% improvement in donation completion rates.
 - Cross-site attribution revealed which campaigns drive actual conversions vs. just traffic.
 - Data-driven decision making replaced guesswork in campaign planning.
+{.case-study__list}
 
 
-#### Services Mapped to Outcomes
+#### Services Mapped to Outcomes {.case-study__subsection-title}
 
 - **Google Analytics & Campaign Insight:** Built comprehensive measurement framework from event tracking to funnel analysis.
 - **Systems & Process Optimization:** Created accessible dashboards and training materials for sustainable adoption.
 - **Data Management & Quality Control:** Established data governance standards for accurate, consistent tracking.
+{.case-study__list}
 
 
-#### Representative Artifacts
+#### Representative Artifacts {.case-study__subsection-title}
 
 - Google Analytics 4 configuration with custom events and conversions
 - Campaign performance dashboards in Looker Studio
 - User funnel analysis reports with optimization recommendations
 - Cross-site attribution tracking implementation documentation
+{.case-study__list}
 
 
-#### Next Steps
+#### Next Steps {.case-study__subsection-title}
 
 Expand attribution modeling to include offline conversions, implement predictive analytics for campaign optimization, and integrate CRM data for complete customer journey visibility.
 
-#### Outcome in One Sentence
+#### Outcome in One Sentence {.case-study__subsection-title}
 
 A comprehensive analytics framework transformed marketing from intuition-based to data-driven, giving the team reliable visibility into what drives conversions and enabling confident campaign planning and optimization.

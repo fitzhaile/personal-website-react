@@ -24,11 +24,11 @@ const nextConfig = {
   // basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   // assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
   
-  // Webpack configuration to handle markdown files
+  // Webpack configuration to handle markdown files as strings
   webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,
-      type: 'asset/source', // Built-in webpack 5 feature to import files as strings
+      type: 'asset/source', // Import markdown files as strings
     });
     return config;
   },

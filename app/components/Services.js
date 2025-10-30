@@ -4,27 +4,16 @@
  * Each service card contains a title, summary, and bullet points
  * Clicking a card opens a modal with the full case study
  * 
- * Content is rendered from clean markdown using react-markdown
- * CSS classes are automatically applied via custom components
+ * Content is rendered from markdown with directive syntax for visible CSS classes
+ * Directives: :::section-title, :::subsection-title, :::list
  */
 
 'use client'
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { services } from './servicesData';
-import ReactMarkdown from 'react-markdown';
-
-/**
- * Custom markdown components that automatically add semantic CSS classes
- * - h3 headings get section-title class
- * - h4 headings get subsection-title class  
- * - ul lists get list class
- */
-const caseStudyComponents = {
-  h3: ({node, ...props}) => <h3 className="case-study__section-title" {...props} />,
-  h4: ({node, ...props}) => <h4 className="case-study__subsection-title" {...props} />,
-  ul: ({node, ...props}) => <ul className="case-study__list" {...props} />,
-}
+import MarkdownIt from 'markdown-it';
+import markdownItAttrs from 'markdown-it-attrs';
 
 /**
  * Services section component
@@ -34,6 +23,15 @@ const caseStudyComponents = {
  * @returns {JSX.Element} Services section with grid layout and case study modal
  */
 export default function Services() {
+  // Initialize markdown-it with attrs plugin for {.classname} syntax
+  const md = useMemo(() => {
+    return new MarkdownIt().use(markdownItAttrs, {
+      leftDelimiter: '{',
+      rightDelimiter: '}',
+      allowedAttributes: ['class']
+    });
+  }, []);
+  
   const [selectedCase, setSelectedCase] = useState(null);
   const [savedScrollPosition, setSavedScrollPosition] = useState(0);
 
@@ -98,12 +96,11 @@ export default function Services() {
                 {...cardProps}
               >
                 <h3 className="service-card__title">{service.title}</h3>
-                {/* Render markdown content */}
-                <div className="service-card__content">
-                  <ReactMarkdown>
-                    {service.content}
-                  </ReactMarkdown>
-                </div>
+                {/* Render markdown card content with {.classname} syntax */}
+                <div 
+                  className="service-card__content"
+                  dangerouslySetInnerHTML={{ __html: md.render(service.content) }}
+                />
                 {service.hasCaseStudy && (
                   <span className="service-card__cta">View Example →</span>
                 )}
@@ -128,10 +125,8 @@ export default function Services() {
                 <h2 className="case-study-modal__title">{selectedCase.title}</h2>
                 <p className="case-study-modal__subtitle">{selectedCase.caseStudy.subtitle}</p>
 
-                {/* Render markdown case study with custom components for classes */}
-                <ReactMarkdown components={caseStudyComponents}>
-                  {selectedCase.caseStudy.content}
-                </ReactMarkdown>
+                {/* Render markdown case study with {.classname} syntax */}
+                <div dangerouslySetInnerHTML={{ __html: md.render(selectedCase.caseStudy.content) }} />
               </div>
             </div>
           )}
