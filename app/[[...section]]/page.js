@@ -60,15 +60,66 @@ export async function generateMetadata({ params }) {
   
   // Handle case studies routes
   if (section === 'case-studies') {
-    const meta = sectionMeta['case-studies'];
     const baseUrl = 'https://fitzhaile.com'; // Update with your actual domain
-    
+    const slug = resolvedParams.section?.[1];
+
+    // If a specific case study slug is present, derive metadata from servicesData
+    if (slug) {
+      try {
+        const { services } = await import('../components/servicesData');
+        const svc = services.find(s => s.slug === slug);
+        const title = svc ? `${svc.title} — Case Study` : 'Case Study';
+        const description = svc?.caseStudy?.subtitle || 'Real-world example of data-driven solutions and analytics implementation.';
+        const url = `/case-studies/${slug}`;
+
+        return {
+          title,
+          description,
+          alternates: { canonical: `${baseUrl}${url}` },
+          openGraph: {
+            title,
+            description,
+            url: `${baseUrl}${url}`,
+            type: 'article',
+            locale: 'en_US',
+            siteName: 'Fitz Haile - Data & Analytics Consulting',
+          },
+          twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+          },
+        };
+      } catch (_e) {
+        // Fallback to generic case study metadata
+        const meta = sectionMeta['case-studies'];
+        return {
+          title: meta.title,
+          description: meta.description,
+          alternates: { canonical: `${baseUrl}${meta.url}` },
+          openGraph: {
+            title: meta.title,
+            description: meta.description,
+            url: `${baseUrl}${meta.url}`,
+            type: 'website',
+            locale: 'en_US',
+            siteName: 'Fitz Haile - Data & Analytics Consulting',
+          },
+          twitter: {
+            card: 'summary_large_image',
+            title: meta.title,
+            description: meta.description,
+          },
+        };
+      }
+    }
+
+    // No slug, use generic case studies listing metadata
+    const meta = sectionMeta['case-studies'];
     return {
       title: meta.title,
       description: meta.description,
-      alternates: {
-        canonical: `${baseUrl}${meta.url}`,
-      },
+      alternates: { canonical: `${baseUrl}${meta.url}` },
       openGraph: {
         title: meta.title,
         description: meta.description,
