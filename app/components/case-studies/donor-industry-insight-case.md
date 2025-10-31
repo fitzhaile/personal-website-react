@@ -1,77 +1,93 @@
 ### Challenge {.case-study__section-title}
 
-A regional nonprofit with strong employer relationships wanted to expand its workplace-giving reach strategically. The team sought a structured, data-driven approach to identify which industries held the most potential for deeper engagement.
+Provide a campaign-selected group of industry leaders tasked with tasked with moving forward fundraiing goals with clear, actionable insight on an assigned industry to guide recruitment strategy. Use existing data to identify where headroom exists and how to focus volunteer time effectively.
 
-The organization had built extensive donor and campaign data over the years and was ready to connect it to the broader business landscape. Leadership wanted to understand how its donor base aligned with the local economy and where additional outreach could deliver the greatest impact.
-
-- Donor, business, and corporate giving records used different categorization systems and needed a unified framework.
-- The organization needed a shared baseline to identify industries with the most growth potential.
-- Insights needed to be accessible and actionable for both staff and volunteer leaders.
+- Align internal donor/corporate data with local economic context
+- Identify industries with meaningful headroom for engagement
+- Produce guidance that non-technical leaders can use immediately
 {.case-study__list}
 
 
-### Approach {.case-study__section-title}
+### Industry Definition {.case-study__section-title}
 
-The project developed a unified dataset linking donor information, business listings, and public labor data under a single industry classification system. This alignment made it possible to compare participation and potential across local sectors.
+Selected Industry (NAICS 4‑digit, anonymized). Establishments operating within a specialized professional services category. Includes independent firms and multi‑site organizations across the region.
 
-#### Data Integration and Analysis {.case-study__subsection-title}
 
-- **Integrated data sources:** Combined donor, corporate giving, and wage data to provide a full picture of the regional economy.
-- **Opportunity scoring:** Weighted employment, wages, donor participation, and leadership giving to identify sectors with the strongest growth potential.
-- **Actionable materials:** Produced concise industry summaries and ranked lists that supported planning and recruitment discussions.
+### Factors Considered {.case-study__section-title}
+
+- Number of establishments and establishment size
+- Employment and employment penetration
+- Donor, donation/payroll penetration; leadership participation
+- Corporate donations and match patterns
+- Payroll and average wages; employee giving potential
 {.case-study__list}
 
 
-#### Day-to-Day Impact {.case-study__subsection-title}
+### Data Sources {.case-study__section-title}
 
-The framework made it easier for staff and volunteers to use data as part of everyday planning. Instead of relying on anecdotal impressions, leadership could view each industry through consistent metrics and focus outreach where opportunity was clearest.
-
-- Industry snapshots clarified where engagement could expand.
-- Shared metrics improved coordination across departments.
-- Campaign discussions became more data-driven and efficient.
+- Internal individual and corporate donor records (2019)
+- BLS Quarterly Census of Employment and Wages (2019 averages)
+- Data Axle business listings
+- NAICS classification (U.S. Census Bureau)
 {.case-study__list}
 
 
-#### Implementation {.case-study__subsection-title}
+### Employment {.case-study__section-title}
 
-The analysis was designed to be simple to maintain and repeat annually. Key phases included:
+Employment penetration compares employees at known accounts to total local employment. Measuring people rather than organizations avoids bias from uneven firm sizes.
 
-- Aligning donor and business data using a consistent industry classification.
-- Calculating participation and wage-based opportunity indicators.
-- Summarizing insights into briefs and ranked lists for leadership review.
+- Penetration within this industry was weak relative to the local economy
+- Small current footprint implies significant headroom despite niche size
+- Attractive average salaries increase the value of potential penetration gains
 {.case-study__list}
 
 
-#### Outcomes {.case-study__subsection-title}
+### Donors & Individual Giving {.case-study__section-title}
 
-The findings offered new perspective on the local economy and helped leadership focus planning where it could have the most impact.
+Donor participation reflects the percent of people within accounts who give. Percentages are volatile at small counts but still directional. Leadership donors often require more time per relationship and can materially affect totals.
 
-- Revealed several industries with untapped potential for engagement.
-- Provided a replicable process for evaluating opportunity each year.
-- Strengthened collaboration between fundraising and research teams.
+- Donor participation and counts were low; leadership share among donors was high
+- Leadership gifts can represent a large portion of individual revenue
+- Small denominators amplify percentage swings; interpret trends with caution
 {.case-study__list}
 
 
-#### Services Mapped to Outcomes {.case-study__subsection-title}
+### Corporate Giving {.case-study__section-title}
 
-- **Donor & Industry Insight:** Created a shared structure for connecting donor and business data to uncover sector-based opportunities.
-- **Systems & Process Optimization:** Delivered usable tools that turned analysis into everyday insight for planning discussions.
-- **Data Management & Quality Control:** Built a unified dataset designed for easy updates and continued expansion.
+Corporate gifts and matches vary by industry and are often decided by headquarters. They increasingly incentivize participation and can materially shift totals even when donor counts are small.
+
+- Corporate participation was limited but impactful where present
+- Matching policies can be a lever for new or increased participation
 {.case-study__list}
 
 
-#### Representative Artifacts {.case-study__subsection-title}
+### Payroll & Giving Potential {.case-study__section-title}
 
-- Industry opportunity brief with sector rankings
-- Prioritized lead list for campaign planning
-- Scoring workbook for sector comparison and analysis
+Total payroll indicates scale; giving potential per employee estimates headroom using typical giving rates (e.g., ~1–2% of income), consistent with observed averages.
+
+- Higher-than-average wages suggest above-average per-employee potential
+- Combined with low current penetration, the opportunity is attractive
 {.case-study__list}
 
 
-#### Next Steps {.case-study__subsection-title}
+### Conclusion {.case-study__section-title}
 
-Expand the model to additional industries, refresh data annually, and refine scoring based on observed campaign outcomes.
+This industry is relatively small but offers clear headroom: higher wages, weak current penetration, and leadership‑gift patterns seen in adjacent fields all point to actionable opportunity.
 
-#### Outcome in One Sentence {.case-study__subsection-title}
+- Focus early outreach on targeted establishments with capacity and leadership prospects
+- Use consistent industry metrics and annual refresh to track movement
+{.case-study__list}
 
-A unified data framework gave the organization a clear, repeatable way to identify high-potential industries—turning existing information into practical guidance for future fundraising growth.
+
+### Services & Artifacts {.case-study__section-title}
+
+- Donor & Industry Insight: Unified structure connecting donor and business data
+- Systems & Process Optimization: Materials leaders can use in planning
+- Data Management & Quality Control: Updatable dataset for annual refresh
+- Industry brief with sector rankings and rationale
+- Prioritized lead list for campaign development (existing accounts removed)
+- Scoring workbook for sector comparison and opportunity review
+{.case-study__list}
+
+
+ 
