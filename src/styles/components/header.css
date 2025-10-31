@@ -21,7 +21,7 @@
 
 /* Logo text styling */
 .header__logo {
-  font-size: var(--text-2xl); /* Mobile size, increased on tablet+ */
+  font-size: var(--text-3xl); /* Mobile size, increased on tablet+ */
   font-weight: var(--font-extrabold);
   letter-spacing: -0.025em; /* Tighter letter spacing for modern look */
   text-decoration: none;
