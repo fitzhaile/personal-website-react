@@ -1,106 +1,79 @@
 ### Challenge {.case-study__section-title}
 
-As the organization's digital presence expanded across multiple properties, the marketing team wanted a comprehensive way to measure campaign performance and understand the complete user journey. They sought a unified analytics framework that could connect activity across sites and provide clear insights into what drove conversions.
+As digital presence expanded across multiple properties, the team needed a single, reliable view of acquisition, behavior, and conversions—moving beyond basic traffic into data that could drive confident decisions.
 
-The team was ready to move from basic reporting to sophisticated measurement—tracking not just traffic, but understanding acquisition sources, user behavior, and conversion patterns that could guide strategy and resource allocation.
-
-- Campaign data existed across multiple platforms and needed integration into a unified view.
-- The organization was ready to implement standardized conversion tracking and funnel analysis.
-- Cross-site user journeys needed to be connected for complete attribution visibility.
-- Marketing decisions needed to be supported by comprehensive, data-driven insights.
+- Campaign data lived across multiple platforms and needed integration into one view
+- Standardized conversion tracking and funnel analysis were required
+- Cross-site user journeys had to be connected for complete attribution
+- Decisions needed to be grounded in consistent, accessible data
 {.case-study__list}
 
 
 ### Approach {.case-study__section-title}
 
-A comprehensive analytics framework was built from the ground up, implementing event-based measurement, funnel analysis, cross-site tracking, and accessible reporting dashboards.
+Built a comprehensive, event-based analytics foundation: consistent conversion tracking, funnel analysis, cross-site attribution, and accessible dashboards used in everyday planning.
 
-#### Acquisition and Conversion Reporting {.case-study__subsection-title}
 
-A new event-based measurement strategy was implemented to capture key interactions such as donations, purchases, and engagement actions. The marketing team gained visibility into where users were coming from, how they engaged across channels, and what influenced conversion outcomes.
+#### Event Configuration & Conversions {.case-study__subsection-title}
 
-- Deployed custom event tracking to measure donations, purchases, and key engagement actions.
-- Built automated reports tracking conversion rate, engagement rate, revenue, and average purchase value.
-- Created segmentation by source, medium, campaign, and user characteristics.
-- Enabled comparison across channels to identify which initiatives drove the most value.
+- Implemented custom twenty to twenty-five GA4 events for donations, ticketing, form entry, engagement, etc. 
+- Based primary conversions on purchase events; defined additional conversions (e.g., contact shares) per Marketing priorities
+- KPI set for reports: users, user conversion rate, engagement rate, average engagement time, ARPPU, total revenue
 {.case-study__list}
 
 
-#### User Behavior and Funnel Analysis {.case-study__subsection-title}
+#### Reporting & Funnel Analysis {.case-study__subsection-title}
 
-To help interpret how visitors moved through the purchase and donation process, a series of user funnels was developed to visualize the complete user journey.
-
-- Mapped drop-off points throughout the donation and purchase process.
-- Analyzed conversion rate variations across acquisition channels and devices.
-- Identified audience segments with the highest and lowest completion rates.
-- Revealed opportunities for optimization such as form simplification and improved calls to action.
+- Automated reporting for conversion rate, engagement rate, revenue, ARPU, and AOV
+- Breakdowns and filters by medium, source, and campaign
+- Compared channels to identify initiatives driving the most value
+- Mapped drop-off across donation and purchase flows; identified low/high-performing segments
+- Funnel exploration with abandonment by step; filterable by acquisition segments (e.g., campaign, medium, source)
+- Prioritized optimizations (form simplification, clearer CTAs)
 {.case-study__list}
 
 
-#### Cross-Site Attribution {.case-study__subsection-title}
+#### Cross-Property Tracking {.case-study__subsection-title}
 
-An additional layer of work unified tracking across the organization's digital properties to create a complete picture of marketing effectiveness.
-
-- Mapped user journeys between informational and transactional sites.
-- Passed campaign tracking data across domains to maintain attribution.
-- Connected awareness-driven campaigns directly to completed actions and donations.
-- Enabled the team to identify which marketing activities generated meaningful outcomes, not just traffic.
+- Connected journeys across informational and transactional properties to maintain attribution end-to-end
+- Linked awareness activities directly to completed actions and donations (outcomes over traffic)
+- Differentiated internal referral flows from direct marketing for reporting clarity
 {.case-study__list}
 
 
-#### Day-to-Day Impact {.case-study__subsection-title}
+#### Non‑Ecommerce Measurement {.case-study__subsection-title}
 
-The new framework consolidated marketing metrics into visual, easily interpreted reports that became part of everyday decision-making.
-
-- Created dashboards showing what was changing, drivers of change, and where to focus next.
-- Designed reports for non-technical users to interpret trends independently.
-- Made analytics a functional part of everyday planning, not just a reporting exercise.
+- Charted KPI metrics (users, user conversion rate, engagement rate, average engagement time, etc.) by medium, source and campaign
+- Defined non‑ecommerce conversions (content‑visit journey goals) and computed conversion rates
+- Explored funnels for content‑visit journeys with abandonment analysis; segmentable by audience
+- Created dashboards snapshot for quick monitoring
 {.case-study__list}
 
 
-#### Implementation {.case-study__subsection-title}
+#### Audiences & Segmentation {.case-study__subsection-title}
 
-The analytics framework was rolled out systematically to ensure adoption and sustainability:
+- Planned audiences (e.g., gender, age, device, region, interests)
+- Segmented performance by source, medium, campaign, device, and user characteristics
+- Added example metrics (e.g., returning users) and segments (e.g., mobile vs. desktop) with room to extend
+{.case-study__list}
 
-- Configured Google Analytics 4 with custom events and conversion tracking.
-- Built automated dashboards and reports in Looker Studio.
-- Provided training on maintaining reports and applying insights to future campaigns.
-- Established regular review cycles to refine tracking and reporting based on team feedback.
+
+#### Data Quality & Governance {.case-study__subsection-title}
+
+- Established governance to keep tracking accurate and consistent
+- Defined naming, parameter, and event standards to ensure durable reporting
 {.case-study__list}
 
 
 #### Outcomes {.case-study__subsection-title}
 
-The project established a complete, scalable foundation for marketing analytics. The team now has reliable visibility into acquisition, engagement, and conversion performance, supported by clear and consistent data.
-
-- Marketing team can now measure campaign ROI with confidence.
-- Conversion funnel insights led to 25% improvement in donation completion rates.
-- Cross-site attribution revealed which campaigns drive actual conversions vs. just traffic.
-- Data-driven decision making replaced guesswork in campaign planning.
+- Reliable visibility into acquisition, engagement, and conversion performance
+- Dashboards made it clear what changed, why, and where to focus next
+- Analytics embedded into day-to-day planning and decision-making
+- Built internal dashboards/report templates for non-technical users
+- Trained staff and set a regular review cadence for iterative improvement
+- Provided an initial GA training session; optional advanced training available as needs evolve
+- Delivered: GA4 custom event/conversion config; reporting templates; attribution docs
+- Mapped to services: Google Analytics & Campaign Insight; Systems & Process Optimization; Data Management & Quality Control
 {.case-study__list}
 
-
-#### Services Mapped to Outcomes {.case-study__subsection-title}
-
-- **Google Analytics & Campaign Insight:** Built comprehensive measurement framework from event tracking to funnel analysis.
-- **Systems & Process Optimization:** Created accessible dashboards and training materials for sustainable adoption.
-- **Data Management & Quality Control:** Established data governance standards for accurate, consistent tracking.
-{.case-study__list}
-
-
-#### Representative Artifacts {.case-study__subsection-title}
-
-- Google Analytics 4 configuration with custom events and conversions
-- Campaign performance dashboards in Looker Studio
-- User funnel analysis reports with optimization recommendations
-- Cross-site attribution tracking implementation documentation
-{.case-study__list}
-
-
-#### Next Steps {.case-study__subsection-title}
-
-Expand attribution modeling to include offline conversions, implement predictive analytics for campaign optimization, and integrate CRM data for complete customer journey visibility.
-
-#### Outcome in One Sentence {.case-study__subsection-title}
-
-A comprehensive analytics framework transformed marketing from intuition-based to data-driven, giving the team reliable visibility into what drives conversions and enabling confident campaign planning and optimization.
