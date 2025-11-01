@@ -4,8 +4,9 @@
  * Each service card contains a title, summary, and bullet points
  * Clicking a card opens a modal with the full case study
  * 
- * Content is rendered from markdown with directive syntax for visible CSS classes
- * Directives: :::section-title, :::subsection-title, :::list
+ * Content is rendered from Markdown files using markdown-it with markdown-it-attrs
+ * Classes are defined in Markdown using {.classname} syntax for explicit styling control
+ * Markdown files are imported as strings via webpack and rendered client-side
  */
 
 'use client'
@@ -23,7 +24,9 @@ import markdownItAttrs from 'markdown-it-attrs';
  * @returns {JSX.Element} Services section with grid layout and case study modal
  */
 export default function Services() {
-  // Initialize markdown-it with attrs plugin for {.classname} syntax
+  // Initialize markdown-it parser with attrs plugin
+  // Enables {.classname} syntax for applying CSS classes directly in Markdown
+  // Example: ### Heading {.my-class} or - list item\n{.list-class}
   const md = useMemo(() => {
     return new MarkdownIt().use(markdownItAttrs, {
       leftDelimiter: '{',

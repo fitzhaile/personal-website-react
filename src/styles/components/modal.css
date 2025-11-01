@@ -1,12 +1,18 @@
 /**
  * ===== MODAL COMPONENT =====
- * Contact form modal popup overlay
+ * Shared modal styles for contact form and case study modals
+ * 
  * Features:
- * - Full-screen dark overlay backdrop
- * - Centered modal content box
- * - Contact form with name, email, message fields
- * - Success state after form submission
- * - Responsive sizing (full-width on mobile with margins)
+ * - Full-screen dark overlay backdrop with iOS safe-area support
+ * - Dynamic viewport units (100dvh) to handle mobile URL bar
+ * - Centered modal content box with accent borders
+ * - Shared close button styling
+ * - Base styles extended by specific modal types (contact, case study)
+ * 
+ * iOS Chrome Fix:
+ * - Uses 100dvh with 100vh fallback for proper viewport height
+ * - Respects safe-area-inset for notched devices
+ * - Ensures borders aren't clipped on mobile browsers
  */
 
 /* Modal overlay (backdrop) - shared base for all modals */

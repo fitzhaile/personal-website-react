@@ -2,11 +2,11 @@
 
 This guide explains all the SEO meta tags configured in your website and how to optimize them further.
 
-## 📋 Current SEO Setup
+## Current SEO Setup
 
 ### Meta Tags Generated (Automatic via Next.js)
 
-Your site now generates these HTML meta tags automatically:
+Your site now generates these HTML meta tags automatically for all pages, including dynamic case study pages:
 
 ```html
 <!-- Primary SEO Tags -->
@@ -137,6 +137,21 @@ title: {
 
 ### Page-Specific Metadata (app/[[...section]]/page.js)
 ```javascript
+// Case study pages get dynamic metadata from servicesData.js
+if (section === 'case-studies' && slug) {
+  const caseStudy = services.find(s => s.slug === slug);
+  if (caseStudy) {
+    return {
+      title: `${caseStudy.title} — Case Study`,
+      description: caseStudy.caseStudy.subtitle,
+      openGraph: {
+        type: 'article', // Changed to 'article' for case studies
+        // ... other OG properties
+      },
+    };
+  }
+}
+
 // Homepage omits title to use default from layout.js
 if (section === 'home') {
   return {
@@ -151,6 +166,12 @@ return {
   description: meta.description,
 };
 ```
+
+**Dynamic Case Study SEO:**
+- Each case study gets a unique title: `"[Service Name] — Case Study | Fitz Haile"`
+- Description pulled from the case study subtitle in `servicesData.js`
+- Open Graph type set to `article` for better social sharing
+- Canonical URLs include the case study slug: `/case-studies/[slug]`
 
 ### Client-Side Title Updates (HomePageClient.js)
 Since this is a single-page app with smooth scrolling navigation, we also update `document.title` during client-side navigation:
@@ -381,10 +402,12 @@ Add this to your `app/layout.js` inside the `<head>`:
 - [ ] Update domain from 'fitzhaile.com' to your actual domain in both files
 - [ ] Verify homepage title is optimized (currently "Data & Analytics Consultant")
 - [ ] Test title updates during smooth-scroll navigation (check browser tabs)
+- [ ] Test case study page metadata (title, description, canonical URL)
+- [ ] Verify case study URLs work: `/case-studies/[slug]`
 - [ ] Create and add social share images (og-image.jpg, twitter-image.jpg)
 - [ ] Add your Twitter handle if you have one
-- [ ] Test all pages with Facebook Debugger
-- [ ] Test all pages with Twitter Card Validator
+- [ ] Test all pages with Facebook Debugger (including case studies)
+- [ ] Test all pages with Twitter Card Validator (including case studies)
 - [ ] Verify Google Analytics is tracking properly
 - [ ] Set up Google Search Console
 - [ ] Submit sitemap to Google Search Console
@@ -470,12 +493,14 @@ Add this to your `app/layout.js` inside the `<head>`:
 ## 🚀 Your Current SEO Score: Excellent!
 
 You already have:
-- ✅ Unique titles per page
+- ✅ Unique titles per page (including dynamic case studies)
 - ✅ Unique descriptions per page
+- ✅ Dynamic metadata for case study pages
 - ✅ Canonical URLs
-- ✅ Open Graph tags
+- ✅ Open Graph tags (type: 'article' for case studies)
 - ✅ Twitter Cards
 - ✅ Mobile responsive design
+- ✅ iOS-optimized modals (100dvh, safe-area support)
 - ✅ Fast loading (static site)
 - ✅ Clean URLs
 - ✅ Semantic HTML
@@ -488,9 +513,9 @@ To complete your SEO setup:
 - ⏳ Set up Google Search Console
 - ⏳ Get your Twitter handle if you use Twitter
 
-You're 90% there! 🎉
+You're 90% there!
 
-## 🔄 How to Update Your Homepage Title
+## How to Update Your Homepage Title
 
 If you ever want to change your homepage title (like we changed from "Data Driven Decision Making" to "Data & Analytics Consultant"), update it in **three places**:
 

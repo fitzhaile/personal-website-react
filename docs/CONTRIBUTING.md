@@ -212,6 +212,35 @@ All files should have:
 4. **Update documentation**: Add to README.md structure section
 5. **Add route if needed**: Update `generateStaticParams()` in page.js
 
+### Editing Service Content (Markdown)
+
+Service content is stored in Markdown files for easy editing:
+
+1. **Edit service card preview**: `app/components/case-studies/{slug}-card.md`
+2. **Edit full case study**: `app/components/case-studies/{slug}-case.md`
+3. **Use {.classname} syntax**: Apply CSS classes directly in Markdown
+4. **Rebuild to see changes**: `npm run build`
+
+**Markdown Syntax:**
+```markdown
+### Section Title {.case-study__section-title}
+
+Regular paragraph text with emphasis.
+
+- List item 1
+- List item 2
+- List item 3
+{.case-study__list}
+```
+
+**Available Classes:**
+- `.case-study__section-title` - Section headings
+- `.case-study__subsection` - Subsection headings
+- `.case-study__list` - Bulleted lists
+- `.case-study__paragraph` - Paragraphs (applied by default)
+
+Content is parsed with `markdown-it` and `markdown-it-attrs` plugin.
+
 ### Adding New Utilities
 
 1. **Create utility file**: `src/styles/utilities/utility-name.css`
@@ -265,10 +294,13 @@ Before committing or deploying, verify:
 ### Functionality
 - [ ] All navigation links work correctly
 - [ ] Forms submit and show success messages
-- [ ] Modals open and close properly
+- [ ] Contact modal opens and closes properly
+- [ ] Case study modals open and close properly
+- [ ] Case study URLs work (e.g., `/case-studies/donor-industry-insight`)
 - [ ] Smooth scrolling works between sections
 - [ ] Browser back/forward buttons work
 - [ ] External links open in new tabs
+- [ ] Markdown content renders correctly with proper classes
 
 ### Responsive Design
 - [ ] Test on mobile (320px - 767px)
@@ -293,8 +325,10 @@ Before committing or deploying, verify:
 
 ### SEO
 - [ ] Each section has unique metadata
+- [ ] Case study pages have dynamic metadata (title, description)
 - [ ] Meta descriptions are compelling
 - [ ] Open Graph tags are correct
+- [ ] Canonical URLs are set correctly
 - [ ] URLs are clean and semantic
 
 ### Accessibility
@@ -445,5 +479,5 @@ If you have questions or run into issues:
 3. Create a new issue with detailed description
 4. Include error messages, screenshots, and steps to reproduce
 
-Thank you for contributing! 🎉
+Thank you for contributing!
 

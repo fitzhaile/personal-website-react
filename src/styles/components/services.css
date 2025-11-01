@@ -1,11 +1,18 @@
 /**
  * ===== SERVICES COMPONENT =====
- * Services section with responsive grid of service cards
+ * Services section with responsive grid of service cards and case study modal
+ * 
  * Features:
  * - Responsive grid layout (1 column mobile, 2 columns tablet+)
- * - Service cards with left border accent
- * - Animated hover effects (border grows, card lifts)
- * - Custom arrow bullet points
+ * - Service cards with left border accent and animated hover effects
+ * - Custom arrow bullet points for lists
+ * - Case study modal extends base .modal styles from modal.css
+ * - Markdown content rendered with markdown-it (supports {.classname} syntax)
+ * 
+ * Case Study Modal:
+ * - Uses base .modal and .modal__content classes from modal.css
+ * - Extended with .modal__content--case-study for larger, scrollable content
+ * - Custom styling for section titles, subsections, and content lists
  */
 
 /* Main services section */

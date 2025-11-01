@@ -1,8 +1,8 @@
 # Next.js & React Beginner's Guide for Your Website
 
-Welcome! This guide will help you understand how your Next.js website works. 🎉
+Welcome! This guide will help you understand how your Next.js website works.
 
-## 📁 File Structure Overview
+## File Structure Overview
 
 ```
 personal-website-react/
@@ -48,7 +48,7 @@ personal-website-react/
 └── package.json                   ← Dependencies
 ```
 
-## 🎯 How It All Connects
+## How It All Connects
 
 1. **User visits** `yoursite.com/services`
 2. **Next.js** matches route to `app/[[...section]]/page.js`
@@ -65,7 +65,7 @@ Think of it like this:
 - **Client Component** (HomePageClient.js) = Interactive body, handles clicks/scrolling
 - **Child Components** = Individual sections (Header, Hero, Services, etc.)
 
-## 🚀 Key Next.js Concepts
+## Key Next.js Concepts
 
 ### 1. Server vs. Client Components
 
@@ -379,9 +379,9 @@ Your website uses **BEM (Block Element Modifier)** - a CSS naming methodology th
 </div>
 ```
 
-Clean, semantic, and self-explanatory! 🎯
+Clean, semantic, and self-explanatory!
 
-## 📝 Modular CSS Structure
+## Modular CSS Structure
 
 Your styles are split into logical files for better organization:
 
@@ -527,16 +527,19 @@ Find and replace color values in component CSS files:
 ```
 
 **Services:**
-```jsx
-// app/components/Services.js
-const services = [
-  { 
-    title: "Your Service", 
-    content: "<p>Description...</p><ul>...</ul>" 
-  },
-  // Add more...
-];
+Service content is stored in Markdown files for easy editing:
+```markdown
+// app/components/case-studies/your-service-card.md
+Brief description of your service.
+
+- Key benefit 1
+- Key benefit 2
+- Key benefit 3
+{.service-card__list}
 ```
+
+Use `{.classname}` syntax to apply CSS classes to elements.
+Files are rendered with markdown-it parser in Services.js.
 
 ### Change Styles:
 
@@ -601,20 +604,56 @@ Create `src/styles/components/testimonials.css`:
 ```
 
 ### Change Service Cards:
-Edit the array in the Services section of `src/App.jsx`:
-```jsx
-{[
-  { 
-    title: "Your Service Name", 
-    content: "Your service description here" 
-  },
-  { 
-    title: "Another Service", 
-    content: "Another description" 
-  },
-  // Add more services...
-]}
+
+Service content is now stored in Markdown files in `app/components/case-studies/`:
+
+**Step 1: Edit the service card preview**
+```markdown
+// app/components/case-studies/your-service-card.md
+Brief description of your service that appears on the card.
+
+- Key benefit 1
+- Key benefit 2
+- Key benefit 3
+{.service-card__list}
 ```
+
+**Step 2: Edit the full case study (optional)**
+```markdown
+// app/components/case-studies/your-service-case.md
+### Challenge {.case-study__section-title}
+
+Description of the challenge...
+
+- Point 1
+- Point 2
+{.case-study__list}
+```
+
+**Step 3: Update the service data**
+```javascript
+// app/components/servicesData.js
+import yourServiceCard from './case-studies/your-service-card.md';
+import yourServiceCase from './case-studies/your-service-case.md';
+
+export const services = [
+  {
+    slug: "your-service",
+    title: "Your Service Name",
+    content: yourServiceCard,
+    hasCaseStudy: true,
+    caseStudy: {
+      subtitle: "One-line description",
+      content: yourServiceCase
+    }
+  },
+];
+```
+
+**Markdown Syntax:**
+- Use `{.classname}` to add CSS classes
+- Place `{.classname}` on the line after lists or headings
+- Example: `### Heading {.my-class}` or `- item\n{.list-class}`
 
 ### Modify Service Card Styles:
 ```css
@@ -695,7 +734,8 @@ Edit the array in the Services section of `src/App.jsx`:
 |------------------|-------------------|
 | **Content** | |
 | Hero text | `app/components/Hero.js` |
-| Services text | `app/components/Services.js` |
+| Services cards | `app/components/case-studies/*-card.md` |
+| Case studies | `app/components/case-studies/*-case.md` |
 | About text | `app/components/About.js` |
 | Footer links | `app/components/Footer.js` |
 | Modal form | `app/components/ContactModal.js` |
@@ -773,11 +813,13 @@ Your website now uses:
 - ✅ **Next.js 15** - Latest framework with App Router
 - ✅ **Server Components** - SEO-optimized metadata
 - ✅ **Client Components** - Interactive features
+- ✅ **Markdown Content** - Easy content editing with markdown-it
 - ✅ **Modular Architecture** - Easy to maintain and scale
 - ✅ **BEM CSS** - Professional styling methodology
 - ✅ **Design Tokens** - Consistent theming with CSS variables
+- ✅ **Consolidated Modals** - Shared base styles, iOS-optimized
 - ✅ **Comprehensive Comments** - Every file thoroughly documented
 
-**Professional-grade architecture** that's both powerful and maintainable! 🚀
+**Professional-grade architecture** that's both powerful and maintainable!
 
-Happy coding! 🎉
+Happy coding!

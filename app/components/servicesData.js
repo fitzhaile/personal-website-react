@@ -1,5 +1,5 @@
 /**
- * ===== SERVICES DATA (MARKDOWN VERSION) =====
+ * ===== SERVICES DATA =====
  * Service offerings and case study content
  * 
  * STRUCTURE OVERVIEW:
@@ -9,10 +9,12 @@
  * MARKDOWN FILES:
  * Content is stored in separate markdown files in the case-studies/ directory:
  * - {slug}-card.md: Brief service description for the card preview
- * - {slug}.md: Full case study content (if hasCaseStudy is true)
+ * - {slug}-case.md: Full case study content (if hasCaseStudy is true)
  * 
- * Markdown files use {.classname} syntax for CSS classes (remark-attr format)
+ * Markdown files use {.classname} syntax for CSS classes (markdown-it-attrs format)
  * Example: ### Challenge {.case-study__section-title}
+ * Example: - List item\n{.case-study__list}
+ * Rendered client-side with markdown-it parser in Services.js
  * 
  * EACH SERVICE OBJECT CONTAINS:
  * 
@@ -27,7 +29,7 @@
  * 
  * @property {string} content - Markdown string imported from {slug}-card.md
  *   - Edit the corresponding markdown file in case-studies/ directory
- *   - Rendered using ReactMarkdown with remark-attr in Services.js
+ *   - Rendered using markdown-it with markdown-it-attrs in Services.js
  * 
  * @property {boolean} hasCaseStudy - Controls "View Example" link visibility
  *   - true: Shows "View Example →" link and makes card clickable
@@ -37,10 +39,10 @@
  *   - Only required if hasCaseStudy is true
  *   - Contains two properties:
  *     - subtitle: Brief case study tagline (1 sentence)
- *     - content: Markdown string imported from {slug}.md
+ *     - content: Markdown string imported from {slug}-case.md
  * 
  * ADDING A NEW SERVICE:
- * 1. Create markdown files: {slug}-card.md and {slug}.md (if has case study)
+ * 1. Create markdown files: {slug}-card.md and {slug}-case.md (if has case study)
  * 2. Add import statements at the top of this file
  * 3. Add service object to the services array
  * 4. Add the new route to generateStaticParams() in app/[[...section]]/page.js
@@ -48,7 +50,7 @@
  * EDITING CONTENT:
  * - Edit the markdown files directly in app/components/case-studies/
  * - Use {.classname} syntax to add CSS classes to elements
- * - Changes will be reflected after rebuilding the site
+ * - Changes will be reflected after rebuilding the site (npm run build)
  */
 
 // Import card content (brief service descriptions)
