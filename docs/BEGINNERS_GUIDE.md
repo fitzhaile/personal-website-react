@@ -15,9 +15,18 @@ personal-website-react/
 │       ├── Header.js              ← Navigation
 │       ├── Hero.js                ← Landing section
 │       ├── Services.js            ← Service cards
+│       ├── servicesData.js        ← Service configuration
 │       ├── About.js               ← About section
 │       ├── Footer.js              ← Footer
-│       └── ContactModal.js        ← Contact form
+│       ├── ContactModal.js        ← Contact form
+│       └── case-studies/          ← Case study content (Markdown)
+│           ├── data-management-card.md
+│           ├── donor-industry-insight-card.md
+│           ├── donor-industry-insight-case.md
+│           ├── google-analytics-card.md
+│           ├── google-analytics-case.md
+│           ├── systems-optimization-card.md
+│           └── systems-optimization-case.md
 ├── src/
 │   ├── styles/                    ← Modular CSS files
 │   │   ├── base/                  ← Global resets & defaults
@@ -44,6 +53,8 @@ personal-website-react/
 ├── public/                        ← Static assets
 │   ├── img/                       ← Images
 │   └── favicon-*.png              ← Favicons
+├── scripts/                       ← Conversion scripts
+│   └── README.md                  ← Script documentation
 ├── next.config.js                 ← Next.js config
 └── package.json                   ← Dependencies
 ```

@@ -94,9 +94,18 @@ personal-website-react/
 │       ├── Header.js              # Navigation header
 │       ├── Hero.js                # Landing section
 │       ├── Services.js            # Service cards
+│       ├── servicesData.js        # Service configuration
 │       ├── About.js               # About section
 │       ├── Footer.js              # Footer with links
-│       └── ContactModal.js        # Contact form modal
+│       ├── ContactModal.js        # Contact form modal
+│       └── case-studies/          # Case study content (Markdown)
+│           ├── data-management-card.md
+│           ├── donor-industry-insight-card.md
+│           ├── donor-industry-insight-case.md
+│           ├── google-analytics-card.md
+│           ├── google-analytics-case.md
+│           ├── systems-optimization-card.md
+│           └── systems-optimization-case.md
 ├── docs/                          # Documentation
 │   ├── BEGINNERS_GUIDE.md         # Learning guide for React & Next.js
 │   ├── CONTRIBUTING.md            # Contribution guidelines & setup
@@ -128,6 +137,8 @@ personal-website-react/
 │   ├── img/                       # Images
 │   ├── favicon-16x16.png          # Favicon (16px)
 │   └── favicon-32x32.png          # Favicon (32px)
+├── scripts/                       # Conversion scripts
+│   └── README.md                  # Script documentation (HTML ↔ Markdown)
 ├── next.config.js                 # Next.js configuration
 ├── package.json                   # Project dependencies
 ├── .gitignore                     # Git ignore file
