@@ -1,6 +1,6 @@
 ### Challenge {.case-study__section-title}
 
-Provide a campaign-selected group of industry leaders tasked with tasked with moving forward fundraiing goals with clear, actionable insight on an assigned industry to guide recruitment strategy. Use existing data to identify where headroom exists and how to focus volunteer time effectively.
+Provide a campaign-selected group of industry leaders tasked with moving forward fundraiing goals with clear, actionable insight on their assigned industry to guide recruitment strategy. Use existing data to identify where headroom exists and how to focus volunteer time effectively.
 
 - Align internal donor/corporate data with local economic context
 - Identify industries with meaningful headroom for engagement
@@ -10,13 +10,13 @@ Provide a campaign-selected group of industry leaders tasked with tasked with mo
 
 ### Industry Definition {.case-study__section-title}
 
-Selected Industry (NAICS 4‑digit, anonymized). Establishments operating within a specialized professional services category. Includes independent firms and multi‑site organizations across the region.
+Selected Industry (NAICS 4‑digit level). Establishments operating within a specialized professional services category. Includes independent firms and multi‑site organizations across the region.
 
 
 ### Factors Considered {.case-study__section-title}
 
 - Number of establishments and establishment size
-- Employment and employment penetration
+- Employment and public employment penetration
 - Donor, donation/payroll penetration; leadership participation
 - Corporate donations and match patterns
 - Payroll and average wages; employee giving potential
@@ -25,8 +25,8 @@ Selected Industry (NAICS 4‑digit, anonymized). Establishments operating within
 
 ### Data Sources {.case-study__section-title}
 
-- Internal individual and corporate donor records (2019)
-- BLS Quarterly Census of Employment and Wages (2019 averages)
+- Internal individual and corporate donor records
+- BLS Quarterly Census of Employment and Wages
 - Data Axle business listings
 - NAICS classification (U.S. Census Bureau)
 {.case-study__list}
@@ -46,7 +46,7 @@ Employment penetration compares employees at known accounts to total local emplo
 
 Donor participation reflects the percent of people within accounts who give. Percentages are volatile at small counts but still directional. Leadership donors often require more time per relationship and can materially affect totals.
 
-- Donor participation and counts were low; leadership share among donors was high
+- While donor participation and counts were low; leadership share among donors was high
 - Leadership gifts can represent a large portion of individual revenue
 - Small denominators amplify percentage swings; interpret trends with caution
 {.case-study__list}
@@ -65,7 +65,7 @@ Corporate gifts and matches vary by industry and are often decided by headquarte
 
 Total payroll indicates scale; giving potential per employee estimates headroom using typical giving rates (e.g., ~1–2% of income), consistent with observed averages.
 
-- Higher-than-average wages suggest above-average per-employee potential
+- Higher-than-average wages suggested above-average per-employee potential
 - Combined with low current penetration, the opportunity is attractive
 {.case-study__list}
 
