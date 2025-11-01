@@ -197,7 +197,7 @@
   max-height: calc(100vh - 2 * var(--spacing-lg)); /* Fallback */
   max-height: calc(100dvh - 2 * var(--spacing-lg) - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   overflow-y: auto;
-  padding: var(--spacing-2xl) var(--spacing-2xl) var(--spacing-3xl);
+  padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);
   position: relative;
   animation: modalSlideIn 0.3s ease-out;
   box-sizing: border-box;
@@ -374,7 +374,7 @@
   }
 
   .case-study-modal__content {
-    padding: var(--spacing-3xl) var(--spacing-3xl) var(--spacing-3xl);
+    padding: var(--spacing-2xl) var(--spacing-2xl) var(--spacing-xl);
   }
 
   .case-study-modal__title {
