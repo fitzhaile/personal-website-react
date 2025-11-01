@@ -112,10 +112,10 @@ export default function Services() {
 
           {/* Case Study Modal */}
           {selectedCase && (
-            <div className="case-study-modal" onClick={closeCaseStudy}>
-              <div className="case-study-modal__content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal case-study-modal" onClick={closeCaseStudy}>
+              <div className="modal__content modal__content--case-study case-study-modal__content" onClick={(e) => e.stopPropagation()}>
                 <button
-                  className="case-study-modal__close"
+                  className="modal__close"
                   onClick={closeCaseStudy}
                   aria-label="Close case study"
                 >
