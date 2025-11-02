@@ -34,7 +34,7 @@ export default function About({ handleContactTrigger }) {
           <p className="about__greeting">Hi, I'm Fitz</p>
           
           <p className="about__text">
-          I'm an independent data and analytics consultant based in Savannah, GA, helping organizations make sense of their data and use it to make smarter decisions.
+          I'm an independent data and analytics consultant helping organizations turn complex data into actionable insights and smarter decisions.
           </p>
           
           <p className="about__text">
