@@ -32,11 +32,13 @@ export const metadata = {
   },
 
   // Custom favicon configuration (PNG format for better browser compatibility)
+  // Google recommends favicon larger than 48x48px for search results
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }, // Larger favicon for Google Search
     ],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },

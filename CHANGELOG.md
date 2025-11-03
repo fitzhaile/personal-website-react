@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Enhanced case study modal system with improved content structure
 - XML sitemap (`sitemap.xml`) for SEO with all pages and case studies
 - `robots.txt` file to guide search engine crawlers and reference sitemap
+- Larger favicon (180x180px) to meet Google's recommendation for search results
+- Explicit Googlebot-Image crawl permissions in robots.txt for favicons
 
 ### Changed
 - Updated Google Analytics case study with Markdown formatting
