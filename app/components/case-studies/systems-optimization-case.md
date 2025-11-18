@@ -13,20 +13,19 @@ As the organization had evolved, each team had developed its own practices—met
 
 ### Approach {.case-study__section-title}
 
-The organization introduced a unified "operating system" for teamwork. Slack became the space for discussion, and Monday.com became the space for action. A few key standards connected the two, keeping communication simple and work transparent.
+An organization-wide across counties and unified "operating system" for teamwork was introduced. Slack deployment became the space for discussion, and an enterprise-based deployment of a project management software became the space for action. Key standards connected the two, keeping communication simple and work transparent.
 
 #### Platform Selection and Design {.case-study__subsection-title}
 
 - **Slack:** Centralized real-time and asynchronous discussion in channels; searchable history replaced long email threads.
-- **Monday.com:** Standardized boards and templates with defined roles, timelines, and status updates.
-- **Guidelines:** A concise "When to use what" one-pager clarified when to use Slack, Monday.com, email, or text.
-- **Standards:** Lightweight norms around task assignment, notifications, and file sharing kept teams consistent without adding bureaucracy.
+- **Project Managment** Baseline templates built based on project needs, creating common work structure across all departments.
+- **Guidelines:** Onboarding documentation clarified when to employ different communication channels (e.g., Slack, project managment, email, or text).
 {.case-study__list}
 
 
 #### Template Development {.case-study__subsection-title}
 
-Built three Monday.com templates—General, Events, and Training—with standardized columns, groups, and statuses that could be used across all departments.
+Starting-poing templates were built based on project need, and unified actino stcurure across all departments.
 
 - Created consistent channel naming conventions in Slack.
 - Clarified DM vs. channel use and set norms for tagging and mentions.
