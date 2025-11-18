@@ -17,7 +17,7 @@ An organization-wide across counties and unified "operating system" for teamwork
 
 #### Platform Selection and Design {.case-study__subsection-title}
 
-- **Slack:** Centralized real-time and asynchronous discussion in channels; searchable history replaced long email threads.
+- **Slack:** Centralized real-time and asynchronous discussion in channels system; searchable history replaced long email threads.
 - **Project Managment** Baseline templates built based on project needs, creating common work structure across all departments.
 - **Guidelines:** Onboarding documentation clarified when to employ different communication channels (e.g., Slack, project managment, email, or text).
 {.case-study__list}
