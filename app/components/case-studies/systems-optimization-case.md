@@ -5,7 +5,7 @@ A growing regional nonprofit wanted to strengthen cross-department collaboration
 As the organization had evolved, each team had developed its own practices—methods that served their immediate needs but created opportunities for better coordination across departments. Leadership recognized that establishing shared systems would accelerate collaboration and make organizational knowledge more accessible to everyone.
 
 - Communication happened through various channels, and the team wanted a central hub for project discussions.
-- Each department had developed its own project tracking approach, creating an opportunity to establish shared standards.
+- Each department had developed its own project management approach, creating an opportunity to establish shared standards.
 - The organization was ready to implement consistent task ownership and status visibility across all teams.
 - Growing staff size called for standardized tools and workflows that would simplify onboarding and collaboration.
 {.case-study__list}
