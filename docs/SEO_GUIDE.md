@@ -57,7 +57,7 @@ Your site now generates these HTML meta tags automatically for all pages, includ
   - Format: `Page Name | Brand Name` (for subpages) or `Name - Service/Title - Location` (for homepage)
   
 **Homepage vs. Subpage Titles:**
-- **Homepage**: `Fitz Haile - Data & Analytics Consultant - Savannah, GA`
+- **Homepage**: `Fitz Haile - Data & Analytics Consultant`
   - Includes name, service, and location for maximum SEO value
   - Clear job title helps search engines understand what you do
 - **Subpages**: `Services | Fitz Haile`
@@ -127,7 +127,7 @@ Your site uses **Next.js metadata API** with a smart title templating system:
 ### Server-Side Metadata (app/layout.js)
 ```javascript
 title: {
-  default: 'Fitz Haile - Data & Analytics Consultant - Savannah, GA',
+  default: 'Fitz Haile - Data & Analytics Consultant',
   template: '%s | Fitz Haile',
 }
 ```
@@ -180,7 +180,7 @@ Since this is a single-page app with smooth scrolling navigation, we also update
 // Update title when navigating between sections
 useEffect(() => {
   const titles = {
-    home: 'Fitz Haile - Data & Analytics Consultant - Savannah, GA',
+    home: 'Fitz Haile - Data & Analytics Consultant',
     services: 'Services | Fitz Haile',
     about: 'About | Fitz Haile',
     contact: 'Contact | Fitz Haile',
@@ -230,7 +230,7 @@ Choose 1-2 primary keywords and sound natural.
 ❌ **Too Long**
 ```
 Bad:  "Fitz Haile - Independent Data and Business Analytics Consultant Helping Organizations Make Smarter Decisions"
-Good: "Fitz Haile - Data & Analytics Consultant - Savannah, GA"
+Good: "Fitz Haile - Data & Analytics Consultant"
 ```
 Google truncates at ~60 characters. Keep it concise.
 
@@ -248,7 +248,7 @@ Before finalizing your title, ask:
 
 Check your title length before committing:
 ```
-Fitz Haile - Data & Analytics Consultant - Savannah, GA
+Fitz Haile - Data & Analytics Consultant
 └─────────────────────────────────────────────────────┘
                     54 characters ✅
 ```

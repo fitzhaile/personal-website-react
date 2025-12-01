@@ -42,7 +42,7 @@ export default function HomePageClient({ section }) {
    */
   useEffect(() => {
     const titles = {
-      home: 'Fitz Haile - Data & Analytics Consultant - Savannah, GA',
+      home: 'Fitz Haile - Data & Analytics Consultant',
       services: 'Services | Fitz Haile',
       about: 'About | Fitz Haile',
       contact: 'Contact | Fitz Haile',
@@ -149,7 +149,7 @@ export default function HomePageClient({ section }) {
       
       // Update document title for better UX
       const titles = {
-        '/': 'Fitz Haile - Data & Analytics Consultant - Savannah, GA',
+        '/': 'Fitz Haile - Data & Analytics Consultant',
         '/services': 'Services | Fitz Haile',
         '/about': 'About | Fitz Haile',
         '/contact': 'Contact | Fitz Haile',

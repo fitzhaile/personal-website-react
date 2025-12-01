@@ -10,7 +10,7 @@ import '../src/index.css'
 export const metadata = {
   // Primary SEO tags
   title: {
-    default: 'Fitz Haile - Data & Analytics Consultant - Savannah, GA',
+    default: 'Fitz Haile - Data & Analytics Consultant',
     template: '%s | Fitz Haile', // Used by child pages for consistent branding
   },
   description: 'Fitz Haile is an independent data and analytics consultant in Savannah, GA - helping organizations turn their data into more informed, smarter decisions.',
